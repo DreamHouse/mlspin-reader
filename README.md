@@ -1,4 +1,4 @@
 mlspin-reader
 =============
 
-Read MLSPIN data from web page
+Read MLSPIN data from web page.
