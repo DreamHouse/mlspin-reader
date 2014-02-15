@@ -1,0 +1,10 @@
+*~
+.DS_Store
+*.iml
+.idea
+start.sh
+stop.sh
+tail.sh
+prepare_checkin.sh
+log
+db/development.sqlite3
