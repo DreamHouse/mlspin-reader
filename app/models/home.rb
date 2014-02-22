@@ -5,6 +5,7 @@ class Home
   
   field :status, type: String
   field :price, type: Integer
-  field :address, type: String
+  field :addr, type: String
   field :received, type: Time
-  field :status, type: String
+  field :desc, type: String
+end
