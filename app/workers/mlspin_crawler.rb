@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class MlspinCrawler
   def sanitize_str(str)
     # replace &nbsp; with space
@@ -7,16 +9,26 @@ class MlspinCrawler
   def upsert(status, size, price, addr, date, time)
     if Home.where(addr: addr).count > 0
       Rails.logger.debug "Home #{addr} already exists"
-      # update status only?
+      home = Home.find(addr: addr)
+      home.update_attributes(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"))
     else
       Home.create!(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"))
     end
+  rescue => e
+    Rails.logger.error "Failed to upsert home for #{addr} due to #{e.message}"
   end
   
   def get_listing
-    # response = HTTParty.get("http://vow.mlspin.com/?cid=3146169&pass=#{APP_CONFIG['mlspin_pass']}").body
-    response = File.read("spec/fixtures/mlspin.html") # read from local disk
-    doc = Nokogiri::HTML(response)
+    # response = HTTParty.get("http://vow.mlspin.com/?cid=3146169&pass=#{APP_CONFIG['mlspin_pass']}")
+    # response_body = response.body
+    # cookie = response.request.options[:headers]['Cookie']
+    # page_2 = HTTParty.get('http://vow.mlspin.com/clients/index.aspx?p=2&s=100', headers: {'Cookie' => cookie } )
+    response_body = File.read("spec/fixtures/mlspin.html") # read from local disk
+    doc = Nokogiri::HTML(response_body)
+    
+    pager = doc.css("td.VOWResultsHeading select[name=p]")
+    page_count = pager.children.count
+    puts "#{page_count}"
     
     table_headers = doc.css("td.VOWResultsHeading")
     status_node = table_headers.select { |element| element.children.first.text == 'Status' }
