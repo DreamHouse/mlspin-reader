@@ -58,5 +58,9 @@ module Mlspin
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    
+    Mongoid.logger = Logger.new('/dev/null')
+    Moped.logger = Logger.new('/dev/null')
   end
 end
