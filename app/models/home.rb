@@ -8,4 +8,5 @@ class Home
   field :addr, type: String
   field :received, type: Time
   field :desc, type: String
+  field :link, type: String
 end
