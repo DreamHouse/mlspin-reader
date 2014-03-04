@@ -8,16 +8,23 @@ response = File.read("spec/fixtures/mlspin.html") # read from local disk
 
 doc = Nokogiri::HTML(response.body)
 
+def update_attribute(home, name, element)
+  home[name.downcase.gsub(/\s+/, "_").to_sym] = element.text.gsub("#{name}:", '').strip
+end
+
+home = Home.find_by(addr: "9 Keeler Farm Lexington, MA")
 doc.css('html body center table tbody tr td table tbody tr td table tbody tr td table tbody tr td').each do |element|
-  if element.text.match(/Style:/)  
-    puts element.text
+  case element.text
+  when /Style:/
+    update_attribute(home, 'Style', element)
+  when /Total Rooms:/
+    update_attribute(home, 'Total Rooms', element)
+  when /Color:/
+    update_attribute(home, 'Color', element)
   end  
 end  
 
-                                    Style: 
-                                        Colonial
-                                
-=> 0
+=> "Colonial"
 
 Works for a house and a condo
 
