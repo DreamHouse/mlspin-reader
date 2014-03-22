@@ -108,13 +108,17 @@ class MlspinCrawler
       when /Lead Paint:/
         update_attribute(home, 'Lead Paint', element)
       when /UFFI:/
-        update_attribute(home, 'UFFI', element)
-      when /Warranty Features:/
-        update_attribute(home, 'Warranty Features', element)
+        entries = element.text.match(/(UFFI)(.*)(Warranty Features)(.*)/m)
+        if entries.size == 5
+          home["uffi".to_sym] = sanitize_str(entries[2].gsub(":", ''))
+          home["warranty_features".to_sym] = sanitize_str(entries[4].gsub(":", ''))
+        end
       when /Year Built:/
-        update_attribute(home, 'Year Built', element)
-      when /Source:/
-        update_attribute(home, 'Source', element)
+        entries = element.text.match(/(Year Built)(.*)(Source)(.*)/m)
+        if entries.size == 5
+          home["year_built".to_sym] = sanitize_str(entries[2].gsub(":", ''))
+          home["source".to_sym] = sanitize_str(entries[4].gsub(":", ''))
+        end
       when /Year Built Description:/
         update_attribute(home, 'Year Built Description', element)
       when /Year Round:/
@@ -130,11 +134,17 @@ class MlspinCrawler
       
       ####### Tax ###########
       when /Tax:/
-        update_attribute(home, 'Tax', element)
-      when /Tax Year:/
-        update_attribute(home, 'Tax Year', element)
+        entries = element.text.match(/(Tax)(.*)(Tax Year)(.*)/m)
+        if entries.size == 5
+          home["tax".to_sym] = sanitize_str(entries[2].gsub(":", ''))
+          home["tax_year".to_sym] = sanitize_str(entries[4].gsub(":", ''))
+        end
       when /Book:/
-        update_attribute(home, 'Book', element)
+        entries = element.text.match(/(Book)(.*)(Page)(.*)/m)
+        if entries.size == 5
+          home["book".to_sym] = sanitize_str(entries[2].gsub(":", ''))
+          home["page".to_sym] = sanitize_str(entries[4].gsub(":", ''))
+        end
       when /Page:/
         update_attribute(home, 'Page', element)
       when /Cert:/
