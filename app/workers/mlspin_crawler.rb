@@ -143,14 +143,12 @@ class MlspinCrawler
         update_attribute(home, 'Zoning Code', element)
       when /Map:/
         # "Map: \n Block: \n Lot:".match(/(Map)(.*)(Block)(.*)(Lot)(.*)/m)
-        # "Map: \n Block: \n Lot:"
-        # 1:"Map"
-        #         2:": \n "
-        #         3:"Block"
-        #         4:": \n "
-        #         5:"Lot"
-        #         6:":"
-        update_attribute(home, 'Map', element)
+        map_entries = element.text.match(/(Map)(.*)(Block)(.*)(Lot)(.*)/m)
+        if map_entries.size == 7
+          home["map".to_sym] = sanitize_str(map_entries[2].gsub(":", ''))
+          home["block".to_sym] = sanitize_str(map_entries[4].gsub(":", ''))
+          home["lot".to_sym] = sanitize_str(map_entries[6].gsub(":", ''))
+        end
       end
     end
     home.save!
