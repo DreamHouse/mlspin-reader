@@ -3,7 +3,8 @@
 class MlspinCrawler
   def sanitize_str(str)
     # replace &nbsp; with space
-    str.gsub("\xC2\xA0", " ").strip
+    # get rid of newline
+    str.gsub("\xC2\xA0", " ").gsub("\n", "").squeeze(" ").strip
   end
   
   def get_listing
@@ -21,7 +22,41 @@ class MlspinCrawler
   def get_details(addr, content)
     home = Home.find_by(addr: addr)
     doc = Nokogiri::HTML(content)
-    doc.css('html body center table tbody tr td table tbody tr td table tbody tr td table tbody tr td').each do |element|
+    
+    # Parse Property Information section
+    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
+      if element.children[0].name == "text" && element.children[0].text.strip.end_with?(":")
+        if element.children.size>1 && element.children[1].name == "b"
+          case element.text
+          when /Approx. Living Area:/
+            update_attribute(home, 'Approx. Living Area', element)
+          when /Approx. Acres:/
+            update_attribute(home, 'Approx. Acres', element)
+          when /Garage Spaces:/
+            update_attribute(home, 'Garage Spaces', element)
+          when /Living Area Includes:/
+            update_attribute(home, 'Living Area Includes', element)
+          when /Heat Zones:/
+            update_attribute(home, 'Heat Zones', element)
+          when /Parking Spaces:/
+            update_attribute(home, 'Parking Spaces', element)
+          when /Living Area Source:/
+            update_attribute(home, 'Living Area Source', element)
+          when /Cool Zones:/
+            update_attribute(home, 'Cool Zones', element)
+          when /Approx. Street Frontage:/
+            update_attribute(home, 'Approx. Street Frontage', element)
+          when /Living Area Disclosures:/
+            update_attribute(home, 'Living Area Disclosures', element)
+          when /Disclosures:/
+            update_attribute(home, 'Disclosures', element)          
+          end
+        end
+      end
+    end  
+
+    # Parse Basic, Features, Other Property Info
+    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
       case element.text
       when /Style:/
         update_attribute(home, 'Style', element)
