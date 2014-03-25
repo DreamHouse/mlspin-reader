@@ -12,7 +12,7 @@ class MlspinCrawler
     (2..@page_count).each { |page_index| get_one_page(page_index) }
   end
 
-  # get_details("9 Keeler Farm Lexington, MA", content)  
+  # get_details("9 Keeler Farm Lexington, MA", '')  
   def get_page_details(addr, link)
     # TODO: read content from link
     content = File.read("spec/fixtures/one_house.html")
@@ -22,6 +22,38 @@ class MlspinCrawler
   def get_details(addr, content)
     home = Home.find_by(addr: addr)
     doc = Nokogiri::HTML(content)
+
+    # Parse Remarks
+    remark_table = nil
+    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table').each do |table|
+      if table.text.strip == 'Remarks'
+        remark_table = table
+      end
+    end
+    
+    if remark_table && remark_table.next
+      home[:remarks] = sanitize_str(remark_table.next.text)
+    end
+    
+    # Parse Room details
+    table_node = nil
+    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr').each do |element|
+      if element.children.size >= 6 && element.children[0].text.strip == 'Room' && element.children[2].text.strip == 'Level'
+        table_node = element.parent
+      end
+    end  
+
+    rooms = []
+    if table_node
+      (1..table_node.children.size-1).each do |i|
+        room_name = sanitize_str(table_node.children[i].children[0].text).gsub(/:$/, '')
+        level = sanitize_str(table_node.children[i].children[2].text)
+        size = sanitize_str(table_node.children[i].children[4].text)
+        features = sanitize_str(table_node.children[i].children[6].text)
+        rooms << { name: room_name, level: level, size: size, features: features }
+      end
+    end
+    home[:room_details] = rooms
     
     # Parse Property Information section
     doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|

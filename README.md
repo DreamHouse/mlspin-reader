@@ -33,13 +33,3 @@ doc.css('html body center table tbody tr td table tbody tr td table tbody tr td 
 end
 
 # parse Room Levels, Dimensions and Features
-table_node = nil
-doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr').each do |element|
-  if element.children.size >= 6 && element.children[0].text.strip == 'Room' && element.children[2].text.strip == 'Level'
-    table_node = element.parent
-  end
-end  
-room = table_node.children[1].children[0].text
-level = table_node.children[1].children[2].text
-size = table_node.children[1].children[4].text
-features = table_node.children[1].children[6].text
