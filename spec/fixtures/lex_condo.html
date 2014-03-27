@@ -1,0 +1,2894 @@
+
+<!-- saved from url=(0064)http://vow.mlspin.com/clients/report.aspx?thisnum=1&mls=71650413 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+.Nav {
+	COLOR: #0000ff; TEXT-DECORATION: none; 
+}
+.Nav:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline; 
+}
+
+.ActiveLink
+	{
+	 font-size: 12pt; 
+	 font-family: Arial;
+	 color:#ffffff;
+	 background: #9b0300;
+	}
+.CurrentLink
+	{
+	 font-size: 12pt; 
+	 font-family: Arial;
+	 font-weight: bold;
+	 color:#000000;
+	 background: #ffe178;
+	}
+.SideMenuAgent
+	{
+		font-size: 10pt; 
+	 	font-family: Arial;
+	 	font-weight: bold;
+	 	color:white;
+	}
+.VOWFooter
+	{
+		font-size: 18pt; 
+	 	font-family: Arial;
+	 	font-weight: 600;
+	 	color:white;
+	}
+.VOWHeader
+	{
+		font-size: 18pt; 
+	 	font-family: Tahoma;
+	 	font-weight: 600;
+	 	color:white;
+	}
+.VOWPageHeader
+	{
+		font-size: 20pt; 
+	 	font-family: Arial;
+	 	font-weight: bold;
+	 	color:red;
+	}
+.VOWSectionHeader
+	{
+		font-size: 10pt; 
+	 	font-family: Arial;
+	 	font-weight: bold;
+	 	color:navy;
+	}
+.VOWBodyContent
+	{
+		font-size: 8pt; 
+	 	font-family: Arial;
+	 	font-weight: none;
+	 	color:black;
+	}
+</style>
+
+<style>
+	TD {font-family:Tahoma,Arial,Verdana,Helvetica; font-size:11px; color:black;} 
+	.h {font-family:arial; font-size:13px; color:black;}
+	.big {font-family:arial,verdana,tahoma,helvetica; font-size:13px; color:black;}
+    .bigbtn
+    {
+        BORDER-RIGHT: 1px solid;
+        BORDER-TOP: 1px solid;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: 11px;
+        BORDER-LEFT: 1px solid;
+        BORDER-BOTTOM: 1px solid;
+        HEIGHT: 17px;
+        font-family:Tahoma,Arial,Verdana,Helvetica;
+        vertical-align :middle;
+        border-color : Gray;
+    }
+   
+.VOWResultsHeading
+	{
+	 background: ;
+	 font-size: ; 
+	 font-family: ;
+	 font-weight: ;
+	 color:;
+	}
+.VOWResultsRow {
+	font-size: ; 
+	font-family: ;
+	color:;
+	}
+	
+.ratingStar {
+		font-size: 0pt;
+		width: 13px;
+		height: 12px;
+		margin: 0px;
+		padding: 0px;
+		cursor: pointer;
+		display: block;
+		background-repeat: no-repeat;
+	}
+	.filledRatingStar {
+		background-image: url(/images/FilledStar.png);
+	}
+	.emptyRatingStar {
+		background-image: url(/images/EmptyStar.png);
+	}
+	.savedRatingStar {
+		background-image: url(/images/SavedStar.png);}
+</style>
+
+ 
+
+<title>
+	Property Report
+</title><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><script type="text/javascript" language="javascript">
+     function pageLoad() {
+         //alert("mls " + "71650413");
+         //document.getElementById("hidmls").value = "71650413";
+         var RatingID = "mlsRating"
+         for (i = 0; i < $find("RatingBehavior1").get_MaxRating(); i++) {
+             switch (i) {
+                 case 0: $get(RatingID + "_Star_" + (i + 1).toString()).title = "I Hate it"; break;
+                 case 1: $get(RatingID + "_Star_" + (i + 1).toString()).title = "I Dislike it"; break;
+                 case 2: $get(RatingID + "_Star_" + (i + 1).toString()).title = "It is OK"; break;
+                 case 3: $get(RatingID + "_Star_" + (i + 1).toString()).title = "I Like it"; break;
+                 case 4: $get(RatingID + "_Star_" + (i + 1).toString()).title = "I Love it"; break;
+                 default: break;
+             }
+         }
+     }
+</script><script language="JavaScript">
+    function matches_delete() {
+        if (confirm("Are you sure you wish to delete this property?")) {
+            document.matchform.submit();
+        }
+    }
+
+    function PrintReport(mls) {
+        h = 600;
+        w = 600;
+        myscroll = "no";
+        mypage = "/reports/public.aspx?mls=" + mls + "&ShowRatePlug=True";
+        myname = "big";
+        myresize = "yes";
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',menubar=1,scrollbars=' + myscroll;
+        win = window.open(mypage, myname, settings)
+    }
+
+    function ViewTour(TheLink, TheHeight, TheWidth) {
+        if (TheHeight) {
+            h = TheHeight;
+        }
+        else {
+            h = 550;
+        }
+
+        if (TheWidth) {
+            w = TheWidth;
+        }
+        else {
+            w = 550;
+        }
+
+        myscroll = "yes";
+        mypage = TheLink;
+        myname = "big" + w + h;
+        myresize = "yes";
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + myscroll + ',resizable=' + myresize;
+        win = window.open(mypage, myname, settings);
+        win.focus();
+    }
+
+    function ShowListingAlert(mls) {
+        h = 320;
+        w = 300;
+        myscroll = "yes";
+        mypage = "ListingAlert.aspx?List_No=" + mls;
+        myname = "big";
+        myresize = "yes";
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + myscroll + ',resizable=' + myresize;
+        win = window.open(mypage, myname, settings)
+        win.focus();
+    }
+
+    function updateShowing() {
+        var flagRequestShowing;
+        flagRequestShowing = document.getElementById("hidrequestshowing").value;
+        if (flagRequestShowing == "True")
+            alert("You have already requested a showing for this property")
+        else {
+            h = 600;
+            w = 600;
+            myscroll = "yes";
+            mypage = "/Email/SendRequestByEmail.aspx?theList=" + document.matchform.match.value;
+            myname = "sendrequest";
+            myresize = "yes";
+            LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+            TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+            settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + myscroll;
+            win = window.open(mypage, myname, settings);
+        }
+    }
+
+    function ShowOpenHouse(mls) {
+        h = 350;
+        w = 500;
+        myscroll = "yes";
+        mypage = "ShowOpenHouse.aspx?List_No=" + mls;
+        myname = "big";
+        myresize = "yes";
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + myscroll + ',resizable=' + myresize;
+        win = window.open(mypage, myname, settings)
+        win.focus();
+    }
+
+    function ShowPhotoGallery(mls,aid) {
+        h = 550;
+        if ((screen.height) > 610) {
+            h = 700;
+        }
+        w = 580;
+        myscroll = "yes";
+        mypage = "ListingPhotoGallery.aspx?List_No=" + mls;
+        myname = "big";
+        myresize = "yes";
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + myscroll + ',resizable=' + myresize;
+        win = window.open(mypage, myname, settings)
+    }
+
+    function ShowAuctionPreview(mls) {
+        h = 350;
+        w = 500;
+        myscroll = "yes";
+        mypage = "/clients/ShowAuctionPreview.aspx?List_No=" + mls;
+        myname = "big";
+        myresize = "yes";
+        LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+        TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+        settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + myscroll + ',resizable=' + myresize;
+        win = window.open(mypage, myname, settings)
+        win.focus();
+    }
+
+    function EnableFbKBtntextCounter(field, maxLimit) {
+
+        if (field.value.length > 0) {
+            document.getElementById("btnSubmit").disabled = false;
+            document.getElementById("btnSubmit").src = "/images/SubmitFeedbackButtonA.png";
+            textCounter(field, maxLimit);
+        }
+        else {
+            if (document.getElementById("hidFeedbackRecord").value == 1) {
+                document.getElementById("btnSubmit").disabled = false;
+                document.getElementById("btnSubmit").src = "/images/SubmitFeedbackButtonA.png";
+            }
+            else {
+                document.getElementById("btnSubmit").disabled = true;
+                document.getElementById("btnSubmit").src = "/images/SubmitFeedbackButton.png";
+            }
+        }
+    }
+
+
+
+    function textCounter(field, maxLimit) {
+        if (field.value.length > maxLimit) // if too long...trim it!
+            field.value = field.value.substring(0, maxLimit);
+    }
+
+    function ValidateFeedback() {
+        var regEx = new RegExp('(&#)|(<(?=(!|[a-zA-Z]+|/|[?])))', 'g');
+        var feedbackText = document.getElementById("txtFeedback").value
+
+        if (feedbackText != null && regEx.test(feedbackText)) {
+
+            alert("Your input contains the '&#' or the less-than symbol '<' followed by an alphabet, '/', '?' or '!' " +
+				 "which is considered as potentially unsafe data. Please correct the field by adding a space after '<' or " +
+				 "removing the '<' or '&#' characters altogether and try again.");
+            try {
+                feedbackText.focus();
+            }
+            catch (er) {
+                //alert('Hidden field');
+            }
+            return false;
+        }
+    }
+            
+</script></head>
+
+ 
+
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="efefef">
+	<center>
+		<table border="0" cellpadding="0" cellspacing="0" width="750">
+			
+			<tbody><tr>
+				<td colspan="6" bgcolor="a30005">
+					<img src="./lex_condo_files/null.gif" height="4"></td>
+			</tr>
+			<tr>
+				<td colspan="6" bgcolor="a30005" class="VOWHeader" align="left">
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" bgcolor="a30005">
+					<img src="./lex_condo_files/null.gif" height="4"></td>
+			</tr>
+			
+			<tr>
+				
+				<td bgcolor="9b0300" width="2">
+					<img src="./lex_condo_files/null.gif" width="2"></td>
+				<!--- BUFFER --->
+				<td width="170" nowrap="" valign="top" bgcolor="9b0300">
+					
+
+						<!--- START SIDE MENU --->
+						<table border="0" cellpadding="0" cellspacing="0" width="170">
+							
+							<tbody><tr>
+								<td>
+									<img src="./lex_condo_files/null.gif" height="4" border="0"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table border="0" cellpadding="3" cellspacing="0" bgcolor="9b0300">
+										
+										<tbody><tr>
+											<td align="center">
+												<img src="./lex_condo_files/photo_agent.aspx" border="0"></td>
+										</tr>
+										
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./lex_condo_files/null.gif" height="20" border="0"></td>
+							</tr>
+							
+							<tr>
+								<td bgcolor="9b0300">
+									<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+							</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/default.aspx?id=67394&PageType=0&PageId=322766" class="ActiveLink">Home</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/idx/index.aspx?id=67394&PageType=1" class="ActiveLink">Search for Homes</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/idx/viewmylistings.aspx?id=67394&PageType=10" class="ActiveLink">Featured Listings</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="CurrentLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/clients/index.aspx?id=67394&PageType=2" class="CurrentLink">Client Login</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/clients/SignUp.aspx?id=67394&PageType=11" class="ActiveLink">Sign Up Now</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/default.aspx?id=67394&PageType=6&PageId=322771" class="ActiveLink">Your Home's Value</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/default.aspx?id=67394&PageType=7&PageId=322772" class="ActiveLink">Contact Me</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/default.aspx?id=67394&PageType=9&PageId=322773" class="ActiveLink">Mortgage Calculator</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+										<tr>
+											<td class="ActiveLink" style="font-family: Arial;">
+												&nbsp;<a href="http://vow.mlspin.com/default.aspx?id=67394&PageType=4&PageId=560243" class="ActiveLink">www.PaulHuangRealtor.com</a></td>
+										</tr>
+										<tr>
+											<td bgcolor="9b0300">
+												<img src="./lex_condo_files/null.gif" height="1" border="0"></td>
+										</tr>
+							
+							<tr>
+								<td>
+									<img src="./lex_condo_files/null.gif" height="20" border="0"></td>
+							</tr>
+							<tr>
+								<td class="SideMenuAgent">
+									<!-- START AGENT INFO --->
+									<table cellpadding="2">
+										<tbody><tr>
+											<td class="SideMenuAgent">
+												Paul Huang<br>Keller Williams Realty<br>175 Littleton Road<br>Westford, MA 01886<br>
+												<br>
+												
+														<br>
+														Phone:
+														781-810-4075
+												
+														<br>
+														Cell Phone:
+														781-254-4332
+												
+														<br>
+														Fax:
+														978-759-0233
+												
+														<br>
+														Email: <a href="mailto:paulhuangrealtor@gmail.com" class="SideMenuAgent">
+														paulhuangrealtor@gmail.com
+														</a>
+												
+												<br>
+												<br>
+												<br>
+												
+												<a href="http://vow.mlspin.com/default.aspx?id=67394&PageType=11&PageId=-1" style="color: white;
+													font-size: 7pt; font-family: Arial;">Privacy
+													Policy</a>
+                                                <br>
+                                                <a href="http://vow.mlspin.com/clients/Unsubscribe.aspx" style="color: white;
+                                                    font-size: 7pt; font-family: Arial;">
+                                                    Unsubscribe</a>
+                                                
+											</td>
+										</tr>
+									</tbody></table>
+									<!--- END AGENT INFO --->
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./lex_condo_files/null.gif" height="20" border="0"></td>
+							</tr>
+						</tbody></table>
+				<!--- END SIDE MENU --->
+
+				</td>
+				<td bgcolor="9b0300" width="2">
+					<img src="./lex_condo_files/null.gif" width="2"></td>
+				<!--- BUFFER --->
+				
+				<td bgcolor="white">
+					&nbsp;&nbsp;&nbsp;</td>
+				<!--- BUFFER --->
+				
+				<td height="100%" width="100%" valign="top" bgcolor="white">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<form name="matchform" method="POST" action="http://vow.mlspin.com/clients/deletematches.aspx"></form>
+			<input type="hidden" name="match" value="71650413">
+			<input type="hidden" name="thisNum" value="1">
+			<input type="hidden" name="totalnum" value="543">
+            <input type="hidden" id="hidrequestshowing" name="hidrequestshowing" value="False">
+			<tbody><tr>
+				<td colspan="7">
+					
+						<img border="0" hspace="5" src="./lex_condo_files/toplogo.gif" align="right">
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="7" height="2" class="VOWResultsHeading">
+					<img src="./lex_condo_files/null.gif" width="1" height="2" alt="" border="0"></td>
+			</tr>
+			<tr>
+				<td class="VOWResultsHeading" valign="bottom" nowrap="">
+					&nbsp;&nbsp;<a href="javascript:updateShowing();" onmouseover="document.requestshowing.src=&#39;/images/requestshowingbutton-h.gif&#39;; window.status=&#39;Request a Showing for Checked Matches&#39;; return true;" onmouseout="document.requestshowing.src=&#39;/images/requestshowingbutton.gif&#39;; window.status=&#39;&#39;; return true;"><img align="absmiddle" border="0" name="requestshowing" onmousedown="document.requestshowing.src=&#39;/images/requestshowingbutton-d.gif&#39;" onmouseup="document.requestshowing.src=&#39;/images/requestshowingbutton-h.gif&#39;" src="./lex_condo_files/requestshowingbutton.gif" title="Request a Showing for Checked Matches"></a>&nbsp; <a href="javascript:matches_delete();" onmouseover="document.matchdeleteimg.src=&#39;/images/deletecriteria-h.gif&#39;; window.status=&#39;Delete This Match&#39;; return true;" onmouseout="document.matchdeleteimg.src=&#39;/images/deletecriteria.gif&#39;; window.status=&#39;&#39;; return true;">
+								<img align="absmiddle" border="0" name="matchdeleteimg" onmousedown="document.matchdeleteimg.src=&#39;/images/deletecriteria-d.gif&#39;" onmouseup="document.matchdeleteimg.src=&#39;/images/deletecriteria-h.gif&#39;" src="./lex_condo_files/deletecriteria.gif" title="Delete This Match"></a></td>
+				<td class="VOWResultsHeading">
+					&nbsp;</td>
+				<td class="VOWResultsHeading" colspan="4" width="100%" valign="bottom" nowrap="">
+					
+					<a href="http://vow.mlspin.com/clients/report.aspx?thisNum=543">
+						<img border="0" src="./lex_condo_files/arrowprv.gif" align="absmiddle"></a>Property
+					<select size="1" name="p" style="font-size: 8pt" onchange="javascript:document.location.href=&#39;/clients/report.aspx?thisNum=&#39; + document.matchform.p.options[document.matchform.p.selectedIndex].text">
+						
+							<option selected="">1</option>
+						
+							<option>2</option>
+						
+							<option>3</option>
+						
+							<option>4</option>
+						
+							<option>5</option>
+						
+							<option>6</option>
+						
+							<option>7</option>
+						
+							<option>8</option>
+						
+							<option>9</option>
+						
+							<option>10</option>
+						
+							<option>11</option>
+						
+							<option>12</option>
+						
+							<option>13</option>
+						
+							<option>14</option>
+						
+							<option>15</option>
+						
+							<option>16</option>
+						
+							<option>17</option>
+						
+							<option>18</option>
+						
+							<option>19</option>
+						
+							<option>20</option>
+						
+							<option>21</option>
+						
+							<option>22</option>
+						
+							<option>23</option>
+						
+							<option>24</option>
+						
+							<option>25</option>
+						
+							<option>26</option>
+						
+							<option>27</option>
+						
+							<option>28</option>
+						
+							<option>29</option>
+						
+							<option>30</option>
+						
+							<option>31</option>
+						
+							<option>32</option>
+						
+							<option>33</option>
+						
+							<option>34</option>
+						
+							<option>35</option>
+						
+							<option>36</option>
+						
+							<option>37</option>
+						
+							<option>38</option>
+						
+							<option>39</option>
+						
+							<option>40</option>
+						
+							<option>41</option>
+						
+							<option>42</option>
+						
+							<option>43</option>
+						
+							<option>44</option>
+						
+							<option>45</option>
+						
+							<option>46</option>
+						
+							<option>47</option>
+						
+							<option>48</option>
+						
+							<option>49</option>
+						
+							<option>50</option>
+						
+							<option>51</option>
+						
+							<option>52</option>
+						
+							<option>53</option>
+						
+							<option>54</option>
+						
+							<option>55</option>
+						
+							<option>56</option>
+						
+							<option>57</option>
+						
+							<option>58</option>
+						
+							<option>59</option>
+						
+							<option>60</option>
+						
+							<option>61</option>
+						
+							<option>62</option>
+						
+							<option>63</option>
+						
+							<option>64</option>
+						
+							<option>65</option>
+						
+							<option>66</option>
+						
+							<option>67</option>
+						
+							<option>68</option>
+						
+							<option>69</option>
+						
+							<option>70</option>
+						
+							<option>71</option>
+						
+							<option>72</option>
+						
+							<option>73</option>
+						
+							<option>74</option>
+						
+							<option>75</option>
+						
+							<option>76</option>
+						
+							<option>77</option>
+						
+							<option>78</option>
+						
+							<option>79</option>
+						
+							<option>80</option>
+						
+							<option>81</option>
+						
+							<option>82</option>
+						
+							<option>83</option>
+						
+							<option>84</option>
+						
+							<option>85</option>
+						
+							<option>86</option>
+						
+							<option>87</option>
+						
+							<option>88</option>
+						
+							<option>89</option>
+						
+							<option>90</option>
+						
+							<option>91</option>
+						
+							<option>92</option>
+						
+							<option>93</option>
+						
+							<option>94</option>
+						
+							<option>95</option>
+						
+							<option>96</option>
+						
+							<option>97</option>
+						
+							<option>98</option>
+						
+							<option>99</option>
+						
+							<option>100</option>
+						
+							<option>101</option>
+						
+							<option>102</option>
+						
+							<option>103</option>
+						
+							<option>104</option>
+						
+							<option>105</option>
+						
+							<option>106</option>
+						
+							<option>107</option>
+						
+							<option>108</option>
+						
+							<option>109</option>
+						
+							<option>110</option>
+						
+							<option>111</option>
+						
+							<option>112</option>
+						
+							<option>113</option>
+						
+							<option>114</option>
+						
+							<option>115</option>
+						
+							<option>116</option>
+						
+							<option>117</option>
+						
+							<option>118</option>
+						
+							<option>119</option>
+						
+							<option>120</option>
+						
+							<option>121</option>
+						
+							<option>122</option>
+						
+							<option>123</option>
+						
+							<option>124</option>
+						
+							<option>125</option>
+						
+							<option>126</option>
+						
+							<option>127</option>
+						
+							<option>128</option>
+						
+							<option>129</option>
+						
+							<option>130</option>
+						
+							<option>131</option>
+						
+							<option>132</option>
+						
+							<option>133</option>
+						
+							<option>134</option>
+						
+							<option>135</option>
+						
+							<option>136</option>
+						
+							<option>137</option>
+						
+							<option>138</option>
+						
+							<option>139</option>
+						
+							<option>140</option>
+						
+							<option>141</option>
+						
+							<option>142</option>
+						
+							<option>143</option>
+						
+							<option>144</option>
+						
+							<option>145</option>
+						
+							<option>146</option>
+						
+							<option>147</option>
+						
+							<option>148</option>
+						
+							<option>149</option>
+						
+							<option>150</option>
+						
+							<option>151</option>
+						
+							<option>152</option>
+						
+							<option>153</option>
+						
+							<option>154</option>
+						
+							<option>155</option>
+						
+							<option>156</option>
+						
+							<option>157</option>
+						
+							<option>158</option>
+						
+							<option>159</option>
+						
+							<option>160</option>
+						
+							<option>161</option>
+						
+							<option>162</option>
+						
+							<option>163</option>
+						
+							<option>164</option>
+						
+							<option>165</option>
+						
+							<option>166</option>
+						
+							<option>167</option>
+						
+							<option>168</option>
+						
+							<option>169</option>
+						
+							<option>170</option>
+						
+							<option>171</option>
+						
+							<option>172</option>
+						
+							<option>173</option>
+						
+							<option>174</option>
+						
+							<option>175</option>
+						
+							<option>176</option>
+						
+							<option>177</option>
+						
+							<option>178</option>
+						
+							<option>179</option>
+						
+							<option>180</option>
+						
+							<option>181</option>
+						
+							<option>182</option>
+						
+							<option>183</option>
+						
+							<option>184</option>
+						
+							<option>185</option>
+						
+							<option>186</option>
+						
+							<option>187</option>
+						
+							<option>188</option>
+						
+							<option>189</option>
+						
+							<option>190</option>
+						
+							<option>191</option>
+						
+							<option>192</option>
+						
+							<option>193</option>
+						
+							<option>194</option>
+						
+							<option>195</option>
+						
+							<option>196</option>
+						
+							<option>197</option>
+						
+							<option>198</option>
+						
+							<option>199</option>
+						
+							<option>200</option>
+						
+							<option>201</option>
+						
+							<option>202</option>
+						
+							<option>203</option>
+						
+							<option>204</option>
+						
+							<option>205</option>
+						
+							<option>206</option>
+						
+							<option>207</option>
+						
+							<option>208</option>
+						
+							<option>209</option>
+						
+							<option>210</option>
+						
+							<option>211</option>
+						
+							<option>212</option>
+						
+							<option>213</option>
+						
+							<option>214</option>
+						
+							<option>215</option>
+						
+							<option>216</option>
+						
+							<option>217</option>
+						
+							<option>218</option>
+						
+							<option>219</option>
+						
+							<option>220</option>
+						
+							<option>221</option>
+						
+							<option>222</option>
+						
+							<option>223</option>
+						
+							<option>224</option>
+						
+							<option>225</option>
+						
+							<option>226</option>
+						
+							<option>227</option>
+						
+							<option>228</option>
+						
+							<option>229</option>
+						
+							<option>230</option>
+						
+							<option>231</option>
+						
+							<option>232</option>
+						
+							<option>233</option>
+						
+							<option>234</option>
+						
+							<option>235</option>
+						
+							<option>236</option>
+						
+							<option>237</option>
+						
+							<option>238</option>
+						
+							<option>239</option>
+						
+							<option>240</option>
+						
+							<option>241</option>
+						
+							<option>242</option>
+						
+							<option>243</option>
+						
+							<option>244</option>
+						
+							<option>245</option>
+						
+							<option>246</option>
+						
+							<option>247</option>
+						
+							<option>248</option>
+						
+							<option>249</option>
+						
+							<option>250</option>
+						
+							<option>251</option>
+						
+							<option>252</option>
+						
+							<option>253</option>
+						
+							<option>254</option>
+						
+							<option>255</option>
+						
+							<option>256</option>
+						
+							<option>257</option>
+						
+							<option>258</option>
+						
+							<option>259</option>
+						
+							<option>260</option>
+						
+							<option>261</option>
+						
+							<option>262</option>
+						
+							<option>263</option>
+						
+							<option>264</option>
+						
+							<option>265</option>
+						
+							<option>266</option>
+						
+							<option>267</option>
+						
+							<option>268</option>
+						
+							<option>269</option>
+						
+							<option>270</option>
+						
+							<option>271</option>
+						
+							<option>272</option>
+						
+							<option>273</option>
+						
+							<option>274</option>
+						
+							<option>275</option>
+						
+							<option>276</option>
+						
+							<option>277</option>
+						
+							<option>278</option>
+						
+							<option>279</option>
+						
+							<option>280</option>
+						
+							<option>281</option>
+						
+							<option>282</option>
+						
+							<option>283</option>
+						
+							<option>284</option>
+						
+							<option>285</option>
+						
+							<option>286</option>
+						
+							<option>287</option>
+						
+							<option>288</option>
+						
+							<option>289</option>
+						
+							<option>290</option>
+						
+							<option>291</option>
+						
+							<option>292</option>
+						
+							<option>293</option>
+						
+							<option>294</option>
+						
+							<option>295</option>
+						
+							<option>296</option>
+						
+							<option>297</option>
+						
+							<option>298</option>
+						
+							<option>299</option>
+						
+							<option>300</option>
+						
+							<option>301</option>
+						
+							<option>302</option>
+						
+							<option>303</option>
+						
+							<option>304</option>
+						
+							<option>305</option>
+						
+							<option>306</option>
+						
+							<option>307</option>
+						
+							<option>308</option>
+						
+							<option>309</option>
+						
+							<option>310</option>
+						
+							<option>311</option>
+						
+							<option>312</option>
+						
+							<option>313</option>
+						
+							<option>314</option>
+						
+							<option>315</option>
+						
+							<option>316</option>
+						
+							<option>317</option>
+						
+							<option>318</option>
+						
+							<option>319</option>
+						
+							<option>320</option>
+						
+							<option>321</option>
+						
+							<option>322</option>
+						
+							<option>323</option>
+						
+							<option>324</option>
+						
+							<option>325</option>
+						
+							<option>326</option>
+						
+							<option>327</option>
+						
+							<option>328</option>
+						
+							<option>329</option>
+						
+							<option>330</option>
+						
+							<option>331</option>
+						
+							<option>332</option>
+						
+							<option>333</option>
+						
+							<option>334</option>
+						
+							<option>335</option>
+						
+							<option>336</option>
+						
+							<option>337</option>
+						
+							<option>338</option>
+						
+							<option>339</option>
+						
+							<option>340</option>
+						
+							<option>341</option>
+						
+							<option>342</option>
+						
+							<option>343</option>
+						
+							<option>344</option>
+						
+							<option>345</option>
+						
+							<option>346</option>
+						
+							<option>347</option>
+						
+							<option>348</option>
+						
+							<option>349</option>
+						
+							<option>350</option>
+						
+							<option>351</option>
+						
+							<option>352</option>
+						
+							<option>353</option>
+						
+							<option>354</option>
+						
+							<option>355</option>
+						
+							<option>356</option>
+						
+							<option>357</option>
+						
+							<option>358</option>
+						
+							<option>359</option>
+						
+							<option>360</option>
+						
+							<option>361</option>
+						
+							<option>362</option>
+						
+							<option>363</option>
+						
+							<option>364</option>
+						
+							<option>365</option>
+						
+							<option>366</option>
+						
+							<option>367</option>
+						
+							<option>368</option>
+						
+							<option>369</option>
+						
+							<option>370</option>
+						
+							<option>371</option>
+						
+							<option>372</option>
+						
+							<option>373</option>
+						
+							<option>374</option>
+						
+							<option>375</option>
+						
+							<option>376</option>
+						
+							<option>377</option>
+						
+							<option>378</option>
+						
+							<option>379</option>
+						
+							<option>380</option>
+						
+							<option>381</option>
+						
+							<option>382</option>
+						
+							<option>383</option>
+						
+							<option>384</option>
+						
+							<option>385</option>
+						
+							<option>386</option>
+						
+							<option>387</option>
+						
+							<option>388</option>
+						
+							<option>389</option>
+						
+							<option>390</option>
+						
+							<option>391</option>
+						
+							<option>392</option>
+						
+							<option>393</option>
+						
+							<option>394</option>
+						
+							<option>395</option>
+						
+							<option>396</option>
+						
+							<option>397</option>
+						
+							<option>398</option>
+						
+							<option>399</option>
+						
+							<option>400</option>
+						
+							<option>401</option>
+						
+							<option>402</option>
+						
+							<option>403</option>
+						
+							<option>404</option>
+						
+							<option>405</option>
+						
+							<option>406</option>
+						
+							<option>407</option>
+						
+							<option>408</option>
+						
+							<option>409</option>
+						
+							<option>410</option>
+						
+							<option>411</option>
+						
+							<option>412</option>
+						
+							<option>413</option>
+						
+							<option>414</option>
+						
+							<option>415</option>
+						
+							<option>416</option>
+						
+							<option>417</option>
+						
+							<option>418</option>
+						
+							<option>419</option>
+						
+							<option>420</option>
+						
+							<option>421</option>
+						
+							<option>422</option>
+						
+							<option>423</option>
+						
+							<option>424</option>
+						
+							<option>425</option>
+						
+							<option>426</option>
+						
+							<option>427</option>
+						
+							<option>428</option>
+						
+							<option>429</option>
+						
+							<option>430</option>
+						
+							<option>431</option>
+						
+							<option>432</option>
+						
+							<option>433</option>
+						
+							<option>434</option>
+						
+							<option>435</option>
+						
+							<option>436</option>
+						
+							<option>437</option>
+						
+							<option>438</option>
+						
+							<option>439</option>
+						
+							<option>440</option>
+						
+							<option>441</option>
+						
+							<option>442</option>
+						
+							<option>443</option>
+						
+							<option>444</option>
+						
+							<option>445</option>
+						
+							<option>446</option>
+						
+							<option>447</option>
+						
+							<option>448</option>
+						
+							<option>449</option>
+						
+							<option>450</option>
+						
+							<option>451</option>
+						
+							<option>452</option>
+						
+							<option>453</option>
+						
+							<option>454</option>
+						
+							<option>455</option>
+						
+							<option>456</option>
+						
+							<option>457</option>
+						
+							<option>458</option>
+						
+							<option>459</option>
+						
+							<option>460</option>
+						
+							<option>461</option>
+						
+							<option>462</option>
+						
+							<option>463</option>
+						
+							<option>464</option>
+						
+							<option>465</option>
+						
+							<option>466</option>
+						
+							<option>467</option>
+						
+							<option>468</option>
+						
+							<option>469</option>
+						
+							<option>470</option>
+						
+							<option>471</option>
+						
+							<option>472</option>
+						
+							<option>473</option>
+						
+							<option>474</option>
+						
+							<option>475</option>
+						
+							<option>476</option>
+						
+							<option>477</option>
+						
+							<option>478</option>
+						
+							<option>479</option>
+						
+							<option>480</option>
+						
+							<option>481</option>
+						
+							<option>482</option>
+						
+							<option>483</option>
+						
+							<option>484</option>
+						
+							<option>485</option>
+						
+							<option>486</option>
+						
+							<option>487</option>
+						
+							<option>488</option>
+						
+							<option>489</option>
+						
+							<option>490</option>
+						
+							<option>491</option>
+						
+							<option>492</option>
+						
+							<option>493</option>
+						
+							<option>494</option>
+						
+							<option>495</option>
+						
+							<option>496</option>
+						
+							<option>497</option>
+						
+							<option>498</option>
+						
+							<option>499</option>
+						
+							<option>500</option>
+						
+							<option>501</option>
+						
+							<option>502</option>
+						
+							<option>503</option>
+						
+							<option>504</option>
+						
+							<option>505</option>
+						
+							<option>506</option>
+						
+							<option>507</option>
+						
+							<option>508</option>
+						
+							<option>509</option>
+						
+							<option>510</option>
+						
+							<option>511</option>
+						
+							<option>512</option>
+						
+							<option>513</option>
+						
+							<option>514</option>
+						
+							<option>515</option>
+						
+							<option>516</option>
+						
+							<option>517</option>
+						
+							<option>518</option>
+						
+							<option>519</option>
+						
+							<option>520</option>
+						
+							<option>521</option>
+						
+							<option>522</option>
+						
+							<option>523</option>
+						
+							<option>524</option>
+						
+							<option>525</option>
+						
+							<option>526</option>
+						
+							<option>527</option>
+						
+							<option>528</option>
+						
+							<option>529</option>
+						
+							<option>530</option>
+						
+							<option>531</option>
+						
+							<option>532</option>
+						
+							<option>533</option>
+						
+							<option>534</option>
+						
+							<option>535</option>
+						
+							<option>536</option>
+						
+							<option>537</option>
+						
+							<option>538</option>
+						
+							<option>539</option>
+						
+							<option>540</option>
+						
+							<option>541</option>
+						
+							<option>542</option>
+						
+							<option>543</option>
+						
+					</select>
+					of
+					543
+					
+					<a href="http://vow.mlspin.com/clients/report.aspx?thisNum=2">
+						<img border="0" src="./lex_condo_files/arrownxt.gif" align="absmiddle"></a>
+				</td>
+			</tr>
+            <tr>
+					<td colspan="7" height="4" class="VOWResultsHeading">
+						<img src="./lex_condo_files/null.gif" width="1" height="4" alt="" border="0"></td>
+			</tr>
+            <tr bgcolor="black">
+					<td colspan="7" height="1">
+						<img src="./lex_condo_files/null.gif" width="1" height="1" alt="" border="0"></td>
+			</tr>
+        
+	</tbody></table>
+ 
+<form name="Form1" method="post" action="./lex_condo_files/lex_condo.html" id="Form1">
+<div>
+<input type="hidden" name="ToolkitScriptManager2_HiddenField" id="ToolkitScriptManager2_HiddenField" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExMjI1MDA2NTUPZBYCAgEPZBYCAgMPZBYCZg9kFgRmD2QWAmYPFgIeCkNhbGxiYWNrSUQFCW1sc1JhdGluZ2QCAw8PFgQeCEltYWdlVXJsBRsvaW1hZ2VzL0Zhdm9yaXRlX25vdHNlbC5wbmceB1Rvb2xUaXAFDEFkZCBGYXZvcml0ZWRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBQlidG5TdWJtaXQFC2J0bkZhdm9yaXRl">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./lex_condo_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./lex_condo_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./lex_condo_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./lex_condo_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script src="./lex_condo_files/ScriptResource(3).axd" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwLH6Or6DwL+/t6jBwKLv+5+AsKL2t4DAsiS8ZgGAqTd77QMAr+Nw+wH">
+</div>
+     <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ToolkitScriptManager2', document.getElementById('Form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tpnlRating'], [], [], 90);
+//]]>
+</script>
+
+        <div id="pnlRating">
+	
+            
+          
+        <table>
+          <tbody><tr>
+          <td>
+            <table border="0" width="100%" cellspacing="0" cellpadding="1">
+                <tbody><tr class="VOWBodyContent">
+                    <td width="15%" align="left"><b>Rate this Listing:</b></td>
+                    <td align="left">
+                        <div id="mlsRating">
+		<input type="hidden" name="mlsRating_RatingExtender_ClientState" id="mlsRating_RatingExtender_ClientState" value="0">
+                        <a href="javascript:void(0)" id="mlsRating_A" title="0" style="text-decoration:none"><span id="mlsRating_Star_1" class="ratingStar emptyRatingStar" style="float:left;" title="I Hate it">&nbsp;</span><span id="mlsRating_Star_2" class="ratingStar emptyRatingStar" style="float:left;" title="I Dislike it">&nbsp;</span><span id="mlsRating_Star_3" class="ratingStar emptyRatingStar" style="float:left;" title="It is OK">&nbsp;</span><span id="mlsRating_Star_4" class="ratingStar emptyRatingStar" style="float:left;" title="I Like it">&nbsp;</span><span id="mlsRating_Star_5" class="ratingStar emptyRatingStar" style="float:left;" title="I Love it">&nbsp;</span></a>
+	</div>
+                    </td>
+                </tr>
+                </tbody></table>
+           </td></tr>
+           <tr>
+            <td>
+
+                
+                    <table border="0" width="100%" cellspacing="0" cellpadding="1">
+                
+                <tbody><tr><td><table><tbody><tr class="VOWBodyContent">
+					<td colspan="2" align="left"><b>Feedback:</b></td>
+				</tr>
+                 <tr class="VOWBodyContent">
+					<td colspan="2" align="left">
+                        <textarea name="txtFeedback" rows="3" cols="80" id="txtFeedback" onchange="textCounter(this, 200);" onkeyup="EnableFbKBtntextCounter(this, 200);" onkeydown="textCounter(this, 200);"></textarea>
+                    </td>
+				</tr>
+                <tr class="VOWBodyContent">
+					<td colspan="1" align="left" width="38%"><font size="1"><b><em>**Feedback is only shared between you and your Real Estate Professional</em></b></font></td>
+				    <td colspan="1" align="right" width="10%"><input type="image" name="btnSubmit" id="btnSubmit" src="./lex_condo_files/SubmitFeedbackButton.png" onmousedown="document.getElementById(&#39;btnSubmit&#39;).src=&#39;/images/SubmitFeedbackButtonB.png&#39;" onclick="Javascript:return ValidateFeedback();" style="border-width:0px;"></td>
+                    </tr> 
+                  </tbody></table></td><td>
+                  <input type="image" name="btnFavorite" id="btnFavorite" title="Add Favorite" src="./lex_condo_files/Favorite_notsel.png" style="border-width:0px;">
+                  </td></tr>
+                
+              </tbody></table>
+            </td>
+            </tr>
+          </tbody></table>
+
+          
+            <input name="hidFavoriteFlag" type="hidden" id="hidFavoriteFlag" value="0">
+            <input name="hidFeedbackRecord" type="hidden" id="hidFeedbackRecord" value="0">
+             <br>  
+            
+</div>
+        
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.RatingBehavior, {"AutoPostBack":true,"CallbackID":"mlsRating","ClientStateFieldID":"mlsRating_RatingExtender_ClientState","EmptyStarCssClass":"emptyRatingStar","FilledStarCssClass":"filledRatingStar","StarCssClass":"ratingStar","WaitingStarCssClass":"savedRatingStar","id":"RatingBehavior1"}, null, null, $get("mlsRating"));
+});
+//]]>
+</script>
+</form>
+
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr>
+					<td colspan="7" height="2" class="VOWResultsHeading">
+						<img src="./lex_condo_files/null.gif" width="1" height="2" alt="" border="0"></td>
+				</tr>
+				<tr bgcolor="black">
+					<td colspan="7" height="1">
+						<img src="./lex_condo_files/null.gif" width="1" height="1" alt="" border="0"></td>
+				</tr>
+				<tr>
+					<td colspan="7" height="2" class="VOWResultsHeading">
+						<img src="./lex_condo_files/null.gif" width="1" height="2" alt="" border="0"></td>
+				</tr>
+				<tr>
+					
+                    <td nowrap="" class="VOWResultsHeading" align="left">
+                     <font size="1" face="MS Sans Serif"><b><a href="javascript:ShowPhotoGallery('71650413');" class="Nav">
+									Large Photo<img src="./lex_condo_files/classic.gif" hspace="3" border="0" align="absmiddle"></a></b></font></td>
+					<td nowrap="" class="VOWResultsHeading" align="right" colspan="6">
+                        
+						<a href="http://vow.mlspin.com/clients/index.aspx" class="Nav">
+							<img src="./lex_condo_files/BackToListings.gif" width="19" height="20" title="Back To Listings" border="0" align="absmiddle"></a>
+						
+								<a href="javascript:PrintReport('71650413');" class="Nav">
+									<img src="./lex_condo_files/printbutton.png" title="Print this page" hspace="3" border="0" align="absmiddle"></a>
+						<a href="http://www.mapquest.com/maps/map.adp?city=Lexington&style=1&cid=lfmaplink&state=MA&address=8+Coppersmyth+Way&zip=02421&country=us&zoom=7&size=big" target="_blank" class="Nav"><img src="./lex_condo_files/MapIt_MapQuest.png" align="absmiddle" border="0" hspace="3" title="Go to Mapquest.com for a Map of this Listing"></a><a href="http://maps.google.com/maps?q=8+Coppersmyth+Way+Lexington+MA+02421" target="_blank" class="Nav"><img src="./lex_condo_files/mapit_google.png" align="absmiddle" border="0" hspace="3" title="Go to Google Maps for a Map of this Listing"></a><a href="http://local.live.com/default.aspx?v=2&where1=8%20Coppersmyth%20Way,%20Lexington,%20MA,%2002421" target="_blank" class="Nav"><img src="./lex_condo_files/MapIt_LocalLive.png" align="absmiddle" border="0" hspace="3" title="Go to Bing for a Map of this Listing"></a><a href="javascript:ShowOpenHouse('71650413');"><img src="./lex_condo_files/openhouse.png" hspace="3" align="absmiddle" border="0" title="This listing has an Open House"></a><a href="javascript:ViewTour('http://bostonrep.com/photos/8Coppersmyth/','','');"><img src="./lex_condo_files/Photo-Gallery-BostonREP3.gif" align="absmiddle" hspace="3" border="0" title="This listing has a Photo Gallery by BostonREP.com - also offering Floor Plans &amp; Virtual Tours." onmouseover="window.status=&#39;This listing has a Photo Gallery by BostonREP.com - also offering Floor Plans &amp; Virtual Tours.&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;"></a>
+					</td>
+				</tr>
+			</tbody></table>
+		
+<table width="100%" border="0" bgcolor="ffffff">
+    <tbody><tr>
+        <td align="center" width="100%">
+            <table border="0" width="98%" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    
+                    <td width="256" valign="bottom">
+                        <table width="256" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td colspan="3" width="384">
+                                    <img border="1" name="pane_71650413" src="./lex_condo_files/photo.aspx" width="256">
+                                </td>
+                            </tr>
+                            
+                            <tr bgcolor="efefef" class="noprint">
+                                <td width="20">
+                                    <a href="javascript:GetPhoto('minus');" onmouseover="window.status=&#39;View Previous Photo&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;">
+                                        <img src="./lex_condo_files/arrowprv.gif" border="0" alt="View Previous Photo" align="absmiddle"></a>
+                                </td>
+                                <td width="344" align="center" class="h">
+                                    <strong>
+                                        28
+                                        Photos</strong>
+                                </td>
+                                <td width="20" align="right">
+                                    <a href="javascript:GetPhoto('plus');" onmouseover="window.status=&#39;View Next Photo&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;">
+                                        <img src="./lex_condo_files/arrownxt.gif" border="0" alt="View Next Photo" align="absmiddle"></a>
+                                </td>
+                            </tr>
+                            <script language="JavaScript">
+				  				
+									CurrentPhoto = 0;
+								PhotoNum_0="/photo/photo.aspx?h=200&w=256&mls=71650413&n=0&o=";
+PhotoNum_1="/photo/photo.aspx?h=200&w=256&mls=71650413&n=1&o=";
+PhotoNum_2="/photo/photo.aspx?h=200&w=256&mls=71650413&n=2&o=";
+PhotoNum_3="/photo/photo.aspx?h=200&w=256&mls=71650413&n=3&o=";
+PhotoNum_4="/photo/photo.aspx?h=200&w=256&mls=71650413&n=4&o=";
+PhotoNum_5="/photo/photo.aspx?h=200&w=256&mls=71650413&n=5&o=";
+PhotoNum_6="/photo/photo.aspx?h=200&w=256&mls=71650413&n=6&o=";
+PhotoNum_7="/photo/photo.aspx?h=200&w=256&mls=71650413&n=7&o=";
+PhotoNum_8="/photo/photo.aspx?h=200&w=256&mls=71650413&n=8&o=";
+PhotoNum_9="/photo/photo.aspx?h=200&w=256&mls=71650413&n=9&o=";
+PhotoNum_10="/photo/photo.aspx?h=200&w=256&mls=71650413&n=A&o=";
+PhotoNum_11="/photo/photo.aspx?h=200&w=256&mls=71650413&n=B&o=";
+PhotoNum_12="/photo/photo.aspx?h=200&w=256&mls=71650413&n=C&o=";
+PhotoNum_13="/photo/photo.aspx?h=200&w=256&mls=71650413&n=D&o=";
+PhotoNum_14="/photo/photo.aspx?h=200&w=256&mls=71650413&n=E&o=";
+PhotoNum_15="/photo/photo.aspx?h=200&w=256&mls=71650413&n=F&o=";
+PhotoNum_16="/photo/photo.aspx?h=200&w=256&mls=71650413&n=G&o=";
+PhotoNum_17="/photo/photo.aspx?h=200&w=256&mls=71650413&n=H&o=";
+PhotoNum_18="/photo/photo.aspx?h=200&w=256&mls=71650413&n=I&o=";
+PhotoNum_19="/photo/photo.aspx?h=200&w=256&mls=71650413&n=J&o=";
+PhotoNum_20="/photo/photo.aspx?h=200&w=256&mls=71650413&n=K&o=";
+PhotoNum_21="/photo/photo.aspx?h=200&w=256&mls=71650413&n=L&o=";
+PhotoNum_22="/photo/photo.aspx?h=200&w=256&mls=71650413&n=M&o=";
+PhotoNum_23="/photo/photo.aspx?h=200&w=256&mls=71650413&n=N&o=";
+PhotoNum_24="/photo/photo.aspx?h=200&w=256&mls=71650413&n=O&o=";
+PhotoNum_25="/photo/photo.aspx?h=200&w=256&mls=71650413&n=P&o=";
+PhotoNum_26="/photo/photo.aspx?h=200&w=256&mls=71650413&n=Q&o=";
+PhotoNum_27="/photo/photo.aspx?h=200&w=256&mls=71650413&n=R&o=";
+       
+							 	function GetPhoto(plusminus)
+								{
+									
+									if (plusminus == "plus")
+										{
+											CurrentPhoto = CurrentPhoto + 1;
+										}
+									else
+										{
+											CurrentPhoto = CurrentPhoto - 1;
+										}
+									if (CurrentPhoto >= 28)
+										{
+											CurrentPhoto = 0;
+										}
+									if (CurrentPhoto < 0)
+										{
+										 CurrentPhoto= 28 - 1;
+										}
+									myvar = eval("PhotoNum_" + CurrentPhoto);
+									document.pane_71650413.src=myvar;
+								
+								}
+                            </script>
+                            
+                        </tbody></table>
+                    </td>
+                    <td align="center" valign="top">
+                        <b>&nbsp;</b>
+                    </td>
+                    
+                    <td align="center" valign="top" bgcolor="#efefef">
+                        <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <tbody><tr>
+                                <td bgcolor="#ffffff">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody><tr>
+                                            <td class="big">
+                                                <b>
+                                                    MLS #&nbsp;71650413
+                                                    -
+                                                    New<br>
+                                                    Condo
+                                                    -
+                                                    Townhouse, Shingle</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table width="100%" cellspacing="0" border="0" bgcolor="#efefef">
+                            <tbody><tr>
+                                <td>
+                                    <b>
+                                        8 Coppersmyth Way&nbsp;-&nbsp;Unit&nbsp;8</b>
+                                </td>
+                                <td>
+                                    List Price: <b>
+                                                $849,900</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>
+                                        Lexington, MA 02421
+                                    </b>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <b>
+                                        Middlesex&nbsp;County</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Unit Placement: <b>
+                                        End</b>
+                                </td>
+                                <td>
+                                    Total Rooms: <b>
+                                        9</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Unit Level: <b>
+                                        1</b>
+                                </td>
+                                <td>
+                                    Bedrooms: <b>
+                                        3</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Grade School: <b>
+                                        Bridge</b>
+                                </td>
+                                <td>
+                                    Bathrooms: <b>
+                                        2f 1h
+                                </b></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Middle School: <b>
+                                        Clarke</b>
+                                </td>
+                                <td>
+                                    Master Baths: <b>
+                                        Yes</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    High School: <b>
+                                        Lexington High</b>
+                                </td>
+                                <td>
+                                    Fireplaces: <b>
+                                        1</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Outdoor Space Avail: <b>
+                                        --</b>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Handicap Access/Features: <b>
+                                        --</b>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        
+                        <table width="100%" cellspacing="0" bgcolor="#efefef">
+                            <tbody><tr>
+                                <td>
+                                    Directions: <b>
+                                        Marrett Rd to Coppersmyth Way</b>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td>
+                        <img border="0" src="./lex_condo_files/null.gif" width="1" height="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="h">Remarks</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                    </td>
+                </tr>
+            </tbody></table>
+            <table width="98%" border="0" cellpadding="2" cellspacing="0" bgcolor="#efefef">
+                <tbody><tr>
+                    <td>
+                        <b>
+                            Young, sparkling 2/3 bedroom unit at Lexington’s coveted Coppersmyth Way!  Gleaming hardwood floors welcome you as you enter this sunny unit with spacious living/dining room combination boasting a gas fireplace and cathedral ceilings.  The recently renovated kitchen offers stainless steel appliances and granite counters, as well as an eat-in breakfast area.  The cozy sitting room or den with French doors is perfect for curling up with a book.  First floor master bedroom with spacious bathroom and plentiful closet space. The second floor offers a spacious bedroom with walk in closet, large bathroom and third bedroom/office.  Fully finished lower level walkout has a family room and office or possible guest suite.  Surround sound speakers installed throughout.  Rear deck offers privacy and wooded views. Conveniently located within walking distance to public transportation, Bridge Elementary School, the “Old Res” and Lincoln Field!</b>
+                    </td>
+                </tr>
+            </tbody></table>
+            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td>
+                        <img border="0" src="./lex_condo_files/null.gif" width="1" height="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="h">Property Information</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                    </td>
+                </tr>
+            </tbody></table>
+            <table width="98%" cellspacing="0" bgcolor="#efefef">
+                <tbody><tr>
+                    <td valign="top" nowrap="">
+                        Approx. Living Area: <b>
+                            3300&nbsp;sq. ft.
+                            ($257.55/sq. ft.)
+                        </b>&nbsp;
+                    </td>
+                    <td nowrap="" valign="top">
+                        Approx. Acres: <b>
+                            
+                            
+                        </b>
+                    </td>
+                    <td valign="top">
+                        Garage Spaces: <b>
+                            2&nbsp;&nbsp;
+                            Attached, Garage Door Opener, Storage, Insulated</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Living Area Includes:
+                        <b>Finished
+                            Basement</b>
+                    </td>
+                    <td valign="top">
+                        Heat Zones: <b>
+                            2&nbsp;&nbsp;Forced Air, Gas</b>
+                    </td>
+                    <td valign="top">
+                        Parking Spaces: <b>
+                            4&nbsp;&nbsp;Off-Street, Paved Driveway</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Living Area Source: <b>
+                            Measured</b>
+                    </td>
+                    <td valign="top">
+                        Cool Zones: <b>
+                            2&nbsp;&nbsp;Central Air</b>
+                    </td>
+                    <td valign="top">
+                        Levels in Unit: <b>
+                            3</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" colspan="3">
+                        Living Area Disclosures: <b>
+                            Includes 950 sq ft in Lower Level</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" colspan="3">
+                        Disclosures: <b>
+                        Washer, dryer, refrigerator and mirror in 2nd floor bedroom are negotiable. Seller requests September 15th closing. Third bedroom on 2nd floor lacks closet.</b>
+                    </td>
+                </tr>
+                <tr bgcolor="white">
+                    <td colspan="3">
+                        <img border="0" src="./lex_condo_files/null.gif" width="1" height="4">
+                    </td>
+                </tr>
+                <tr bgcolor="white">
+                    <td colspan="3">
+                        <b class="h">Complex &amp; Association Information</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Complex Name:<b>
+                            Coppesmyth Way</b>
+                    </td>
+                    <td valign="top">
+                        Units in Complex: <b>
+                            8</b>&nbsp; Complete: <b>
+                                Yes</b>
+                    </td>
+                    <td valign="top">
+                        Units Owner Occupied: <b>
+                            </b>&nbsp; Source: <b>
+                                </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" nowrap="">
+                        Association: <b>
+                            Yes</b> &nbsp;&nbsp;&nbsp;
+                        Fee: <b>$
+                            568
+                            &nbsp;
+                            Monthly
+                            </b>
+                    </td>
+                    <td valign="top" colspan="2">
+                        Fee Includes: <b>
+                            Master Insurance, Exterior Maintenance, Road Maintenance, Landscaping, Snow Removal</b>
+                    </td>
+                </tr>
+                
+            </tbody></table>
+            
+            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td>
+                        <img border="0" src="./lex_condo_files/null.gif" width="1" height="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b class="h">Room Levels, Dimensions and Features </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                    </td>
+                </tr>
+            </tbody></table>
+            <table width="98%" border="0" cellspacing="0" bgcolor="#efefef">
+                <tbody><tr>
+                    <td valign="top" width="128">
+                        <b>Room</b>
+                    </td>
+                    <td valign="top" width="64" align="center">
+                        <b>Level</b>
+                    </td>
+                    <td valign="top" width="64" align="center">
+                        <b>Size</b>
+                    </td>
+                    <td>
+                        <b>Features</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Living Room:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            16x14</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Fireplace, Ceiling - Cathedral, Flooring - Hardwood, French Doors, Deck - Exterior, Recessed Lighting</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Dining Room:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            14x11</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Flooring - Hardwood</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Family Room:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            B</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            21x16</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Flooring - Wall to Wall Carpet, Exterior Access, Recessed Lighting</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Kitchen:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            16x11</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Ceiling - Cathedral, Dining Area, Countertops - Stone/Granite/Solid, Recessed Lighting, Stainless Steel Appliances</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Master Bedroom:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            14x13</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Bathroom - Full, Ceiling Fan(s), Closet - Walk-in, Flooring - Wall to Wall Carpet</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Bedroom
+                        2:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            2</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            16x15</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Ceiling - Cathedral, Ceiling Fan(s), Closet - Walk-in, Flooring - Wall to Wall Carpet</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Bedroom
+                        3:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            2</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            13x11</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Flooring - Wall to Wall Carpet</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Bath
+                        1:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            5x5</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Bathroom - Half, Flooring - Stone/Ceramic Tile</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Bath
+                        2:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            14x9</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Bathroom - Full, Closet - Linen, Flooring - Stone/Ceramic Tile, Countertops - Stone/Granite/Solid, Jacuzzi / Whirlpool Soaking Tub, Double Vanity</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Bath
+                        3:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            2</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            14x13</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Bathroom - Full, Closet - Linen, Flooring - Stone/Ceramic Tile, Countertops - Stone/Granite/Solid, Jacuzzi / Whirlpool Soaking Tub, Double Vanity</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Laundry:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            B</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            12x9</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Closet - Linen, Closet/Cabinets - Custom Built, Flooring - Vinyl</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Den:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            12x7</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Flooring - Hardwood, French Doors</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Mud Room:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            </b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Closet, Flooring - Stone/Ceramic Tile</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Office:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            B</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            15x13</b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Closet, Flooring - Stone/Ceramic Tile</b>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td valign="top" nowrap="">
+                        Foyer:
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            1</b>
+                    </td>
+                    <td valign="top" align="center">
+                        <b>
+                            </b>
+                    </td>
+                    <td valign="top">
+                        <b>
+                            Ceiling - Cathedral, Closet, Flooring - Wall to Wall Carpet, Recessed Lighting</b>
+                    </td>
+                </tr>
+                
+            </tbody></table>
+            <table border="0" width="98%" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td align="center" valign="top" bgcolor="#efefef">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td bgcolor="#ffffff">
+                                    <img border="0" src="./lex_condo_files/null.gif" width="1" height="8">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <b class="h">Features</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table width="100%" border="0" cellspacing="0" bgcolor="#efefef">
+                            
+                            <tbody><tr>
+                                <td>
+                                    Area Amenities: <b>
+                                        Public Transportation, Shopping, Swimming Pool, Tennis Court, Park, Walk/Jog Trails, Stables, Golf Course, Medical Facility, Bike Path, Conservation Area, Highway Access, Public School</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Appliances: <b>
+                                        Range, Disposal, Microwave, Refrigerator</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Association Pool: <b>
+                                        No</b>
+                                    
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Basement: <b>
+                                        Yes</b>
+                                        Full, Finished
+                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Beach: <b>
+                                        No
+                                    </b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Construction: <b>
+                                        Frame, Conventional (2x4-2x6)</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Docs in Hand: <b>
+                                        Master Deed, Rules &amp; Regs, Management Association Bylaws, Other (See Remarks)</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Electric Features: <b>
+                                        200 Amps</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Exterior: <b>
+                                        Shingles</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Exterior Features: <b>
+                                        Porch, Deck - Wood, Screens, Gutters, Professional Landscaping, Sprinkler System</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Flooring: <b>
+                                        Tile, Vinyl, Wall to Wall Carpet, Hardwood</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Hot Water: <b>
+                                        Tank</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Interior Features: <b>
+                                        Central Vacuum, Security System, Cable Available, French Doors, Other (See Remarks)</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Pets Allowed: <b>
+                                        Yes w/ Restrictions
+                                        
+                                        -Other (See Remarks)
+                                        
+                                    </b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Roof Material: <b>
+                                        Asphalt/Fiberglass Shingles</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Sewer Utilities: <b>
+                                        City/Town Sewer
+                                        
+                                        
+                                    </b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Sewage District: <b>
+                                        MWRA<b>
+                                </b></b></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Terms: <b>
+                                        Contract for Deed</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Water Utilities: <b>
+                                        City/Town Water</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Utility Connections: <b>
+                                        for Gas Range, Washer Hookup, Icemaker Connection</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Waterfront: <b>
+                                        No
+                                    </b>
+                                </td>
+                            </tr>
+                             
+                        </tbody></table>
+                    </td>
+                    <td align="center" valign="top">
+                        &nbsp;
+                    </td>
+                    <td align="center" valign="top" bgcolor="#efefef">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td bgcolor="#ffffff">
+                                    <img border="0" src="./lex_condo_files/null.gif" width="1" height="8">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <b class="h">Other Property Info</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table width="100%" border="0" cellspacing="0" bgcolor="#efefef">
+                            
+                            <tbody><tr>
+                                <td>
+                                    Adult Community: <b>
+                                        No</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Disclosure Declaration: <b>
+                                        No</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Elevator: <b>
+                                        No</b>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    Laundry Features: <b>
+                                        In Unit
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Exclusions: <b>
+                                        </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lead Paint: <b>
+                                        None</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    UFFI: <b>
+                                        --</b>&nbsp;&nbsp;Warranty Features:
+                                    <b>
+                                        --</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Year Built/Converted: <b>
+                                        1999/</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Year Built Source: <b>
+                                        Public Record</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Year Built Desc: <b>
+                                        Actual</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Year Round: <b>
+                                        Yes</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Short Sale w/Lndr.App.Req:&nbsp;<b>No</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lender Owned:&nbsp;<b>No</b>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td bgcolor="#ffffff">
+                                    <img border="0" src="./lex_condo_files/null.gif" width="1" height="8">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <b class="h">Tax Information</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#ffffff">
+                                    <img border="0" src="./lex_condo_files/blue.gif" width="100%" height="1">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table width="100%" border="0" cellspacing="0" bgcolor="#efefef">
+                            <tbody><tr>
+                                <td>
+                                    Pin #: <b>
+                                        </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Assessed: <b>$685,000</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tax: <b>$10,624</b>&nbsp; Tax Year: <b>
+                                        2014</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Book: <b>
+                                        50762</b>&nbsp; Page: <b>
+                                            528</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cert: <b>
+                                        </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Zoning Code: <b>
+                                        RS</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Map: <b>
+                                        42</b>&nbsp; Block: <b>
+                                            </b>&nbsp; Lot: <b>
+                                                051A-3</b>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+            
+        </td>
+    </tr>
+</tbody></table>
+
+
+                <table width="100%" border="0" bgcolor="ffffff">
+                    <tbody><tr>
+                        <td align="center" width="100%">
+                            <table width="98%" align="center">
+                                <tbody><tr>
+                                <td>
+
+                                    
+                                    <iframe src="./lex_condo_files/rates.html" frameborder="0" scrolling="auto" width="100%" height="320"></iframe>     
+                                </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>    
+			
+<br>
+
+
+	</td>
+	
+		<td bgcolor="white">
+			&nbsp;&nbsp;&nbsp;</td>
+		<!--- BUFFER --->
+	
+	</tr>
+	
+		<tr>
+			<td colspan="6" bgcolor="navy">
+				<img src="./lex_condo_files/null.gif" height="4"></td>
+		</tr>
+		<tr>
+			<td colspan="6" bgcolor="navy" class="VOWFooter" align="center">
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="6" bgcolor="navy">
+				<img src="./lex_condo_files/null.gif" height="4"></td>
+		</tr>
+	
+	</tbody></table> </center>
+	<br>
+	<br>
+	
+	<center>
+		<table width="750">
+			<tbody><tr>
+				<td align="center">
+					<font size="1" face="MS Sans Serif">
+						Servicing:  Acton, Andover, Bedford, Belmont, Billerica, Boston, Boxborough, Burlington, Carlisle, Chelmsford, Concord, Dover, Framingham, Lexington, Lincoln, Littleton, Natick, Newton, North Andover, North Reading, Norwood, Sudbury, Tewksbury, Waltham, Wayland, Wellesley, Westford, Weston, Winchester
+						<br>
+						<br>
+					</font>
+				</td>
+			</tr>
+		</tbody></table>
+	</center>
+
+
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

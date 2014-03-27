@@ -9,13 +9,16 @@ class MlspinCrawler
   
   def get_listing
     get_first_page
-    (2..@page_count).each { |page_index| get_one_page(page_index) }
+    # (2..@page_count).each { |page_index| get_one_page(page_index) }
   end
 
-  # get_details("9 Keeler Farm Lexington, MA", '')  
+  # get_details("8 Coppersmyth Way U: 8 Lexington, MA", '')  
   def get_page_details(addr, link)
-    # TODO: read content from link
-    content = File.read("spec/fixtures/one_house.html")
+    # content = File.read("spec/fixtures/lex_condo.html")
+    # response = HTTParty.get(link, headers: {'Cookie' => @cookie } )
+    # content = response.body
+    
+    Rails.logger.debug "Parse details for addr #{addr}, content: #{content}"
     get_details(addr, content)
   end
   
@@ -246,6 +249,10 @@ protected
       home.update_attributes(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"), link: link)
     else
       Home.create!(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"), link: link)
+      if link
+        get_page_details(addr, "http://vow.mlspin.com/clients/#{link}")
+        sleep 2
+      end
     end
   rescue => e
     Rails.logger.error "Failed to upsert home for #{addr} due to #{e.message}"
@@ -256,8 +263,6 @@ protected
     response = HTTParty.get("http://vow.mlspin.com/?cid=3146169&pass=#{APP_CONFIG['mlspin_pass']}")
     response_body = response.body
     @cookie = response.request.options[:headers]['Cookie']
-    # page_2 = HTTParty.get('http://vow.mlspin.com/clients/index.aspx?p=2&s=100', headers: {'Cookie' => @cookie } )
-    # response_body = File.read("spec/fixtures/mlspin.html") # read from local disk
     doc = Nokogiri::HTML(response_body)
     
     pager = doc.css("td.VOWResultsHeading select[name=p]")
@@ -296,6 +301,10 @@ protected
       time = sanitize_str(table_node.children[i].children[25 + offset].text)
       
       upsert(status, size, price, addr, date, time, link)
+      
+      if link
+        break
+      end
     end
   end
 end
