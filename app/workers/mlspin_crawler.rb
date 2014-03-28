@@ -12,23 +12,24 @@ class MlspinCrawler
     # (2..@page_count).each { |page_index| get_one_page(page_index) }
   end
 
-  # get_details("8 Coppersmyth Way U: 8 Lexington, MA", '')  
+  # get_page_details("8 Coppersmyth Way U: 8 Lexington, MA", '')  
   def get_page_details(addr, link)
     # content = File.read("spec/fixtures/lex_condo.html")
-    # response = HTTParty.get(link, headers: {'Cookie' => @cookie } )
-    # content = response.body
+    response = HTTParty.get(link, headers: {'Cookie' => @cookie } )
+    content = response.body
     
-    Rails.logger.debug "Parse details for addr #{addr}, content: #{content}"
+    Rails.logger.debug "Parse details for addr #{addr}"
     get_details(addr, content)
   end
   
   def get_details(addr, content)
     home = Home.find_by(addr: addr)
     doc = Nokogiri::HTML(content)
-
+    
     # Parse Remarks
     remark_table = nil
-    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table').each do |table|
+    # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table').each do |table|
+    doc.css('html>body>center>table>tr>td>table>tr>td>table').each do |table|
       if table.text.strip == 'Remarks'
         remark_table = table
       end
@@ -40,7 +41,8 @@ class MlspinCrawler
     
     # Parse Room details
     table_node = nil
-    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr').each do |element|
+    # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr').each do |element|
+    doc.css('html>body>center>table>tr>td>table>tr>td>table>tr').each do |element|
       if element.children.size >= 6 && element.children[0].text.strip == 'Room' && element.children[2].text.strip == 'Level'
         table_node = element.parent
       end
@@ -59,7 +61,8 @@ class MlspinCrawler
     home[:room_details] = rooms
     
     # Parse Property Information section
-    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
+    # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
+    doc.css('html>body>center>table>tr>td>table>tr>td>table>tr>td').each do |element|
       if element.children[0].name == "text" && element.children[0].text.strip.end_with?(":")
         if element.children.size>1 && element.children[1].name == "b"
           case element.text
@@ -91,7 +94,8 @@ class MlspinCrawler
     end  
 
     # Parse Basic, Features, Other Property Info
-    doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
+    # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
+    doc.css('html>body>center>table>tr>td>table>tr>td>table>tr>td>table>tr>td').each do |element|
       case element.text
       when /Style:/
         update_attribute(home, 'Style', element)
@@ -242,11 +246,16 @@ protected
     home[name.downcase.gsub(/[\s\.\/]+/, "_").to_sym] = sanitize_str(element.text.gsub("#{name}:", ''))
   end
   
-  def upsert(status, size, price, addr, date, time, link)
+  def upsert(status, size, price, addr, date, time, link, fetch_if_exists = false)
     if Home.where(addr: addr).count > 0
       Rails.logger.debug "Home #{addr} already exists"
       home = Home.find_by(addr: addr)
       home.update_attributes(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"), link: link)
+      
+      if link && fetch_if_exists
+        get_page_details(addr, "http://vow.mlspin.com/clients/#{link}")
+        sleep 2
+      end
     else
       Home.create!(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"), link: link)
       if link
@@ -300,11 +309,7 @@ protected
       date = sanitize_str(table_node.children[i].children[23 + offset].text)
       time = sanitize_str(table_node.children[i].children[25 + offset].text)
       
-      upsert(status, size, price, addr, date, time, link)
-      
-      if link
-        break
-      end
+      upsert(status, size, price, addr, date, time, link, true)
     end
   end
 end
