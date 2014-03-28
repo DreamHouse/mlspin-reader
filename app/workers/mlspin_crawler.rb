@@ -4,12 +4,12 @@ class MlspinCrawler
   def sanitize_str(str)
     # replace &nbsp; with space
     # get rid of newline
-    str.gsub("\xC2\xA0", " ").gsub("\n", "").squeeze(" ").strip
+    str.gsub("\xC2\xA0", " ").gsub("\n", "").gsub("\r", "").squeeze(" ").strip
   end
   
   def get_listing
     get_first_page
-    # (2..@page_count).each { |page_index| get_one_page(page_index) }
+    (2..@page_count).each { |page_index| get_one_page(page_index) }
   end
 
   # get_page_details("8 Coppersmyth Way U: 8 Lexington, MA", '')  
@@ -309,7 +309,7 @@ protected
       date = sanitize_str(table_node.children[i].children[23 + offset].text)
       time = sanitize_str(table_node.children[i].children[25 + offset].text)
       
-      upsert(status, size, price, addr, date, time, link, true)
+      upsert(status, size, price, addr, date, time, link, false)
     end
   end
 end
