@@ -8,3 +8,4 @@ tail.sh
 prepare_checkin.sh
 log
 db/development.sqlite3
+tmp

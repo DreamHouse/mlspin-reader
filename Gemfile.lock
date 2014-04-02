@@ -52,6 +52,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
+    haml (4.0.5)
+      tilt
     hike (1.2.3)
     httparty (0.13.0)
       json (~> 1.8)
@@ -171,6 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  haml
   httparty
   jquery-rails
   mongoid (~> 3.0.4)
