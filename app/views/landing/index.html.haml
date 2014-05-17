@@ -17,40 +17,50 @@
 .jumbotron
   .logo-img
     =image_tag "logo.png"
-  .search-box
-    .search-text
-      最低价格
-    .search-input
-      %select
-        %option 不限
-        %option 0-10万
-        %option 10万-20万
-    .search-text
-      最高价格
-    .search-input
-      %select
-        %option 不限
-        %option 10万-20万
-        %option 100万－200万
-    .search-text
-      卧室
-    .search-input
-      %select
-        %option 无所谓
-        %option 至少1间
-        %option 至少2间
-        %option 至少3间
-        %option 4间以上
-    .search-text
-      卫生间
-    .search-input
-      %select
-        %option 无所谓
-        %option 至少1间
-        %option 至少1间半
-        %option 至少2间
-    .search-button
-      %button{type: "submit", class: "btn btn-warning"} 开始找房
+  %form{ :action => "/landing/search", :method => "post"}
+    .search-box
+      .search-text
+        最低价格
+      .search-input
+        %select#min_price{:name => "min_price"}
+          %option{:value => 0} 不限
+          %option{:value => 10} 10万
+          %option{:value => 20} 20万
+      .search-text
+        最高价格
+      .search-input
+        %select#max_price{:name => "max_price"}
+          %option{:value => 10000000000} 不限
+          %option{:value => 50} 50万
+          %option{:value => 100} 100万
+          %option{:value => 200} 200万
+      .search-text
+        卧室
+      .search-input
+        %select
+          %option 无所谓
+          %option 至少1间
+          %option 至少2间
+          %option 至少3间
+          %option 4间以上
+      .search-text
+        卫生间
+      .search-input
+        %select
+          %option 无所谓
+          %option 至少1间
+          %option 至少1间半
+          %option 至少2间
+        城镇
+      .search-input
+        %select#town{:name => "town"}
+          %option{:value=> "Arlington"} Arlington
+          %option{:value=> "Belmont"} Belmont
+          %option{:value=> "Lexington"} Lexington
+          %option{:value=> "Newton"} Newton
+          %option{:value=> "Winchester"} Winchester
+      .search-button
+        %button{type: "submit", class: "btn btn-warning"} 开始找房
 .container
   .row.campaign
     .col-md-4
