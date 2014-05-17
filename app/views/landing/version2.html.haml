@@ -1,0 +1,139 @@
+.container#top-ad-container
+  .col-md-12
+    .ad-img
+      =image_tag "paul_ad.jpg", :class => "top-ad"
+.navbar.navbar-default
+  .container
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{href: "#"} 搜索房产
+        %li
+          %a{href: "#"} 最近新房
+        %li
+          %a{href: "#"} 业主售房
+      %ul.nav.navbar-nav.navbar-right
+        %form.navbar-form.navbar-right
+          .form-group
+            %input{type: "text", placeholder: "邮箱", class: "form-control"}
+            %button{type: "submit", class: "btn btn-primary"} 新手上路
+            %button{type: "submit", class: "btn btn-primary"} 登陆
+.jumbotron
+  .logo-img
+    =image_tag "logo.png"
+  .search-box
+    .search-text
+      最低价格
+    .search-input
+      %select
+        %option 不限
+        %option 0-10万
+        %option 10万-20万
+    .search-text
+      最高价格
+    .search-input
+      %select
+        %option 不限
+        %option 10万-20万
+        %option 100万－200万
+    .search-text
+      卧室
+    .search-input
+      %select
+        %option 无所谓
+        %option 至少1间
+        %option 至少2间
+        %option 至少3间
+        %option 4间以上
+    .search-text
+      卫生间
+    .search-input
+      %select
+        %option 无所谓
+        %option 至少1间
+        %option 至少1间半
+        %option 至少2间
+    .search-button
+      %button{type: "submit", class: "btn btn-warning"} 开始找房
+.container
+  .row.campaign
+    .col-md-4
+      .carousel.slide#new_house_carousel
+        %ol.carousel-indicators
+          %li{"data-target" => "#new_house_carousel", "data-slide-to" => "0", "class" => "active"}
+          %li{"data-target" => "#new_house_carousel", "data-slide-to" => "1"}
+          %li{"data-target" => "#new_house_carousel", "data-slide-to" => "2"}
+        .carousel-inner
+          .item.active
+            =image_tag "house_sample_1.jpg"
+            .carousel-caption 本周新房
+          .item
+            =image_tag "house_sample_2.jpg"
+            .carousel-caption 本周新房
+          .item
+            =image_tag "house_sample_3.jpg"
+            .carousel-caption 本周新房
+        %a{"class"=>"left carousel-control", "href"=>"#new_house_carousel", "data-slide"=>"prev"}
+          %span<
+        %a{"class"=>"right carousel-control", "href"=>"#new_house_carousel", "data-slide"=>"next"}
+          %span>
+    .col-md-4
+      .carousel.slide#apt_carousel
+        %ol.carousel-indicators
+          %li{"data-target" => "#apt_carousel", "data-slide-to" => "0", "class" => "active"}
+          %li{"data-target" => "#apt_carousel", "data-slide-to" => "1"}
+          %li{"data-target" => "#apt_carousel", "data-slide-to" => "2"}
+        .carousel-inner
+          .item.active
+            =image_tag "apt_sample_1.jpg"
+            .carousel-caption 投资热点
+          .item
+            =image_tag "apt_sample_2.jpg"
+            .carousel-caption 投资热点
+          .item
+            =image_tag "apt_sample_3.jpg"
+            .carousel-caption 投资热点
+        %a{"class"=>"left carousel-control", "href"=>"#apt_carousel", "data-slide"=>"prev"}
+          %span<
+        %a{"class"=>"right carousel-control", "href"=>"#apt_carousel", "data-slide"=>"next"}
+          %span>
+    .col-md-4
+      .carousel.slide#sell_carousel
+        %ol.carousel-indicators
+          %li{"data-target" => "#sell_carousel", "data-slide-to" => "0", "class" => "active"}
+          %li{"data-target" => "#sell_carousel", "data-slide-to" => "1"}
+          %li{"data-target" => "#sell_carousel", "data-slide-to" => "2"}
+        .carousel-inner
+          .item.active
+            =image_tag "sell_sample_1.jpg"
+            .carousel-caption 业主直售
+          .item
+            =image_tag "sell_sample_2.jpg"
+            .carousel-caption 业主直售
+          .item
+            =image_tag "sell_sample_3.jpg"
+            .carousel-caption 业主直售
+        %a{"class"=>"left carousel-control", "href"=>"#sell_carousel", "data-slide"=>"prev"}
+          %span<
+        %a{"class"=>"right carousel-control", "href"=>"#sell_carousel", "data-slide"=>"next"}
+          %span>
+.container
+  .row
+    .col-md-4
+      %h2 Lexington
+      %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
+      %p
+        %a{href: "#", class: "btn btn-default"}查看详情》
+    .col-md-4
+      %h2 Belmont
+      %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
+      %p
+        %a{href: "#", class: "btn btn-default"}查看详情》
+    .col-md-4
+      %h2 Arlington
+      %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
+      %p
+        %a{href: "#", class: "btn btn-default"}查看详情》
+  %hr
+  %footer
+    %p @ 美房美地 2014
