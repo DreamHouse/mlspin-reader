@@ -24,16 +24,15 @@
       .search-input
         %select#min_price{:name => "min_price"}
           %option{:value => 0} 不限
-          %option{:value => 10} 10万
-          %option{:value => 20} 20万
+          - (1..10).each do |price|
+            %option{:value => price*10 } #{price*10}万
       .search-text
         最高价格
       .search-input
         %select#max_price{:name => "max_price"}
           %option{:value => 10000000000} 不限
-          %option{:value => 50} 50万
-          %option{:value => 100} 100万
-          %option{:value => 200} 200万
+          - (5..20).each do |price|
+            %option{:value => price*10 } #{price*10}万
       .search-text
         卧室
       .search-input

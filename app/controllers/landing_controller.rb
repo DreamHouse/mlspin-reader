@@ -11,9 +11,8 @@ class LandingController < ApplicationController
     min_price = params[:min_price].to_i * 10000
     max_price = params[:max_price].to_i * 10000
     town = params[:town]
-    
-    Rails.logger.info "min price: #{min_price}"
-    @homes = Home.between(price: min_price..max_price)
-    render 'search_list'
+
+    @homes = Home.between(price: min_price..max_price).paginate(:page => params[:page], :per_page => 30)
+    render 'search_list', layout: "top_bar"
   end
 end

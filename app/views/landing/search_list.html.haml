@@ -1,1 +1,10 @@
-%h1 Found #{@homes.count} homes
+.container#home_list
+  = will_paginate @homes
+  - @homes.each do |home|
+    .row
+      .col-md-4
+        %p=home.addr
+      .col-md-4
+        %p=home.price
+      .col-md-4
+        %p=home.status
