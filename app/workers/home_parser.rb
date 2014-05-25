@@ -8,18 +8,29 @@
 
 class HomeParser
   include StringHelper
-  def initialize(addr, link)
+  def initialize(addr, link, cookie)
     @addr = addr
     @link = link
+    @cookie = cookie
   end
   
   def get_page_details
-    content = File.read("spec/fixtures/new_house.html")
-    # response = HTTParty.get(@link, headers: {'Cookie' => @cookie } )
-    #content = response.body
+    # content = File.read("spec/fixtures/new_house.html")
+    response = HTTParty.get(@link, headers: {'Cookie' => @cookie } )
+    content = response.body
     
     Rails.logger.debug "Parse details for addr #{@addr}"
     get_details(content)
+    
+    Rails.logger.debug "Download images for addr #{@addr}"
+    download_image
+  end
+  
+  def download_image
+    home = Home.find_by(addr: @addr)
+    if home[:mls] && home[:photo_count]
+      ImageDownloader.new(home[:mls], home[:photo_count]).download
+    end
   end
   
   def get_details(content)
@@ -30,7 +41,7 @@ class HomeParser
     remark_table = nil
     # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table').each do |table|
     doc.css('html>body>center>table>tr>td>table>tr>td>table').each do |table|
-      if table.text.strip == 'Remarks'
+      if table.text && table.text.strip == 'Remarks'
         remark_table = table
       end
     end
@@ -43,7 +54,8 @@ class HomeParser
     table_node = nil
     # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr').each do |element|
     doc.css('html>body>center>table>tr>td>table>tr>td>table>tr').each do |element|
-      if element.children.size >= 6 && element.children[0].text.strip == 'Room' && element.children[2].text.strip == 'Level'
+      if element.children.size >= 6 && element.children[0].text && element.children[0].text.strip == 'Room' \
+        && element.children[2].text && element.children[2].text.strip == 'Level'
         table_node = element.parent
       end
     end  
@@ -63,7 +75,7 @@ class HomeParser
     # Parse Property Information section
     # doc.css('html>body>center>table>tbody>tr>td>table>tbody>tr>td>table>tbody>tr>td').each do |element|
     doc.css('html>body>center>table>tr>td>table>tr>td>table>tr>td').each do |element|
-      if element.children[0].name == "text" && element.children[0].text.strip.end_with?(":")
+      if element.children[0].name == "text" && element.children[0].text && element.children[0].text.strip.end_with?(":")
         if element.children.size>1 && element.children[1].name == "b"
           case element.text
           when /Approx. Living Area:/

@@ -16,18 +16,18 @@ protected
       home.update_attributes(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"), link: link, mls: mls)
       
       if link && fetch_if_exists
-        HomeParser.new(addr, "http://vow.mlspin.com/clients/#{link}").get_page_details
+        HomeParser.new(addr, "http://vow.mlspin.com/clients/#{link}", @cookie).get_page_details
         sleep 2
       end
     else
       Home.create!(status: status, desc: size, price: price.delete("$,").to_i, addr: addr, received: Time.parse("#{date} #{time}"), link: link, mls: mls)
       if link
-        HomeParser.new(addr, "http://vow.mlspin.com/clients/#{link}").get_page_details
+        HomeParser.new(addr, "http://vow.mlspin.com/clients/#{link}", @cookie).get_page_details
         sleep 2
       end
     end
   rescue => e
-    Rails.logger.error "Failed to upsert home for #{addr} due to #{e.message}"
+    Rails.logger.error "Failed to upsert home for #{addr} due to #{e.message}, #{e.backtrace}"
   end
   
   def get_first_page
