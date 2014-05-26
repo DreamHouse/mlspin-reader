@@ -9,3 +9,4 @@ prepare_checkin.sh
 log
 db/development.sqlite3
 tmp
+public/assets/images

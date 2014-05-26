@@ -42,4 +42,22 @@
 #home_list {
   padding-top: 60px;
 }
- 
+
+.home-row {
+  margin-top: 5px;
+}
+.home-addr {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.home-price {
+  float: right;
+  font-size: 18px;
+  color: blueviolet;
+}
+
+.home-thumb {
+  height: 200px;
+  width: 256px;
+}

@@ -12,7 +12,7 @@ class LandingController < ApplicationController
     max_price = params[:max_price].to_i * 10000
     town = params[:town]
 
-    @homes = Home.between(price: min_price..max_price).paginate(:page => params[:page], :per_page => 30)
+    @homes = Home.where(status: 'ACT').between(price: min_price..max_price).asc(:price).paginate(:page => params[:page], :per_page => 30)
     render 'search_list', layout: "top_bar"
   end
 end

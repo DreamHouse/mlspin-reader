@@ -1,10 +1,13 @@
 .container#home_list
   = will_paginate @homes
   - @homes.each do |home|
+    .row.home-row
+      .col-md-6
+        %p.home-addr=home.addr
+        %p= home.desc
+      .col-md-2
+        %p.home-price="$#{home.price}"
+      .col-md-4
+        =image_tag "images/#{home.mls}/0.jpg", :class => "home-thumb"
     .row
-      .col-md-4
-        %p=home.addr
-      .col-md-4
-        %p=home.price
-      .col-md-4
-        %p=home.status
+      %hr
