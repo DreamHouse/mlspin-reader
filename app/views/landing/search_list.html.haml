@@ -4,7 +4,12 @@
     .row.home-row
       .col-md-6
         %p.home-addr=home.addr
-        %p= home.desc
+        %p= "#{home[:bedrooms]}间卧室， 卫生间：#{home[:bathrooms]}，一共#{home[:total_rooms]}个房间"
+        - if home[:year_built]
+          %p= "建于#{home[:year_built]}年"
+        %p= "建筑形式：#{home[:style]}"
+        %p= "室内面积：#{home[:approx_living_area]}，院子面积：#{home[:approx_acres]}"
+        %p= "房产税：#{home[:tax]} （#{home[:tax_year]}年）"
       .col-md-2
         %p.home-price="$#{home.price}"
       .col-md-4
