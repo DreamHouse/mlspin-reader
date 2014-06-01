@@ -5,7 +5,9 @@
 # 
 # parser = HomeParser.new("9 Keeler Farm Lexington, MA", 'http://vow.mlspin.com/clients/report.aspx?thisnum=2&mls=71659343&cid=3146169&pass=paul')
 # parser.get_page_details
-
+# 
+# For testing, 
+# parser = HomeParser.new("1 Peartree Drive Lexington, MA", '', '').get_page_details
 class HomeParser
   include StringHelper
   def initialize(addr, link, cookie)
@@ -15,15 +17,15 @@ class HomeParser
   end
   
   def get_page_details
-    # content = File.read("spec/fixtures/new_house.html")
-    response = HTTParty.get(@link, headers: {'Cookie' => @cookie } )
-    content = response.body
+    content = File.read("spec/fixtures/new_house.html")
+    # response = HTTParty.get(@link, headers: {'Cookie' => @cookie } )
+    # content = response.body
     
     Rails.logger.debug "Parse details for addr #{@addr}"
     get_details(content)
     
     Rails.logger.debug "Download images for addr #{@addr}"
-    download_image
+    # download_image
   end
   
   def download_image
@@ -121,9 +123,15 @@ class HomeParser
       when /Total Rooms:/
         update_attribute(home, 'Total Rooms', element)
       when /Bedrooms:/
-        update_attribute(home, 'Bedrooms', element)
+        home[:bedrooms] = sanitize_str(element.text.gsub("Bedrooms:", '')).to_i
       when /Bathrooms:/
-        update_attribute(home, 'Bathrooms', element)
+        bathrooms = sanitize_str(element.text.gsub("Bathrooms:", ''))
+        if bathrooms.is_a? String
+          bathrooms_regex = bathrooms.match(/(.*f)(.*h)/)
+          if bathrooms_regex.size >= 3
+            home[:bathrooms] = bathrooms_regex[1].to_i + bathrooms_regex[2].to_i * 0.5
+          end
+        end
       when /Master Bath:/
         update_attribute(home, 'Master Bath', element)
       when /Fireplaces:/
