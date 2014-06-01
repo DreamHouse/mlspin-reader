@@ -42,7 +42,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'pry-rails'
-  gem 'pry-plus'
+#  gem 'pry-plus'
 end
 
 group :test do
