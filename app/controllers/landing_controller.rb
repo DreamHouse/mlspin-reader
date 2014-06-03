@@ -3,7 +3,7 @@ class LandingController < ApplicationController
     if params["version"] == "2"
       render "version2"
     else
-      render "index"
+      render "index", layout: "top_bar"
     end
   end
   
