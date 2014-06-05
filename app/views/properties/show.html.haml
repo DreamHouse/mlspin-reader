@@ -11,7 +11,18 @@
         %a{:href => "#"} 历史价格
   .col-md-8#details
     - if @home
-      %h2= @home.addr
+      %h5= @home.addr
+      .carousel.slide#home_detail_carousel
+        .carousel-inner
+          .item.active
+            =image_tag "images/#{@home.mls}/0.jpg"
+          - (1..@home[:photo_count]-1).each do |photo_index|
+            .item
+              =image_tag "images/#{@home.mls}/#{photo_index}.jpg"
+        %a{"class"=>"left carousel-control", "href"=>"#home_detail_carousel", "data-slide"=>"prev"}
+          %span<
+        %a{"class"=>"right carousel-control", "href"=>"#home_detail_carousel", "data-slide"=>"next"}
+          %span>
     - else
       %h2 抱歉，我们目前没有关于这个房产的信息
   .col-md-2#detail_ads
