@@ -1,0 +1,20 @@
+.container.home_details_container
+  .col-md-2#detail_nav
+    %ul.nav.nav-pills.nav-stacked
+      %li.active
+        %a{:href => "#"} 房屋信息
+      %li 
+        %a{:href => "#"} 地产信息
+      %li 
+        %a{:href => "#"} 学校资源
+      %li 
+        %a{:href => "#"} 历史价格
+  .col-md-8#details
+    - if @home
+      %h2= @home.addr
+    - else
+      %h2 抱歉，我们目前没有关于这个房产的信息
+  .col-md-2#detail_ads
+    %button.btn.btn-link 我要下Offer
+    %button.btn.btn-warning 联系房产代理
+    

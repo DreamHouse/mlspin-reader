@@ -2,6 +2,8 @@ Mlspin::Application.routes.draw do
   match 'landing/index'
   match 'landing/search'
   
+  resources :properties
+  
   root :to => 'landing#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
