@@ -1,7 +1,7 @@
 class LandingController < ApplicationController
   def index
-    if params["version"] == "2"
-      render "version2"
+    if params["version"]
+      render "version#{params["version"]}"
     else
       render "index"
     end

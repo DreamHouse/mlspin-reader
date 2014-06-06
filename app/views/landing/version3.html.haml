@@ -63,7 +63,7 @@
       %button{type: "submit", class: "btn btn-warning"} 开始找房
 .container
   .row.campaign
-    .col-md-6
+    .col-md-4
       .carousel.slide#new_house_carousel
         %ol.carousel-indicators
           %li{"data-target" => "#new_house_carousel", "data-slide-to" => "0", "class" => "active"}
@@ -83,7 +83,7 @@
           %span<
         %a{"class"=>"right carousel-control", "href"=>"#new_house_carousel", "data-slide"=>"next"}
           %span>
-    .col-md-6
+    .col-md-4
       .carousel.slide#apt_carousel
         %ol.carousel-indicators
           %li{"data-target" => "#apt_carousel", "data-slide-to" => "0", "class" => "active"}
@@ -91,55 +91,53 @@
           %li{"data-target" => "#apt_carousel", "data-slide-to" => "2"}
         .carousel-inner
           .item.active
-            =image_tag "belmont_1.jpg"
-            .carousel-caption 热门区域
+            =image_tag "apt_sample_1.jpg"
+            .carousel-caption 投资热点
           .item
-            =image_tag "belmont_2.jpg"
-            .carousel-caption 热门区域
+            =image_tag "apt_sample_2.jpg"
+            .carousel-caption 投资热点
           .item
-            =image_tag "belmont_3.jpg"
-            .carousel-caption 热门区域
+            =image_tag "apt_sample_3.jpg"
+            .carousel-caption 投资热点
         %a{"class"=>"left carousel-control", "href"=>"#apt_carousel", "data-slide"=>"prev"}
           %span<
         %a{"class"=>"right carousel-control", "href"=>"#apt_carousel", "data-slide"=>"next"}
           %span>
+    .col-md-4
+      .carousel.slide#sell_carousel
+        %ol.carousel-indicators
+          %li{"data-target" => "#sell_carousel", "data-slide-to" => "0", "class" => "active"}
+          %li{"data-target" => "#sell_carousel", "data-slide-to" => "1"}
+          %li{"data-target" => "#sell_carousel", "data-slide-to" => "2"}
+        .carousel-inner
+          .item.active
+            =image_tag "sell_sample_1.jpg"
+            .carousel-caption 业主直售
+          .item
+            =image_tag "sell_sample_2.jpg"
+            .carousel-caption 业主直售
+          .item
+            =image_tag "sell_sample_3.jpg"
+            .carousel-caption 业主直售
+        %a{"class"=>"left carousel-control", "href"=>"#sell_carousel", "data-slide"=>"prev"}
+          %span<
+        %a{"class"=>"right carousel-control", "href"=>"#sell_carousel", "data-slide"=>"next"}
+          %span>
 .container
   .row
-    .col-md-6
-      %h2 12 Sargent Rd, Winchester
-      %p $849,000, 4卧室，3.5卫生间，2811平方尺，建于1940年，院子10000平方尺。
-      %hr
-      %blockquote 
-        %p This house has 683 sf finished basement and has 682 unfinished basement. I am not sure how many s f. for the finished room, bathroom and the hallway. Two car garages may be 24X 26 = 624. 683 is included in 2811. The first and second floor may be around 2130.
-        %p Serious waste of footage on the first floor -- a room is difficult to find how to use.Three bedrooms on the second floor, good, but just 3 bedrooms. Funny 品 like outlook! yard is so so. 
-        %p Multiple offers 
-        %p I didn't follow up, but, I guess 850K ----> 880K??         
-        %footer 发表人 Max
-      %hr
-      %blockquote
-        %p even our agent thinks it is crazy if this house sold for over $900K.
-        %footer 发表人 兼职代理王先生
-      %hr
-      %blockquote
-        %p 这明显是一个cape或者ranch 加盖的两层？地多大，看着没有什么yard的感觉，如果地够大，真不该加建，索性拔掉重新盖也就算了，加建的房子没几个外形和里面的layout看着舒服的，总是别扭。
-        %footer 发表人 专业人士张小姐
+    .col-md-4
+      %h2 Lexington
+      %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
       %p
         %a{href: "#", class: "btn btn-default"}查看详情》
-    .col-md-6
+    .col-md-4
       %h2 Belmont
       %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
-      %hr
-      %blockquote
-        %p 据说是SAT平均分要排到几十之外了，请问是这样吗？
-        %footer 娃妈
-      %hr
-      %blockquote
-        %p 两周前在wellesley图书馆也有nj刚搬来的妈妈抱怨说wellesley小学不好（我不住那儿，只是去借书），因为没有计算机课、第二外语和乐队⋯⋯
-        %footer 娃爸
-      %hr
-      %blockquote
-        %p who cares about average SAT? do you want your child to aim at "average" SAT?
-        %footer 天涯游子
+      %p
+        %a{href: "#", class: "btn btn-default"}查看详情》
+    .col-md-4
+      %h2 Arlington
+      %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
       %p
         %a{href: "#", class: "btn btn-default"}查看详情》
   %hr
