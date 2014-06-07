@@ -1,5 +1,6 @@
 $(function() {
   $('#home_detail_carousel').carousel({
-    'interval': 3000
+    'interval': 10000
   });
+
 })

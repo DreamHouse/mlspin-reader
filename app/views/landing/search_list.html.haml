@@ -3,7 +3,7 @@
   - @homes.each do |home|
     .row.home-row
       .col-md-6
-        %p.home-addr=home.addr
+        %p.home-addr= link_to home.addr, property_path(home.mls)
         %p= "#{home[:bedrooms]}间卧室， 卫生间：#{home[:bathrooms]}，一共#{home[:total_rooms]}个房间"
         - if home[:year_built]
           %p= "建于#{home[:year_built]}年"

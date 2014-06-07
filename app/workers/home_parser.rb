@@ -17,9 +17,9 @@ class HomeParser
   end
   
   def get_page_details
-    content = File.read("spec/fixtures/new_house.html")
-    # response = HTTParty.get(@link, headers: {'Cookie' => @cookie } )
-    # content = response.body
+    # content = File.read("spec/fixtures/new_house.html")
+    response = HTTParty.get(@link, headers: {'Cookie' => @cookie } )
+    content = response.body
     
     Rails.logger.debug "Parse details for addr #{@addr}"
     get_details(content)

@@ -65,3 +65,20 @@
 .home_details_container {
   padding-top: 20px;
 }
+
+.details_more {
+  padding-top: 20px;
+}
+
+#home_detail_carousel {
+  width: 480px;
+}
+
+.details_basic {
+  padding-top: 10px;
+}
+
+.tab-pane {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
