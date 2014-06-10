@@ -21,6 +21,7 @@
           %p= "建于#{@home[:year_built]}年"
         %p= "建筑形式：#{@home[:style]}"
         %p= "室内面积：#{@home[:approx_living_area]}，院子面积：#{@home[:approx_acres]}"
+        %p= "评估价：#{@home[:assessed]}"
         %p= "房产税：#{@home[:tax]} （#{@home[:tax_year]}年）"
         %p= "房屋介绍：#{@home[:remarks]}"
       .col-md-2#detail_ads
@@ -31,6 +32,8 @@
         %ul.nav.nav-tabs
           %li.active
             %a{:href => "#house_details", "data-toggle" => "tab"} 房屋信息
+          %li
+            %a{:href => "#room_details", "data-toggle" => "tab"} 房间信息
           %li 
             %a{:href => "#lot_details", "data-toggle" => "tab"} 地产信息
           %li 
@@ -39,12 +42,26 @@
             %a{:href => "#history_details", "data-toggle" => "tab"} 历史价格
         .tab-content
           .tab-pane.active#house_details
-            %p= "主卧 "
+            %p= "建筑风格: #{@home[:style]}"
+            %p= "房子颜色: #{@home[:color]}"
+            %p= "取暖方式: #{@home[:heat_zones]}"
+            %p= "热水: #{@home[:hot_water]}"
+            %p= "空调: #{@home[:cool_zones]}"
+            %p= "是否有地下室: #{@home[:basement]}"
+          .tab-pane#room_details
+            - @home[:room_details].each do |room|
+              %p= "#{room["name"]} 位于 #{room["level"]} 层"
+              - unless room["size"].blank?
+                = "，面积 #{room[:size]} 平方英尺"
           .tab-pane#lot_details
-            %p= "停车位：#{@home[:garage_spaces]}"
+            %p= "车库：#{@home[:garage_spaces]}"
+            %p= "车位：#{@home[:parking_spaces]}"
+            %p= "给水：#{@home[:water_utilities]}"
+            %p= "排水：#{@home[:sewer_utilities]}"
           .tab-pane#school_details
-            %p= "中学 #{@home[:middle_school]}"
             %p= "小学 #{@home[:grade_school]}"
+            %p= "初中 #{@home[:middle_school]}"
+            %p= "高中 #{@home[:high_school]}"
           .tab-pane#history_details
             过往价格
 - else
