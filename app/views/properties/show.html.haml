@@ -50,9 +50,10 @@
             %p= "是否有地下室: #{@home[:basement]}"
           .tab-pane#room_details
             - @home[:room_details].each do |room|
-              %p= "#{room["name"]} 位于 #{room["level"]} 层"
-              - unless room["size"].blank?
-                = "，面积 #{room[:size]} 平方英尺"
+              - if room["size"].blank?
+                %p= "#{room["name"]} 位于 #{room["level"]} 层"
+              - else
+                %p= "#{room["name"]} 位于 #{room["level"]} 层，面积 #{room["size"]} 平方英尺"
           .tab-pane#lot_details
             %p= "车库：#{@home[:garage_spaces]}"
             %p= "车位：#{@home[:parking_spaces]}"
