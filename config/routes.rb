@@ -1,4 +1,6 @@
 Mlspin::Application.routes.draw do
+  devise_for :users
+
   match 'landing/index'
   match 'landing/search'
   
