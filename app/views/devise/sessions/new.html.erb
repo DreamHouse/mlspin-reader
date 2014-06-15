@@ -1,0 +1,38 @@
+<div class="signin_page">
+  <div class="jumbotron">
+    <div class="containter">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="signin_form">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="containter">
+                <div class="row signin_form_row">
+                  <div class="col-md-2"><%= f.label t('devise.email') %></div>
+                  <div class="col-md-10"><%= f.email_field :email, autofocus: true %></div>
+                </div>
+
+                <div class="row signin_form_row">
+                  <div class="col-md-2"><%= f.label t('devise.password') %></div>
+                  <div class="col-md-10"><%= f.password_field :password, autocomplete: "off" %></div>
+                </div>
+          
+                <div class="row signin_form_row">
+                  <% if devise_mapping.rememberable? -%>
+                    <div class="col-md-12"><%= f.check_box :remember_me %> <%= f.label t('devise.remember_me') %></div>
+                  <% end -%>
+                </div>
+          
+                <div class="row signin_form_row">
+                  <div class="col-md-12"><%= f.submit t('devise.sign_in'), :class => "btn btn-primary" %></div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <div class="col-md-2">
+          <!-- add some graph here -->
+        </div>
+        </div>
+    <!-- <%= render "devise/shared/links" %> -->
+  </div>
+</div>
+</div>

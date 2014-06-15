@@ -9,8 +9,17 @@
         %li
           %a{href: "#"} 业主售房
       %ul.nav.navbar-nav.navbar-right
-        %form.navbar-form.navbar-right
-          .form-group
-            %input{type: "text", placeholder: "邮箱", class: "form-control"}
-            %button{type: "submit", class: "btn btn-primary"} 新手上路
-            %button{type: "submit", class: "btn btn-primary"} 登陆
+        - if user_signed_in?
+          %li
+            %p.signed_in_user= current_user.email
+          %li
+            %p.signed_in_user= link_to "退出", destroy_user_session_path, :method => :delete
+        - else
+          %li
+            = form_tag(user_session_path, :method => :post, :class => "navbar-right navbar-form") do
+              %input{id: "email", name: "user[email]", type: "text", placeholder: "邮箱", class: "form-control"}
+              %input{id: "password", name: "user[password]", type: "password", placeholder: "密码", class: "form-control"}
+              %hidden{name: "commit", value: "Sign in"}
+              %button{type: "submit", class: "btn btn-primary"} 登陆
+          %li
+            %p.register_button= link_to "注册新帐号", new_user_registration_path, :class => "btn btn-primary"

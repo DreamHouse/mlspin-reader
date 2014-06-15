@@ -8,6 +8,16 @@
   float: left;
 }
 
+.register_button {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.signed_in_user {
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
 .search-box {
   padding-top: 20px;
   padding-left: 30px;
@@ -81,4 +91,32 @@
 .tab-pane {
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+/* Signin page */
+@media (min-width: 768px) {
+  .signin_page {
+    max-width: 730px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+}
+
+.signin_page .jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #e6e6e6;
+}
+
+.signin_page .jumbotron .btn {
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.signin_page .jumbotron .signin_form {
+  text-align: left;
+}
+
+.signin_form_row {
+  padding-top: 10px;
 }
