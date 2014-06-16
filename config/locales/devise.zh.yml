@@ -5,8 +5,10 @@ zh:
     sign_in_title: "登陆"
     email: "电子邮件"
     password: "密码"
+    password_confirmation: "确认密码"
     remember_me: "记住登陆状态"
     sign_in: "登陆"
+    sign_up: "注册"
     confirmations:
       confirmed: "Your account was successfully confirmed."
       send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
