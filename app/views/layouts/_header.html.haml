@@ -2,12 +2,45 @@
   .container
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
-        %li.active
-          %a{href: "/"} 搜索房产
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            买房相关
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "/Condo"} 开放日 (Open House)
+              %a{href: "/Belmont"} 搜索房产
+              %a{href: "/Lexington"} 贷款
         %li
-          %a{href: "#"} 最近新房
-        %li
-          %a{href: "#"} 业主售房
+          %a{href: "#"} 卖房相关
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            房产形式分类 
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "/Condo"} 公寓 (Condo)
+              %a{href: "/Belmont"} 多家庭 (Multi-family)
+              %a{href: "/Lexington"} 独立房 (Single-family)
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            城镇分类 
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "/Arlington"} Arlington
+              %a{href: "/Belmont"} Belmont
+              %a{href: "/Lexington"} Lexington
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            黄页 
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "/Arlington"} 房产代理
+              %a{href: "/Belmont"} 贷款机构
+              %a{href: "/Lexington"} 房屋维修保养
+              %a{href: "/Lexington"} 其他
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
