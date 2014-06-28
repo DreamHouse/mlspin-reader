@@ -1,0 +1,9 @@
+- if @article
+  .container.home_details_container
+    .row
+      .col-md-10#details_images
+        %h3= @article.title
+        %p= raw(@article.content)
+- else
+  %h2 抱歉，该文章不存在
+    
