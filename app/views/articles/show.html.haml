@@ -3,6 +3,9 @@
     .row
       .col-md-10#details_images
         %h3= @article.title
+        %p
+          %a{"href" => @article.source_link}
+            阅读原文
         %p= raw(@article.content)
 - else
   %h2 抱歉，该文章不存在
