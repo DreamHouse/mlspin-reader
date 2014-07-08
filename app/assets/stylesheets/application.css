@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require bootstrap.min
- *= require_tree .
+ *= require homepage
+ *= require version2
  */
 

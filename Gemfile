@@ -11,7 +11,8 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'will_paginate_mongoid'
-gem 'devise'
+gem 'devise'         # user management
+gem 'mercury-rails'  # html editor
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

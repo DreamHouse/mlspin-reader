@@ -63,6 +63,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mercury-rails (0.9.0)
+      coffee-rails
+      railties (~> 3.2)
     method_source (0.8.2)
     mime-types (1.25.1)
     mongoid (3.0.23)
@@ -154,6 +157,7 @@ DEPENDENCIES
   haml
   httparty
   jquery-rails
+  mercury-rails
   mongoid (~> 3.0.4)
   nokogiri (= 1.5.0)
   pry-rails

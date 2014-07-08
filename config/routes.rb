@@ -1,4 +1,6 @@
 Mlspin::Application.routes.draw do
+  mount Mercury::Engine => '/'
+
   devise_for :users
 
   match 'landing/index'
