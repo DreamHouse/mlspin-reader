@@ -3,7 +3,7 @@ class LandingController < ApplicationController
     if params["version"] == "2"
       render "version2"
     else
-      @articles = Article.order_by(created_at: :desc).limit(5)
+      @articles = Article.order_by(publish_date: :desc).limit(5)
       render "index", layout: "top_bar"
     end
   end
