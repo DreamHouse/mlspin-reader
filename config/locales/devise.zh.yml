@@ -63,5 +63,14 @@ zh:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "出错了"
+        other: "出错了"
+  mongoid:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "抱歉，该邮件已经被使用，请换其他邮件或者使用该邮件地址直接登录"
+            password:
+              too_short: "密码长度不够，至少需要6个字母或数字"
