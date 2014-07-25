@@ -18,7 +18,12 @@
               <div class="containter">
                 <div class="row signin_form_row">
                   <div class="col-md-2"><%= f.label t('devise.email') %></div>
-                  <div class="col-md-10"><%= f.email_field :email, autofocus: true %></div>
+                  <div class="col-md-10"><%= f.email_field :email, autofocus: true %>（登录用）</div>
+                </div>
+
+                <div class="row signin_form_row">
+                  <div class="col-md-2"><%= f.label t('devise.nickname') %></div>
+                  <div class="col-md-10"><%= f.text_field :nickname, autocomplete: "off" %>（需唯一）</div>
                 </div>
             
                 <div class="row signin_form_row">

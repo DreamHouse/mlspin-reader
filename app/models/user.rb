@@ -6,7 +6,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :nickname
 
   ## Database authenticatable
   field :email,              type: String, default: ""
@@ -25,7 +25,9 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
-
+  field :nickname,           type: String
+  
+  validates_uniqueness_of :nickname
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time

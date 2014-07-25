@@ -46,7 +46,7 @@
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
-            %p.signed_in_user= current_user.email
+            %p.signed_in_user= current_user.nickname
           %li
             %p.signed_in_user= link_to "退出", destroy_user_session_path, :method => :delete
         - else

@@ -5,6 +5,7 @@ zh:
     sign_in_title: "登陆"
     email: "电子邮件"
     password: "密码"
+    nickname: "网名"
     password_confirmation: "确认密码"
     remember_me: "记住登陆状态"
     sign_in: "登陆"
@@ -72,5 +73,7 @@ zh:
           attributes:
             email:
               taken: "抱歉，该邮件已经被使用，请换其他邮件或者使用该邮件地址直接登录"
+            nickname:
+              taken: "抱歉，该网名已经被使用。"
             password:
               too_short: "密码长度不够，至少需要6个字母或数字"
