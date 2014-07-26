@@ -17,6 +17,10 @@
               <% end %>
               <div class="containter">
                 <div class="row signin_form_row">
+                  注册后我们将发送确认邮件到您的信箱，请点击邮件中的链接激活新账号
+                </div>
+                
+                <div class="row signin_form_row">
                   <div class="col-md-2"><%= f.label t('devise.email') %></div>
                   <div class="col-md-10"><%= f.email_field :email, autofocus: true %>（登录用）</div>
                 </div>

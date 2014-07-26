@@ -1,5 +1,5 @@
-<p>Welcome <%= @email %>!</p>
+<p>欢迎注册新账号 <%= @email %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>请点击下面的链接激活新账号</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to '激活新账号', confirmation_url(@resource, confirmation_token: @token) %></p>

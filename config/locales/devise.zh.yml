@@ -77,3 +77,5 @@ zh:
               taken: "抱歉，该网名已经被使用。"
             password:
               too_short: "密码长度不够，至少需要6个字母或数字"
+              blank: "密码为空"
+              confirmation: "确认密码和密码不符"
