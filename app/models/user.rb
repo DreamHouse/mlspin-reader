@@ -42,4 +42,8 @@ class User
   # Technically user does not belong to role, this belongs_to here 
   # only means a user has a foriegn key to a role
   belongs_to :role
+  
+  def admin?
+    self.role && self.role.admin?
+  end
 end

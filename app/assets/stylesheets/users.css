@@ -1,3 +1,7 @@
 .error_container ul li {
   color: red;
 }
+
+.login-error {
+  color: red;
+}

@@ -4,6 +4,9 @@
       <div class="row">
         <div class="col-md-10">
           <div class="signin_form">
+            <% flash.each do |name, msg| %>
+               <%= content_tag :div, msg, :class => "login-error", :id => "flash_#{name}" if msg.is_a?(String) %>
+            <% end %>
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
               <div class="containter">
                 <div class="row signin_form_row">
