@@ -6,6 +6,11 @@ Mlspin::Application.routes.draw do
   
   resources :properties
   resources :articles
+  
+  namespace :admin do
+    resources :articles
+  end
+  
   root :to => 'landing#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

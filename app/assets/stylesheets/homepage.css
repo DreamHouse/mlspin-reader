@@ -120,3 +120,8 @@
 .signin_form_row {
   padding-top: 10px;
 }
+
+/* Admin pages */
+.admin-articles .row{
+  padding-top: 10px;
+}
