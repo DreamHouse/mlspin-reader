@@ -2,8 +2,6 @@
   .container.home_details_container
     .row
       .col-md-10#details_images
-        - if can? :create, Article
-          %p 发表文章
         %h3= @article.title
         %p
           %a{"href" => @article.source_link}

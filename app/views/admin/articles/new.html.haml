@@ -1,1 +1,12 @@
-Let's party
+.container
+  .row
+    .col-md-10
+      %h3 标题：
+      %p 
+        原文链接：
+        = text_field_tag :link
+      %div
+        正文：
+      %div{"data-mercury" => "full"}
+        %p
+    

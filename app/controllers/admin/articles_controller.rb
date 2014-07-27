@@ -1,4 +1,7 @@
 class Admin::ArticlesController < ApplicationController
+  def new
+    render layout: "admin"
+  end
 
   def index
     # check permission

@@ -1,7 +1,7 @@
 .container.admin-articles
   .row
     .col-md-8
-      %form{action: new_admin_article_path, method: :get}
+      %form{action: "/editor" + new_admin_article_path, method: :get}
         %button{type: "submit", class: "btn btn-warning"} 发表文章
   - if @articles
     - @articles.each do |article|
