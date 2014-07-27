@@ -11,7 +11,6 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'will_paginate_mongoid'
-<<<<<<< HEAD
 gem 'devise'
 gem "cancan"
 gem 'mercury-rails'  # html editor
