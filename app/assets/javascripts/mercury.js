@@ -447,6 +447,16 @@ window.Mercury = {
   // ## Debug Mode
   //
   // Turning debug mode on will log events and other various things (using console.debug if available).
-  debug: false
+  debug: true,
 
+  onload: function() {
+      Mercury.on('ready', function() {
+        var link = $('#mercury_iframe').contents().find('#save_url');
+        Mercury.saveUrl = link.val(); 
+      });
+      
+      Mercury.on('saved', function() {
+        window.location.href = window.location.href.replace(/\/editor\//i, '/');
+      });
+  }
 };

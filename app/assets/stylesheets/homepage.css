@@ -125,3 +125,20 @@
 .admin-articles .row{
   padding-top: 10px;
 }
+
+.create-article input.short-field {
+  width: 200px;
+}
+
+.create-article input {
+  width: 600px;
+}
+
+.create-article textarea {
+  width: 600px;
+  height: 135px;
+}
+
+.create-article .row {
+  padding-top: 10px;
+}
