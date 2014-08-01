@@ -1,4 +1,11 @@
 class Admin::ArticlesController < ApplicationController
+  def index
+    # check permission
+    @articles = Article.unscoped.all
+    
+    render layout: "admin"
+  end
+  
   def new
     render layout: "admin"
   end
@@ -9,7 +16,7 @@ class Admin::ArticlesController < ApplicationController
   end
   
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.unscoped.find(params[:id])
     
     render layout: 'admin_editor'
   end
@@ -17,15 +24,18 @@ class Admin::ArticlesController < ApplicationController
   def update
     doc = params[:content]
     # {"content"=>{"title"=>{"type"=>"full", "data"=>{}, "value"=>"test3", "snippets"=>{}}, "content"=>{"type"=>"full", "data"=>{}, "value"=>"bb<p></p>", "snippets"=>{}}}
-    @article = Article.find(params[:id])
-    @article.update_attributes!(title: doc["title"]["value"], content: doc["content"]["value"])
+    @article = Article.unscoped.find(params[:id])
+    @article.update_attributes!(title: doc["title"]["value"], content: doc["content"]["value"], desc: doc["desc"]["value"])
     render json: {"result" => "everything is good"}
   end
   
-  def index
-    # check permission
-    @articles = Article.all
+  def publish
+    @article = Article.unscoped.find(params[:id])
+    if @article
+      @article.published = true
+      @article.save!
+    end
     
-    render layout: "admin"
+    render layout: 'admin_editor'
   end
 end

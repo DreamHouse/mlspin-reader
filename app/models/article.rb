@@ -9,6 +9,9 @@ class Article
   field :publish_date, type: DateTime
   field :content, type: String
   field :author, type: String # original author
+  field :published, type: Boolean
   
   belongs_to :user
+  
+  default_scope where(published: true)
 end

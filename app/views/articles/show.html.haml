@@ -2,7 +2,7 @@
   .container.home_details_container
     .row
       .col-md-10#details_images
-        %h3= @article.title
+        %h3= raw(@article.title)
         %p
           %a{"href" => @article.source_link}
             阅读原文

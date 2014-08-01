@@ -1,0 +1,8 @@
+.container.create-article
+  .row
+    .col-md-8
+      - if @article
+        %p 文章 #{raw(@article.title)} 发布成功
+      - else
+        文章发布失败，找不到需要发布的文章
+      %a{href: admin_articles_path} 返回文章列表

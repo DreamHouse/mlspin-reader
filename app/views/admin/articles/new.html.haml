@@ -17,15 +17,16 @@
         = text_field_tag 'source_link'
     .row
       .col-md-3
-        原文发表日期('MM/DD/YYYY')：
+        原文发表日期('YYYY-MM-DD')：
       .col-md-9
-        = text_field_tag 'publish_date', '01/01/2014', class: 'short-field'
+        = text_field_tag 'publish_date', '2014-01-01', class: 'short-field'
     .row
       .col-md-3
         原文作者：
       .col-md-9
         = text_field_tag 'author', nil, class: 'short-field'
     .row
-      .col-md-2
+      .col-md-3
         %button{type: "submit", class: "btn btn-warning"} 下一步：编辑正文
-    
+      .col-md-9
+        %a{href: admin_articles_path} 返回文章列表

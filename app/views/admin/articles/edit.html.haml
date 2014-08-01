@@ -5,12 +5,13 @@
     .col-md-9
       = hidden_field_tag 'save_url', admin_article_path(@article.id)
       %div{id: 'title', "data-mercury" => "full"}
-        = @article.title
+        = raw(@article.title)
   .row
     .col-md-3
       摘要：
-    .col-md-9  
-      = @article.desc
+    .col-md-9
+      %div{id: 'desc', "data-mercury" => "full"}
+        = raw(@article.desc)
   .row
     .col-md-3
       原文链接：
@@ -30,4 +31,10 @@
     .col-md-12
       %div{id: 'content', "data-mercury" => "full"}
         %p= raw(@article.content)
-    
+  .row
+    .col-md-3
+      %form{action: publish_admin_article_path(@article.id), method: :post}
+        %button{type: "submit", class: "btn btn-warning", id: "publish_article"} 发布文章
+  .row
+    .col-md-3
+      %a{href: admin_articles_path} 返回文章列表

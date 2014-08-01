@@ -2,10 +2,10 @@
   .row.campaign
     .col-md-8
       -@articles.each do |article|
-        %h3=article.title
+        %h3=raw(article.title)
         %p= "#{article.author},  发表于：#{article.publish_date.to_date}"
         %p
-          = article.desc
+          = raw(article.desc)
           %a{"href" => "./articles/#{article.id}"}
             阅读全文
     .col-md-4

@@ -126,6 +126,14 @@
   padding-top: 10px;
 }
 
+.edit-article .row {
+  padding-top: 10px;
+}
+
+.edit-article .row #content {
+  height: 100px;
+}
+
 .create-article input.short-field {
   width: 200px;
 }

@@ -447,12 +447,17 @@ window.Mercury = {
   // ## Debug Mode
   //
   // Turning debug mode on will log events and other various things (using console.debug if available).
-  debug: true,
+  debug: false,
 
   onload: function() {
       Mercury.on('ready', function() {
         var link = $('#mercury_iframe').contents().find('#save_url');
         Mercury.saveUrl = link.val(); 
+        
+        var publish_button = $('#mercury_iframe').contents().find('#publish_article');
+        if (publish_button) {
+          publish_button.hide();
+        }
       });
       
       Mercury.on('saved', function() {
