@@ -131,7 +131,7 @@
 }
 
 .edit-article .row #content {
-  height: 100px;
+  min-height: 100px;
 }
 
 .create-article input.short-field {
