@@ -43,6 +43,8 @@ class User
   # only means a user has a foriegn key to a role
   belongs_to :role
   
+  # A user should belong to one or 0 merchant
+  belongs_to :merchant
   def admin?
     self.role && self.role.admin?
   end
