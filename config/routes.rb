@@ -10,9 +10,13 @@ Mlspin::Application.routes.draw do
   resources :articles
   
   namespace :admin do
+    resource :dashboard
+    
     resources :articles do
       post 'publish', on: :member
     end
+    
+    resources :merchants
   end
   
   root :to => 'landing#index'

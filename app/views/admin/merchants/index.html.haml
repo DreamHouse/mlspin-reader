@@ -1,0 +1,12 @@
+.container.admin-articles
+  .row
+    .col-md-8
+      %form{action: new_admin_merchant_path, method: :get}
+        %button{type: "submit", class: "btn btn-warning"} 添加商户
+  - if @merchants
+    - @merchants.each do |merchant|
+      .row
+        .col-md-4
+          = merchant.name
+        .col-md-4
+          = merchant.phone

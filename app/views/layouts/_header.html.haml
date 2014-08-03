@@ -49,7 +49,7 @@
             %p.signed_in_user
               = current_user.nickname
               - if current_user.admin?
-                %a{href: admin_articles_path} (管理员界面)
+                %a{href: admin_dashboard_path} (管理员界面)
           %li
             %p.signed_in_user= link_to "退出", destroy_user_session_path, :method => :delete
         - else
