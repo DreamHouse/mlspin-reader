@@ -13,6 +13,7 @@ class Merchant
   
   validates_presence_of :name, :phone
   validates_uniqueness_of :name
+  validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   
   has_many :users
 end

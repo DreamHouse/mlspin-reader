@@ -1,0 +1,37 @@
+.container.create-article
+  = form_tag({action: :create}, method: :post, multipart: true) do
+    .row
+      .col-md-3
+        商家名称：
+      .col-md-9
+        = text_field_tag 'name'
+    .row
+      .col-md-3
+        商家简介：
+      .col-md-9  
+        = text_area_tag 'desc'
+    .row
+      .col-md-3
+        商家电话：
+      .col-md-9  
+        = text_field_tag 'phone'
+    .row
+      .col-md-3
+        商家地址：
+      .col-md-9  
+        = text_field_tag 'addr'
+    .row
+      .col-md-3
+        商家网页：
+      .col-md-9
+        = text_field_tag 'link'
+    .row
+      .col-md-3
+        头像图片或Logo
+      .col-md-9
+        = file_field_tag 'photo'
+    .row
+      .col-md-3
+        %button{type: "submit", class: "btn btn-warning"} 提交
+      .col-md-9
+        %a{href: admin_merchants_path} 返回商家列表
