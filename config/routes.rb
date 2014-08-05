@@ -16,7 +16,10 @@ Mlspin::Application.routes.draw do
       post 'publish', on: :member
     end
     
-    resources :merchants
+    resources :merchants do
+      post 'publish', on: :member
+      put 'update_photo', on: :member
+    end
   end
   
   root :to => 'landing#index'

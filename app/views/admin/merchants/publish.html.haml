@@ -1,0 +1,8 @@
+.container.create-article
+  .row
+    .col-md-8
+      - if @merchant
+        %p 商家 #{raw(@merchant.name)} 状态修改成功
+      - else
+        找不到商家
+      %a{href: admin_merchants_path} 返回商家列表

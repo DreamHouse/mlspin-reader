@@ -1,0 +1,43 @@
+.container.edit-merchant
+  .row
+    .col-md-3
+      商家名称：
+    .col-md-9
+      = hidden_field_tag 'save_url', admin_merchant_path(@merchant.id)
+      %div{id: 'name', "data-mercury" => "full", "class" => "input-field"}
+        = raw(@merchant.name)
+  .row
+    .col-md-3
+      商家简介：
+    .col-md-9
+      %div{id: 'desc', "data-mercury" => "full", "class" => "multi-line-input"}
+        = raw(@merchant.desc)
+  .row
+    .col-md-3
+      商家电话：
+    .col-md-9
+      %div{id: 'phone', "data-mercury" => "full", "class" => "input-field"}
+        = raw(@merchant.phone)
+  .row
+    .col-md-3
+      商家地址：
+    .col-md-9
+      %div{id: 'addr', "data-mercury" => "full", "class" => "input-field"}
+        = raw(@merchant.addr)
+  .row
+    .col-md-3
+      商家网页：
+    .col-md-9
+      %div{id: 'link', "data-mercury" => "full", "class" => "input-field"}
+        = raw(@merchant.link)
+  .row
+    = form_for @merchant, :url => update_photo_admin_merchant_path, :html => { :multipart => true } do |f| 
+      .col-md-3
+        商标／头像：
+      .col-md-3
+        = f.file_field 'photo'
+      .col-md-3
+        %button{type: "submit", class: "btn btn-warning"} 保存图片
+  .row
+    .col-md-3
+      %a{href: admin_merchants_path} 返回商家列表

@@ -3,7 +3,7 @@ mlspin-reader
 
 Installation:
 imagemagick is required to change image size by paperclip gem:
-brew install imagemagick
+brew install imagemagick --with-libtiff
 
 Setup roles: 
 rails console

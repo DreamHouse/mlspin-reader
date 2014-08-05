@@ -1,37 +1,39 @@
-.container.create-article
-  = form_tag({action: :create}, method: :post, multipart: true) do
+.container.show-article
+  - if @merchant
     .row
       .col-md-3
         商家名称：
       .col-md-9
-        = text_field_tag 'name'
+        = raw(@merchant.name)
     .row
       .col-md-3
-        商家简介：（此处只能使用无格式文本，字体和格式可稍后修改）
+        商家简介：
       .col-md-9  
-        = text_area_tag 'desc'
+        = raw(@merchant.desc)
     .row
       .col-md-3
         商家电话：
       .col-md-9  
-        = text_field_tag 'phone'
+        = raw(@merchant.phone)
     .row
       .col-md-3
         商家地址：
       .col-md-9  
-        = text_field_tag 'addr'
+        = raw(@merchant.addr)
     .row
       .col-md-3
         商家网页：
       .col-md-9
-        = text_field_tag 'link'
+        = raw(@merchant.link)
     .row
       .col-md-3
         头像图片或Logo
       .col-md-9
-        = file_field_tag 'photo'
+        = image_tag @merchant.photo.url
     .row
       .col-md-3
         %button{type: "submit", class: "btn btn-warning"} 提交
       .col-md-9
         %a{href: admin_merchants_path} 返回商家列表
+  - else
+    %p 找不到该商家

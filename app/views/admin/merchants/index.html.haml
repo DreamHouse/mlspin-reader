@@ -3,12 +3,36 @@
     .col-md-8
       %form{action: new_admin_merchant_path, method: :get}
         %button{type: "submit", class: "btn btn-warning"} 添加商户
+  .row
+    .col-md-2
+      商家
+    .col-md-2
+      电话
+    .col-md-2
+      商标／头像
+    .col-md-2
+      改变状态
+    .col-md-1
+      编辑
   - if @merchants
     - @merchants.each do |merchant|
       .row
-        .col-md-4
-          = merchant.name
-        .col-md-4
+        .col-md-2
+          %a{href: admin_merchant_path(merchant.id)}= merchant.name
+        .col-md-2
           = merchant.phone
-        .col-md-4
-          = image_tag merchant.photo.url
+        .col-md-2
+          = image_tag merchant.photo.url, class: 'merchant-thumbnail'
+          %a{href: edit_admin_merchant_path(merchant.id)} 更换头像
+        - if merchant.published
+          .col-md-2
+            %form{action: publish_admin_merchant_path(merchant.id), method: :post}
+              %input{type: "hidden", name: "publish", value: "false"}
+              %button{type: "submit", class: "btn", id: "publish_article"} 不在前台显示
+        - else
+          .col-md-2
+            %form{action: publish_admin_merchant_path(merchant.id), method: :post}
+              %input{type: "hidden", name: "publish", value: "true"}
+              %button{type: "submit", class: "btn", id: "publish_article"} 在前台公开
+        .col-md-1
+          %a{href: '/editor' + edit_admin_merchant_path(merchant.id)} 编辑

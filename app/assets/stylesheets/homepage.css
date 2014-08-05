@@ -150,3 +150,23 @@
 .create-article .row {
   padding-top: 10px;
 }
+
+.merchant-thumbnail {
+  height: 50px;
+}
+
+.edit-merchant .row {
+  padding-top: 10px;
+}
+
+.edit-merchant .input-field {
+  height: 20px;
+}
+
+.edit-merchant .multi-line-input {
+  min-height: 80px;
+}
+
+.show-article .row {
+  min-height: 30px;
+}

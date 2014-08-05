@@ -39,4 +39,8 @@ Mlspin::Application.configure do
   config.assets.debug = true
   
   Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:log_command] = true
+  Paperclip.options[:log] = true
+  
+  config.paperclip_defaults = {:log_commnad => true, :command_path => "/usr/local/bin/", :log => true}
 end
