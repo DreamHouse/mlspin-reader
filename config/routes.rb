@@ -8,6 +8,7 @@ Mlspin::Application.routes.draw do
   
   resources :properties
   resources :articles
+  resources :merchants
   
   namespace :admin do
     resource :dashboard

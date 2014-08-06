@@ -1,0 +1,17 @@
+.container
+  .row
+    .col-md-2
+      商家
+    .col-md-2
+      电话
+    .col-md-2
+      商标／头像
+  - if @merchants
+    - @merchants.each do |merchant|
+      .row
+        .col-md-2
+          %a{href: merchant_path(merchant.id)}= merchant.name
+        .col-md-2
+          = merchant.phone
+        .col-md-2
+          = image_tag merchant.photo.url, class: 'merchant-thumbnail'
