@@ -1,17 +1,14 @@
-.container
-  .row
-    .col-md-2
-      商家
-    .col-md-2
-      电话
-    .col-md-2
-      商标／头像
+.container.merchant-list
   - if @merchants
     - @merchants.each do |merchant|
       .row
         .col-md-2
-          %a{href: merchant_path(merchant.id)}= merchant.name
-        .col-md-2
-          = merchant.phone
-        .col-md-2
-          = image_tag merchant.photo.url, class: 'merchant-thumbnail'
+          = image_tag merchant.photo.url, class: 'merchant-small'
+        .col-md-10
+          = merchant.name
+          %br
+          = merchant.desc
+          %br
+          = "网站：#{merchant.link}"
+          %br
+          = "电话：#{merchant.phone}"
