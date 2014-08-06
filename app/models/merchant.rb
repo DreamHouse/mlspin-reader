@@ -10,6 +10,8 @@ class Merchant
   field :desc, type: String
   field :link, type: String
   field :published, type: Boolean
+  field :tags, type: Array
+  
   has_mongoid_attached_file :photo, 
     :styles => { :thumb => ["50x50#", :png], :small => ["100x100#", :png], :medium => ["150x150>", :png] }
   

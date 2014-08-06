@@ -27,6 +27,13 @@
         = text_field_tag 'link'
     .row
       .col-md-3
+        商家类别：
+      .col-md-9
+        - Tag.all.each do |tag|
+          = check_box_tag 'tags[]', tag.name
+          = tag.value
+    .row
+      .col-md-3
         头像图片或Logo
       .col-md-9
         = file_field_tag 'photo'

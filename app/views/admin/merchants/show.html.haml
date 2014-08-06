@@ -27,6 +27,13 @@
         = raw(@merchant.link)
     .row
       .col-md-3
+        商家类别：
+      .col-md-9
+        - if @merchant.tags
+          - @merchant.tags.each do |t| 
+            = Tag.where(name: t).first.value + ', '
+    .row
+      .col-md-3
         头像图片或Logo
       .col-md-9
         = image_tag @merchant.photo.url
