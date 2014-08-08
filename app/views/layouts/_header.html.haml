@@ -40,9 +40,8 @@
           %ul.dropdown-menu
             %li
               %a{href: merchants_path + '?tag=agent'} 房产代理
-              %a{href: "/Belmont"} 贷款机构
-              %a{href: "/Lexington"} 房屋维修保养
-              %a{href: "/Lexington"} 其他
+              %a{href: merchants_path + '?tag=mortgage'} 贷款机构
+              %a{href: merchants_path + '?tag=builder'} 房屋维修保养
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li

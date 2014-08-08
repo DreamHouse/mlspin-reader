@@ -12,8 +12,8 @@ class Merchant
   field :published, type: Boolean
   field :tags, type: Array
   
-  has_mongoid_attached_file :photo, 
-    :styles => { :thumb => ["50x50#", :png], :small => ["100x100#", :png], :medium => ["150x150>", :png] }
+  has_mongoid_attached_file :photo
+  # , :styles => { :thumb => ["50x50#", :png], :small => ["100x100#", :png], :medium => ["150x150>", :png] }
   
   validates_presence_of :name, :phone
   validates_uniqueness_of :name

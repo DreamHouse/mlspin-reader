@@ -3,11 +3,11 @@
     - @merchants.each do |merchant|
       .row
         .col-md-2
-          = image_tag merchant.photo.url, class: 'merchant-small'
+          = image_tag merchant.photo.url, class: 'merchant-image-narrow'
         .col-md-10
-          = merchant.name
+          = raw(merchant.name)
           %br
-          = merchant.desc
+          = raw(merchant.desc)
           %br
           = "网站：#{merchant.link}"
           %br

@@ -159,6 +159,9 @@
   height: 100px;
 }
 
+.merchant-image-narrow {
+  width: 150px;
+}
 .edit-merchant .row {
   padding-top: 10px;
 }
