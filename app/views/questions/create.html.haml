@@ -1,0 +1,8 @@
+.container.create-article
+  - if @error
+    - if @error == :no_user
+      请先登陆再提问
+  - else
+    .row
+      .col-md-9
+        = "问题 #{@question.title} 发表成功"

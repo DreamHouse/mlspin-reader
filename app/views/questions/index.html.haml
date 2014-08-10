@@ -1,0 +1,14 @@
+.container.merchant-list
+  .row
+    %a.btn.btn-primary.btn-ask-question{href: new_question_path} 提问
+  - if @questions
+    - @questions.each do |question|
+      .row
+        .col-md-8
+          %a{href: question_path(question.id)}
+            = raw(question.title)
+        .col-md-4
+          = "提问人：#{question.user.nickname}"
+          = "发表时间：#{question.created_at}"
+      %hr
+      

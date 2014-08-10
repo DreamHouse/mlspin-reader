@@ -29,7 +29,7 @@
       .col-md-3
         商家类别：
       .col-md-9
-        - Tag.all.each do |tag|
+        - Tag.merchant.each do |tag|
           = check_box_tag 'tags[]', tag.name
           = tag.value
     .row

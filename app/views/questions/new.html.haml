@@ -1,0 +1,22 @@
+.container.create-question
+  = form_tag(questions_path, method: 'post') do
+    .row
+      .col-md-3
+        标题：
+      .col-md-9
+        = text_field_tag 'title'
+    .row
+      .col-md-3
+        内容：
+      .col-md-9  
+        = text_area_tag 'content'
+    .row
+      .col-md-3
+        类别（至少选一个）：
+      .col-md-9
+        - Tag.question.each do |tag|
+          = check_box_tag 'tags[]', tag.name
+          = tag.value
+    .row
+      .col-md-3
+        %button{type: "submit", class: "btn btn-warning"} 提问

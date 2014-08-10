@@ -181,3 +181,29 @@
 .merchant-list .row {
   padding-top: 10px;
 }
+
+/* Questions style */
+.create-question .row {
+  padding-top: 10px;
+}
+
+.create-question input[type="text"] {
+  width: 80%;
+}
+
+.create-question textarea {
+  width: 80%;
+  height: 200px;
+}
+
+.btn-ask-question {
+  width: 90%;
+}
+
+.answer-question-form .row {
+  padding-top: 10px;
+}
+
+.answer-question-form .align-right {
+  float: right;
+}
