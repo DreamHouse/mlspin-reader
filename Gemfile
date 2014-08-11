@@ -14,7 +14,10 @@ gem 'will_paginate_mongoid'
 gem 'devise'
 gem "cancan"
 gem 'mercury-rails'  # html editor
+
 gem 'mongoid-paperclip', :require => "mongoid_paperclip"  # image uploader
+gem 'ckeditor' # another html editor, replace mercury later
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

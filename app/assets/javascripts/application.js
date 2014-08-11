@@ -15,3 +15,5 @@
 //= require bootstrap.min
 //= require landing
 //= require properties
+//= require question
+//= require ckeditor/init

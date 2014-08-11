@@ -15,6 +15,7 @@ class QuestionsController < ApplicationController
       @error = :no_user
     else
       @question = Question.create!(params)
+      @question.content = params[:content][0]
       @question.user = current_user
       @question.save!
     end

@@ -1,4 +1,6 @@
 Mlspin::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   mount Mercury::Engine => '/'
 
   devise_for :users
@@ -8,7 +10,11 @@ Mlspin::Application.routes.draw do
   
   resources :properties
   resources :articles
-  resources :questions
+  
+  resources :questions do
+    resources :answers
+  end
+  
   resources :merchants
   
   namespace :admin do

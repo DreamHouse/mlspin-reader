@@ -9,14 +9,14 @@
       .col-md-3
         内容：
       .col-md-9  
-        = text_area_tag 'content'
+        = cktext_area 'content', '', :class => 'someclass', :ckeditor => {:language => 'zh'}
     .row
       .col-md-3
         类别（至少选一个）：
       .col-md-9
         - Tag.question.each do |tag|
-          = check_box_tag 'tags[]', tag.name
+          = check_box_tag 'tags[]', tag.name, false, class: 'question-tag-checkbox'
           = tag.value
     .row
       .col-md-3
-        %button{type: "submit", class: "btn btn-warning"} 提问
+        %button{type: "submit", class: "btn btn-warning", id: 'submit-question'} 提问
