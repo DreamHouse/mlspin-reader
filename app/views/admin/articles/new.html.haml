@@ -9,7 +9,7 @@
       .col-md-3
         摘要：
       .col-md-9  
-        = text_area_tag 'desc'
+        = cktext_area 'desc', '', :class => 'someclass', :ckeditor => {:language => 'zh'}
     .row
       .col-md-3
         原文链接：
@@ -27,6 +27,11 @@
         = text_field_tag 'author', nil, class: 'short-field'
     .row
       .col-md-3
-        %button{type: "submit", class: "btn btn-warning"} 下一步：编辑正文
+        正文：
+      .col-md-9  
+        = cktext_area 'content', '', :class => 'someclass', :ckeditor => {:language => 'zh'}
+    .row
+      .col-md-3
+        %button{type: "submit", class: "btn btn-warning"} 保存
       .col-md-9
         %a{href: admin_articles_path} 返回文章列表

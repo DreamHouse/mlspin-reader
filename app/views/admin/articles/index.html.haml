@@ -9,7 +9,7 @@
         .col-md-8
           = raw(article.title)
         .col-md-2
-          %a{href: '/editor' + edit_admin_article_path(article.id)} 编辑
+          %a{href: edit_admin_article_path(article.id)} 编辑
           &nbsp;&nbsp;
           - if article.published
             %a{href: edit_admin_article_path(article.id)} 查看全文

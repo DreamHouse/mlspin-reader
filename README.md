@@ -29,5 +29,11 @@ Tag.create(name: '社区', value: '社区', usage: 'question')
 Tag.create(name: '贷款', value: '贷款', usage: 'question')
 Tag.create(name: '维护', value: '维护', usage: 'question')
 
+Grant user the admin role:
+rails c
+u = User.last
+u.role = Role.first
+u.save!
+
 After installing CKEditor gem, run:
 rails generate ckeditor:install --orm=mongoid --backend=paperclip
