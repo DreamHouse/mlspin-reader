@@ -6,7 +6,7 @@
         %p
           %a{"href" => @article.source_link}
             阅读原文
-        %div{"data-mercury" => "full"}
+        %div
           %p= raw(@article.content)
 - else
   %h2 抱歉，该文章不存在

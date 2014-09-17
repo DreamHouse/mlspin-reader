@@ -13,7 +13,6 @@ gem 'haml'
 gem 'will_paginate_mongoid'
 gem 'devise'
 gem "cancan"
-gem 'mercury-rails'  # html editor
 
 gem 'mongoid-paperclip', :require => "mongoid_paperclip"  # image uploader
 gem 'ckeditor' # another html editor, replace mercury later

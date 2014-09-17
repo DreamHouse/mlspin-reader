@@ -134,6 +134,10 @@
   min-height: 100px;
 }
 
+.edit-article input[type="text"] {
+  width: 600px;
+}
+
 .create-article input.short-field {
   width: 200px;
 }

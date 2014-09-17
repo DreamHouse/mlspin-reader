@@ -23,10 +23,9 @@ class Admin::ArticlesController < ApplicationController
   end
   
   def update
-    # {"content"=>{"title"=>{"type"=>"full", "data"=>{}, "value"=>"test3", "snippets"=>{}}, "content"=>{"type"=>"full", "data"=>{}, "value"=>"bb<p></p>", "snippets"=>{}}}
     @article = Article.unscoped.find(params[:id])
     @article.update_attributes!(title: params[:title], desc: params[:desc][0], content: params[:content][0])
-    render json: {"result" => "everything is good"}
+    redirect_to admin_articles_path
   end
   
   def publish

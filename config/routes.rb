@@ -1,8 +1,6 @@
 Mlspin::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
-  mount Mercury::Engine => '/'
-
   devise_for :users
 
   match 'landing/index'

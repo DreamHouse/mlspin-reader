@@ -1,5 +1,5 @@
 .container.edit-article
-  = form_tag(admin_articles_path(@article.id), :method => :put) do
+  = form_tag(admin_article_path(@article.id), :method => :put) do
     .row
       .col-md-3
         标题：
@@ -26,11 +26,17 @@
       .col-md-9
         = @article.author
     .row
-      .col-md-12
-        = cktext_area 'content', '', :value => @article.desc, :class => 'someclass', :ckeditor => {:language => 'zh'}
+      .col-md-3
+        内容：
+      .col-md-9
+        = cktext_area 'content', '', :value => @article.content, :class => 'someclass', :ckeditor => {:language => 'zh'}
     .row
       .col-md-3
-        %button{type: "submit", class: "btn btn-warning", id: "publish_article"} 保存
+        %button{type: "submit", class: "btn btn-warning", id: "save_article"} 保存
+  = form_tag(publish_admin_article_path(@article.id), :method => :post) do
+    .row
+      .col-md-3
+        %button{type: "submit", class: "btn btn-warning", id: "publish_article"} 发布文章
     .row
       .col-md-3
         %a{href: admin_articles_path} 返回文章列表
