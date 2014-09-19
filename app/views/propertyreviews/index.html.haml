@@ -1,0 +1,17 @@
+.container.merchant-list
+  .row
+    .col-md-10
+      .container
+        - if @propertyreviews
+          - @propertyreviews.each do |pr|
+            .row
+              .col-md-8
+                %a{href: propertyreview_path(pr.id)}
+                  = raw(pr.title)
+              .col-md-4
+                = "提问人：#{pr.user.nickname}"
+                = "发表时间：#{pr.created_at}"
+            %hr
+    .col-md-2
+      %a.btn.btn-primary.btn-ask-question{href: new_question_path} 发起新讨论
+      

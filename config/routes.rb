@@ -8,6 +8,7 @@ Mlspin::Application.routes.draw do
   
   resources :properties
   resources :articles
+  resources :propertyreviews
   
   resources :questions do
     resources :answers
