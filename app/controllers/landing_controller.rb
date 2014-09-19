@@ -4,6 +4,7 @@ class LandingController < ApplicationController
       render "version2"
     else
       @articles = Article.order_by(publish_date: :desc).limit(5)
+      @questions = Question.where(:content.ne => '').order_by(updated_at: :desc).limit(5)
       render "index", layout: "top_bar"
     end
   end
