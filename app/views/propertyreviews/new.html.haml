@@ -8,16 +8,21 @@
         .panel-body
           = form_tag(propertyreviews_path, method: 'post') do
             .row
-              .col-md-3
-                地址：
-              .col-md-9
+              .col-md-4
+                地址（街名，例如 290 Congress st）：
+              .col-md-8
                 = text_field_tag 'addr'
+                = hidden_field_tag 'server_url', @server_url
             .row
-              .col-md-3
+              .col-md-4
                 城镇：
-              .col-md-9
+              .col-md-8
                 = text_field_tag 'town'
             .row
               .col-md-3
                 %button{type: "submit", class: "btn btn-warning", id: "property-review-next-btn"} 下一步
+            .row
+              .col-md-12
+                = label_tag 'search_result', '', id: 'search_result'
+
               

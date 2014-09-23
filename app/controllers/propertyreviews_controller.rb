@@ -8,6 +8,7 @@ class PropertyreviewsController < ApplicationController
   end
   
   def new
+    @server_url = "#{request.protocol}#{request.host}:#{request.port}"
   end
   
   def create

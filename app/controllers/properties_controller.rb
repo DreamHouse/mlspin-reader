@@ -4,7 +4,11 @@ class PropertiesController < ApplicationController
     addr = params[:addr]
     
     if addr
-      @home = Home.where(addr: /#{addr}/).first
+      town = params[:town]
+      if town
+        addr = addr + " " + town
+      end
+      @home = Home.where(addr: /#{addr}/i).first
     elsif mls
       @home = Home.where(mls: mls).first
     end
