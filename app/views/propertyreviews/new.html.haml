@@ -1,0 +1,23 @@
+.container.create-propertyreview
+  .row
+    .col-md-10
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            您好，很高兴您能尝试我们的房源讨论功能。首先，请您提供您想讨论的房子的基本信息
+        .panel-body
+          = form_tag(propertyreviews_path, method: 'post') do
+            .row
+              .col-md-3
+                地址：
+              .col-md-9
+                = text_field_tag 'addr'
+            .row
+              .col-md-3
+                城镇：
+              .col-md-9
+                = text_field_tag 'town'
+            .row
+              .col-md-3
+                %button{type: "submit", class: "btn btn-warning", id: "property-review-next-btn"} 下一步
+              

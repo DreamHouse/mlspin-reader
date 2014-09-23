@@ -211,3 +211,7 @@
 .answer-question-form .align-right {
   float: right;
 }
+
+.create-propertyreview .panel .row {
+  padding-top: 10px;
+}

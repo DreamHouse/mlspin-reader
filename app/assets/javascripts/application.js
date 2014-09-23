@@ -16,4 +16,5 @@
 //= require landing
 //= require properties
 //= require question
+//= require propertyreview
 //= require ckeditor/init
