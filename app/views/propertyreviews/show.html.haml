@@ -1,0 +1,69 @@
+- if @home
+  .container.home_details_container
+    .row
+      .col-md-6#details_images
+        %p= @home.addr
+        .carousel.slide#home_detail_carousel
+          .carousel-inner
+            .item.active
+              =image_tag "images/#{@home.mls}/0.jpg"
+            - (1..@home[:photo_count]-1).each do |photo_index|
+              .item
+                =image_tag "images/#{@home.mls}/#{photo_index}.jpg"
+          %a{"class"=>"left carousel-control", "href"=>"#home_detail_carousel", "data-slide"=>"prev"}
+            %span<
+          %a{"class"=>"right carousel-control", "href"=>"#home_detail_carousel", "data-slide"=>"next"}
+            %span>
+      .col-md-4.details_basic
+        %p= "售价 #{@home.price}"
+        %p= "#{@home[:bedrooms]}间卧室， 卫生间：#{@home[:bathrooms]}，一共#{@home[:total_rooms]}个房间"
+        - if @home[:year_built]
+          %p= "建于#{@home[:year_built]}年"
+        %p= "建筑形式：#{@home[:style]}"
+        %p= "室内面积：#{@home[:approx_living_area]}，院子面积：#{@home[:approx_acres]}"
+        %p= "评估价：#{@home[:assessed]}"
+        %p= "房产税：#{@home[:tax]} （#{@home[:tax_year]}年）"
+      .col-md-2#detail_ads
+        %button.btn.btn-link 我要下Offer
+        %button.btn.btn-warning 联系房产代理
+    .row
+      .col-md-10.details_more
+        %ul.nav.nav-tabs
+          %li.active
+            %a{:href => "#house_details", "data-toggle" => "tab"} 房屋信息
+          %li
+            %a{:href => "#room_details", "data-toggle" => "tab"} 房间信息
+          %li 
+            %a{:href => "#lot_details", "data-toggle" => "tab"} 地产信息
+          %li 
+            %a{:href => "#school_details", "data-toggle" => "tab"} 学校资源
+          %li 
+            %a{:href => "#history_details", "data-toggle" => "tab"} 历史价格
+        .tab-content
+          .tab-pane.active#house_details
+            %p= "建筑风格: #{@home[:style]}"
+            %p= "房子颜色: #{@home[:color]}"
+            %p= "取暖方式: #{@home[:heat_zones]}"
+            %p= "热水: #{@home[:hot_water]}"
+            %p= "空调: #{@home[:cool_zones]}"
+            %p= "是否有地下室: #{@home[:basement]}"
+          .tab-pane#room_details
+            - @home[:room_details].each do |room|
+              - if room["size"].blank?
+                %p= "#{room["name"]} 位于 #{room["level"]} 层"
+              - else
+                %p= "#{room["name"]} 位于 #{room["level"]} 层，面积 #{room["size"]} 平方英尺"
+          .tab-pane#lot_details
+            %p= "车库：#{@home[:garage_spaces]}"
+            %p= "车位：#{@home[:parking_spaces]}"
+            %p= "给水：#{@home[:water_utilities]}"
+            %p= "排水：#{@home[:sewer_utilities]}"
+          .tab-pane#school_details
+            %p= "小学 #{@home[:grade_school]}"
+            %p= "初中 #{@home[:middle_school]}"
+            %p= "高中 #{@home[:high_school]}"
+          .tab-pane#history_details
+            过往价格
+- else
+  %h2 抱歉，我们目前没有关于这个房产的信息
+    

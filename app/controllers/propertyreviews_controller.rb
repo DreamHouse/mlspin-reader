@@ -15,5 +15,6 @@ class PropertyreviewsController < ApplicationController
   end
   
   def show
+    @home = Home.find(params[:id])
   end
 end
