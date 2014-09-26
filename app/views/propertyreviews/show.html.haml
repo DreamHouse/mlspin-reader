@@ -64,6 +64,28 @@
             %p= "高中 #{@home[:high_school]}"
           .tab-pane#history_details
             过往价格
+  .container.create-question
+    = form_tag(propertyreviews_path, method: 'post') do
+      .row
+        .col-md-3
+          您关于本房产的看法或问题：
+        .col-md-9  
+          = hidden_field_tag 'property_id', @home.id
+          = cktext_area 'content', '', :class => 'someclass', :ckeditor => {:language => 'zh'}
+      .row
+        .col-md-3
+          %button{type: "submit", class: "btn btn-warning", id: 'submit-propertyreview'} 发表
+  .container.merchant-list
+    - if @propertyreviews
+      - @propertyreviews.each do |review|
+        .row
+          .col-md-8
+            = raw(review.content)
+          .col-md-4
+            = "提问人：#{review.user.nickname}"
+            = "发表时间：#{review.created_at}"
+        %hr
 - else
   %h2 抱歉，我们目前没有关于这个房产的信息
+
     
