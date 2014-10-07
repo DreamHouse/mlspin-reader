@@ -18,24 +18,26 @@
                 %li{"data-target" => "#sell_carousel", "data-slide-to" => "1"}
                 %li{"data-target" => "#sell_carousel", "data-slide-to" => "2"}
               .carousel-inner
-                .item.active
-                  =image_tag "sell_sample_1.jpg"
-                  .carousel-caption 业主直售
-                .item
-                  =image_tag "sell_sample_2.jpg"
-                  .carousel-caption 业主直售
-                .item
-                  =image_tag "sell_sample_3.jpg"
-                  .carousel-caption 业主直售
+                - @reviewed_homes.each_with_index do |home, index|
+                  - if index == 0
+                    .item.active
+                      =image_tag "images/#{home.mls}/0.jpg"
+                      .carousel-caption "#{home.addr}"
+                  - else
+                    .item
+                      =image_tag "images/#{home.mls}/0.jpg"
+                      .carousel-caption #{home.addr}
               %a{"class"=>"left carousel-control", "href"=>"#sell_carousel", "data-slide"=>"prev"}
                 %span<
               %a{"class"=>"right carousel-control", "href"=>"#sell_carousel", "data-slide"=>"next"}
                 %span>
             .town
-              %h2 Lexington
-              %p 美国马萨诸塞州米德尔塞克斯县一小镇，因美国独立战争在此打响而著名。据2000年统计，人口30355人，面积42.8平方公里。列克星敦建立于1642年。
+              %h2 热门房源讨论
+              %p 
+                = raw(@reviewed_homes.first.addr)
+                = raw(@reviewed_homes.first.propertyreviews.first.content)
               %p
-                %a{href: "#", class: "btn btn-default"}查看详情》
+                %a{href: propertyreviews_path, class: "btn btn-default"}查看详情》
         .row
           .col-md-4
             %h3 热点问题
