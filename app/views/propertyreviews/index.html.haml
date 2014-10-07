@@ -1,17 +1,29 @@
 .container.merchant-list
   .row
     .col-md-10
-      .container
-        - if @propertyreviews
-          - @propertyreviews.each do |pr|
-            .row
-              .col-md-8
-                %a{href: propertyreview_path(pr.id)}
-                  = raw(pr.title)
-              .col-md-4
-                = "提问人：#{pr.user.nickname}"
-                = "发表时间：#{pr.created_at}"
-            %hr
+      - if @reviewed_homes
+        - @reviewed_homes.each do |home|
+          .row
+            .col-md-2
+              - if home.mls
+                =image_tag "images/#{home.mls}/0.jpg", class: "review-list-thumb"
+              - else
+                "图片暂缺"
+            .col-md-6
+              %a{href: propertyreview_path(home.id)}
+                = home.addr
+            .col-md-4
+              %p= "售价 #{home.price}"
+              %p= "#{home[:bedrooms]}间卧室， 卫生间：#{home[:bathrooms]}，一共#{home[:total_rooms]}个房间"
+          .row
+            = "#{home.propertyreviews.count}条评论"
+          .row
+            - if home.propertyreviews.first
+              .col-md-8.review-content
+                = raw(home.propertyreviews.first.content)
+              .col-md-4.review-ts
+                = "发表时间：#{home.propertyreviews.first.created_at}"
+          %hr
     .col-md-2
       %a.btn.btn-primary.btn-ask-question{href: new_propertyreview_path} 发起新讨论
       

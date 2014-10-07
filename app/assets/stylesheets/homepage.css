@@ -215,3 +215,17 @@
 .create-propertyreview .panel .row {
   padding-top: 10px;
 }
+
+/* Property Review */
+.review-list-thumb {
+  height: 100px;
+  width: 100px;
+}
+
+.review-content {
+  color: orange;
+}
+
+.review-ts {
+  color: orange;
+}

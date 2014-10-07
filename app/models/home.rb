@@ -9,4 +9,6 @@ class Home
   field :received, type: Time
   field :desc, type: String
   field :link, type: String
+  
+  has_many :propertyreviews
 end

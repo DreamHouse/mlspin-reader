@@ -4,7 +4,9 @@ class PropertyreviewsController < ApplicationController
   layout "top_bar"
   
   def index
-    @propertyreviews = Propertyreview.all
+    @reviewed_homes = Propertyreview.all.reduce([]) do |result, pr| 
+      result << pr.home 
+    end
   end
   
   def new
