@@ -1,15 +1,16 @@
 class LandingController < ApplicationController
   def index
-    if params["version"] == "2"
-      render "version2"
+    @articles = Article.order_by(publish_date: :desc).limit(5)
+    @questions = Question.where(:content.ne => '').order_by(updated_at: :desc).limit(5)
+    
+    @reviewed_homes = Propertyreview.all.reduce([]) do |result, pr| 
+      result << pr.home 
+    end
+    @reviewed_homes.select! { |home| home.mls }
+
+    if params["version"]
+      render "version#{params["version"]}", layout: "top_bar"
     else
-      @articles = Article.order_by(publish_date: :desc).limit(5)
-      @questions = Question.where(:content.ne => '').order_by(updated_at: :desc).limit(5)
-      
-      @reviewed_homes = Propertyreview.all.reduce([]) do |result, pr| 
-        result << pr.home 
-      end
-      @reviewed_homes.select! { |home| home.mls }
       render "index", layout: "top_bar"
     end
   end

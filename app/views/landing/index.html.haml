@@ -34,8 +34,9 @@
             .town
               %h2 热门房源讨论
               %p 
-                = raw(@reviewed_homes.first.addr)
-                = raw(@reviewed_homes.first.propertyreviews.first.content)
+                - unless @reviewed_homes.empty?
+                  = raw(@reviewed_homes.first.addr)
+                  = raw(@reviewed_homes.first.propertyreviews.first.content)
               %p
                 %a{href: propertyreviews_path, class: "btn btn-default"}查看详情》
         .row

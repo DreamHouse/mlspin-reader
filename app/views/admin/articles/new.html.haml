@@ -1,5 +1,5 @@
 .container.create-article
-  %form{action: admin_articles_path, method: :post}
+  = form_tag(admin_articles_path, :method => :post) do
     .row
       .col-md-3
         标题：
