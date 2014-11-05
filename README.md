@@ -37,3 +37,4 @@ u.save!
 
 After installing CKEditor gem, run:
 rails generate ckeditor:install --orm=mongoid --backend=paperclip
+

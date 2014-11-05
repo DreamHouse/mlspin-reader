@@ -1,0 +1,59 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{href: "/"} 首页
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            买房
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: propertyreviews_path } 房源讨论
+              %a{href: questions_path + "?tag=房屋咨询" } 买房咨询
+              %a{href: questions_path + "?tag=社区" } 社区咨询
+              %a{href: questions_path + "?tag=贷款" } 贷款咨询
+              %a{href: questions_path + "?tag=贷款" } 购房知识
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            卖房
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: merchants_path + '?tag=卖房'} 卖房咨询
+              %a{href: merchants_path + '?tag=卖房'} 市场行情
+              %a{href: merchants_path + '?tag=卖房'} 卖房知识
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            贷款
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: merchants_path + '?tag=卖房'} 利率走势
+              %a{href: merchants_path + '?tag=卖房'} 相关新闻
+              %a{href: merchants_path + '?tag=卖房'} 贷款知识
+        %li
+          %a{href: "/"} 房检
+        %li
+          %a{href: "/"} 贷款
+        %li
+          %a{href: "/"} 房产税
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li
+            %p.signed_in_user
+              = current_user.nickname
+              - if current_user.admin?
+                %a{href: admin_dashboard_path} (管理员界面)
+          %li
+            %p.signed_in_user= link_to "退出", destroy_user_session_path, :method => :delete
+        - else
+          %li
+            = form_tag(user_session_path, :method => :post, :class => "navbar-right navbar-form") do
+              %input{id: "email", name: "user[email]", type: "text", placeholder: "邮箱", class: "form-control"}
+              %input{id: "password", name: "user[password]", type: "password", placeholder: "密码", class: "form-control"}
+              %hidden{name: "commit", value: "Sign in"}
+              %button{type: "submit", class: "btn btn-primary"} 登陆
+          %li
+            %p.register_button= link_to "注册新帐号", new_user_registration_path, :class => "btn btn-primary"

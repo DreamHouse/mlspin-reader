@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Propertytax.create!(town: 'Belmont', state: 'MA', year: 2011, rate: 13.24)

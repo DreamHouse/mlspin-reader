@@ -8,6 +8,8 @@ class LandingController < ApplicationController
     end
     @reviewed_homes.select! { |home| home.mls }
 
+    @header_version = (params["header_version"] || "")
+    
     if params["version"]
       render "version#{params["version"]}", layout: "top_bar"
     else
