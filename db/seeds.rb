@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Propertytax.create!(town: 'Belmont', state: 'MA', year: 2011, rate: 13.24)
+# load tax rates from tax_seed.rb

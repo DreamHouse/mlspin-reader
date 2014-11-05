@@ -1,0 +1,50 @@
+1. Springfield             19.49
+2. Sharon                   19.47
+3. Wayland                19.35
+4. Westborough        18.24
+5. Amherst                18.20
+6. Sherborn               17.72
+7. Boxboro                 17.38
+8. Sudbury                 17.03
+9. Carlisle                   16.13
+10. Framingham       16.03
+11. Everett                  15.89
+12. Randolph              15.47
+13. Revere                   14.44
+14. Lexington             14.40
+15. Dedham                14.37
+16. Watertown           13.92 (Residential Exemption: 1,182.40)
+17. Westwood             13.83
+18. Chelsea                  13.81 (Residential Exemption: 685.20)
+19. Malden                  13.58 (Residential Exemption: 925.10)
+20. North Andover     13.52
+21. Lynnfield               13.49
+22. Quincy                  13.42
+23. Belmont                13.24
+24. Concord                13.10
+25. Waltham               13.09  (Residential Exemption: 1,027.44)
+26. Boston                   12.79   (Residential Exemption 1,628)
+27. Somerville             12.71   (Residential Exemption: 1,738.02)
+28. Natick                   12.60
+29. Melrose                12.46
+30. Arlington             12.41
+31. Beverly                 12.41
+32. Lincoln                 12.37
+33. Stoneham            12.21
+34. Winchester          12.10
+35. Dover                   11.70
+36. Cohasset              11.59
+37. Wellesley             11.43
+38.  Weston               11.39
+39. Brookline             11.30 (Residential Exemption: 1,864.50)
+40. Needham            10.90
+41. Newton                10.90
+42. Saugus                 10.62
+43. Norwood             10.10
+44. Hyannis                9.38
+45. Cambridge            8.16  (Residential Exemption: 1,679)
+46. Provincetown       6.81
+47. Chatham               4.28
+48.  Nantucket            3.58  (Residential Exemption: 1,000+/-)
+49.  Edgartown           3.40
+50. Chilmark               2.13
