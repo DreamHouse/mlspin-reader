@@ -1,0 +1,61 @@
+- if @taxrates
+  .container.home_details_container
+    .row
+      .col-md-10.details_more
+        %ul.nav.nav-tabs
+          %li.active
+            %a{:href => "#tax-2014", "data-toggle" => "tab"} 2014
+          %li
+            %a{:href => "#tax-2013", "data-toggle" => "tab"} 2013
+          %li 
+            %a{:href => "#tax-2012", "data-toggle" => "tab"} 2012
+          %li 
+            %a{:href => "#tax-2011", "data-toggle" => "tab"} 2011
+        .tab-content
+          .tab-pane.active#tax-2014
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th 城镇
+                  %th 税率
+              %tbody
+                - @taxrates[2014].each do |rate|
+                  %tr
+                    %td= rate.town
+                    %td= rate.rate
+          .tab-pane#tax-2013
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th 城镇
+                  %th 税率
+              %tbody
+                - @taxrates[2013].each do |rate|
+                  %tr
+                    %td= rate.town
+                    %td= rate.rate
+          .tab-pane#tax-2012
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th 城镇
+                  %th 税率
+              %tbody
+                - @taxrates[2012].each do |rate|
+                  %tr
+                    %td= rate.town
+                    %td= rate.rate
+          .tab-pane#tax-2011
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th 城镇
+                  %th 税率
+              %tbody
+                - @taxrates[2011].each do |rate|
+                  %tr
+                    %td= rate.town
+                    %td= rate.rate
+- else
+  %h2 抱歉，我们目前没有关于这个房产的信息
+    

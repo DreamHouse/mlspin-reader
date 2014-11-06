@@ -16,6 +16,8 @@ Mlspin::Application.routes.draw do
   
   resources :merchants
   
+  get 'propertytax/index'
+  
   namespace :admin do
     resource :dashboard
     

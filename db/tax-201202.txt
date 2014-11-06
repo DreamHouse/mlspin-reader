@@ -1,0 +1,25 @@
+West Springfield	17.25	35.64	35.64	12/15/11
+West Boylston	16.81	16.81	16.81	12/02/11
+East Bridgewater	15.63	15.63	15.63	11/10/11
+West Bridgewater	15.36	24.65	24.65	12/07/11
+West Newbury	14.83	14.83	14.83	12/13/11
+North Adams	14.82	32.83	32.83	12/09/11
+North Reading	14.38	14.38	14.38	11/29/11
+East Brookfield	14.22	14.22	14.22	10/05/11
+North Andover	13.92	19.16	19.16	12/14/11
+North Brookfield	13.50	13.50	13.50	11/21/11
+New Salem	13.40	16.02	16.02	01/24/12
+West Brookfield	11.63	11.63	11.63	12/15/11
+West Stockbridge	11.12	11.12	11.12	05/14/12
+North Attleborough	12.23	12.70	12.70	12/06/11
+Manchester By The Sea	10.11	10.11	10.11	11/30/11
+New Ashford	8.84	12.53	12.53	05/01/12
+New Marlborough	8.77	8.77	8.77	12/13/11
+Oak Bluffs	7.39	7.39	7.39	12/23/11
+Mount Washington	5.65	5.65	5.65	11/08/11
+West Tisbury	4.92	4.92	4.92	04/23/12
+New Bedford	13.76	28.44	28.44	12/19/11
+Great Barrington	13.12	13.12	13.12	08/23/11
+New Braintree	15.96	15.96	15.96	12/15/11
+South Hadley	14.73	14.73	14.73	12/14/11
+South Shore Tri-Town	12.89	23.89	0.00	02/28/12

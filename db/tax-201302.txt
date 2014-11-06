@@ -1,0 +1,26 @@
+East Brookfield	13.85	13.85	13.85
+East Longmeadow	17.67	17.67	17.67
+East Bridgewater	13.21	13.21	13.21
+Fall River	10.23	21.47	21.47
+Great Barrington	12.16	12.16	12.16
+Mount Washington	5.36	5.36	5.36
+North Adams	14.00	31.49	31.49
+North Andover	13.52	18.63	18.63
+North Attleborough	11.72	11.72	11.72
+North Brookfield	13.56	13.56	13.56
+North Reading	14.00	14.00	14.00
+South Hadley	14.36	14.36	14.36
+West Boylston	16.38	16.38	16.38
+West Bridgewater	14.60	23.74	23.74
+West Newbury	13.68	13.68	13.68
+West Springfield	16.72	34.20	34.20
+West Brookfield	10.94	10.94	10.94
+West Stockbridge	10.60	10.60	10.60
+West Tisbury	4.73	4.73	4.73
+New Ashford	7.28	10.59	10.59
+New Bedford	12.88	27.14	27.14
+New Salem	13.20	15.30	15.30
+New Braintree	15.44	15.44	0.00
+New Marlborough	8.47	8.47	8.47
+Manchester By The Sea	9.04	9.04	9.04
+South Shore Tri-Town	11.90	17.70	0.00
