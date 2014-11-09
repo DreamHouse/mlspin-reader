@@ -1,329 +1,353 @@
-http://www.homesellinginmass.net/2012/08/2012-massachusetts-tax-rates.html
-
-Abington	15.14	15.14	15.14
-Acton	18.08	18.08	18.08
-Acushnet	11.41	13.94	13.94
-Adams	16.00	18.97	18.97
-Agawam	14.00	28.32	28.32
-Alford	4.30	4.30	4.30
-Amesbury	18.46	18.46	18.46
-Amherst	18.20	18.20	18.20
-Andover	14.12	22.46	22.46
-Aquinnah	3.86	3.86	0.00
-Arlington	12.41	12.41	12.41
-Ashburnham	17.15	17.15	17.15
-Ashby	14.90	14.90	14.90
-Ashfield	13.94	13.94	13.94
-Ashland	15.91	15.91	15.91
-Athol	14.14	14.14	14.14
-Attleboro	12.20	19.61	19.61
-Auburn	15.38	24.33	24.33
-Avon	12.27	25.96	25.96
-Ayer	12.09	26.82	26.82
-Barnstable	8.05	7.28	7.28
-Barre	13.53	13.53	13.53
-Becket	8.82	8.82	8.82
-Bedford	14.33	31.76	31.76
-Belchertown	15.65	15.65	15.65
-Bellingham	13.11	16.01	16.01
-Belmont	13.24	13.24	13.24
-Berkley	11.01	11.01	11.01
-Berlin	13.89	14.84	14.84
-Bernardston	15.83	15.83	15.83
-Beverly	12.41	22.59	22.59
-Billerica	13.47	30.75	30.75
-Blackstone	15.51	15.51	15.51
-Blandford	13.28	13.28	13.28
-Bolton	19.42	19.42	19.42
-Boston	12.79	31.04	31.04
-Bourne	8.21	8.21	8.21
-Boxborough	17.38	17.38	17.38
-Boxford	13.71	13.71	13.71
-Boylston	15.66	15.66	15.66
-Braintree	10.20	23.29	23.29
-Brewster	6.94	6.94	6.94
-Bridgewater	14.42	14.42	14.42
-Brimfield	13.86	13.86	13.86
-Brockton	15.29	29.55	29.55
-Brookfield	14.51	14.51	14.51
-Brookline	11.30	18.30	18.30
-Buckland	14.11	14.11	14.11
-Burlington	11.50	30.80	30.80
-Cambridge	8.16	19.90	19.90
-Canton	11.55	23.04	23.04
-Carlisle	16.13	16.13	16.13
-Carver	14.78	20.45	20.45
-Charlemont	16.00	16.00	16.00
-Charlton	11.57	11.57	11.57
-Chatham	4.28	4.28	4.28
-Chelmsford	16.72	16.72	16.72
-Chelsea	12.92	30.60	30.60
-Cheshire	9.45	9.45	9.45
-Chester	18.64	18.64	18.64
-Chesterfield	16.15	16.15	16.15
-Chicopee	14.66	30.30	30.30
-Chilmark	2.13	2.13	2.13
-Clarksburg	11.11	11.11	11.11
-Clinton	14.13	27.36	27.36
-Cohasset	11.59	11.59	11.59
-Colrain	14.90	14.90	14.90
-Concord	13.19	13.19	13.19
-Conway	12.98	12.98	12.98
-Cummington	12.45	12.45	12.45
-Dalton	17.38	17.38	17.38
-Danvers	13.40	18.67	18.67
-Dartmouth	8.44	12.90	12.90
-Dedham	14.37	31.06	31.06
-Deerfield	12.32	12.32	12.32
-Dennis	5.59	5.59	5.59
-Dighton	12.11	24.09	24.09
-Douglas	13.31	13.31	13.31
-Dover	11.70	11.70	11.70
-Dracut	12.69	12.69	12.69
-Dudley	10.56	10.56	10.56
-Dunstable	14.62	14.62	14.62
-Duxbury	12.60	12.60	12.60
-Eastham	5.91	5.91	5.91
-Easthampton	12.69	12.69	12.69
-Easton	14.51	14.51	14.51
-Edgartown	3.40	3.40	3.40
-Egremont	7.13	7.13	7.13
-Erving	7.24	12.53	12.53
-Essex	13.62	13.62	13.62
-Everett	15.89	43.74	43.74
-Fairhaven	9.56	19.30	19.30
-Falmouth	7.20	7.20	7.20
-Fitchburg	16.20	21.60	21.60
-Florida	8.08	23.92	23.92
-Foxborough	12.94	12.94	12.94
-Framingham	16.03	37.11	37.11
-Franklin	12.95	12.95	12.95
-Freetown	11.40	18.30	18.30
-Gardner	15.67	15.67	15.67
-Georgetown	11.67	11.67	11.67
-Gill	13.90	13.90	13.90
-Gloucester	11.31	12.08	12.08
-Goshen	14.63	14.63	14.63
-Gosnold	1.96	1.96	1.96
-Grafton	13.63	13.63	13.63
-Granby	14.98	14.98	14.98
-Granville	11.90	11.90	11.90
-Greenfield	18.14	18.14	18.14
-Groton	16.38	16.38	16.38
-Groveland	12.55	12.55	12.55
-Hadley	9.92	9.92	9.92
-Halifax	15.77	15.77	15.77
-Hamilton	17.19	17.19	17.19
-Hampden	15.64	15.64	15.64
-Hancock	3.11	3.11	3.11
-Hanover	14.18	14.71	14.71
-Hanson	12.10	12.10	12.10
-Hardwick	12.40	12.40	12.40
-Harvard	15.47	15.47	15.47
-Harwich	7.70	7.70	7.70
-Hatfield	10.84	10.84	10.84
-Haverhill	13.93	23.27	23.27
-Hawley	14.65	14.65	0.00
-Heath	18.83	18.83	18.83
-Hingham	11.08	11.08	11.08
-Hinsdale	11.42	11.42	11.42
-Holbrook	17.36	33.44	33.44
-Holden	15.65	15.65	15.65
-Holland	14.58	14.58	14.58
-Holliston	17.94	17.94	17.94
-Holyoke	15.78	37.08	37.08
-Hopedale	14.39	23.05	23.05
-Hopkinton	16.73	16.73	16.73
-Hubbardston	11.33	11.33	11.33
-Hudson	14.16	26.19	26.19
-Hull	12.35	12.35	0.00
-Huntington	14.66	14.66	14.66
-Ipswich	12.00	12.00	12.00
-Kingston	14.65	14.65	14.65
-Lakeville	11.20	11.20	11.20
-Lancaster	17.13	17.13	17.13
-Lanesborough	16.64	16.64	16.64
-Lawrence	13.45	30.41	30.41
-Lee	13.06	13.06	13.06
-Leicester	12.44	12.44	12.44
-Lenox	10.49	14.02	14.02
-Leominster	15.41	15.41	15.41
-Leverett	16.20	16.20	16.20
-Lexington	14.40	27.28	27.28
-Leyden	16.43	16.43	16.43
-Lincoln	12.37	16.27	16.27
-Littleton	15.33	24.40	24.40
-Longmeadow	18.75	18.75	18.75
-Lowell	14.27	29.73	29.73
-Ludlow	15.70	15.70	15.70
-Lunenburg	16.16	16.16	16.16
-Lynn	16.22	32.41	32.41
-Lynnfield	13.49	14.61	14.61
-Malden	13.58	23.68	23.68
-Mansfield	14.31	18.27	18.27
-Marblehead	10.21	10.21	10.21
-Marion	9.40	9.40	9.40
-Marlborough	13.94	27.55	27.55
-Marshfield	11.29	11.29	11.29
-Mashpee	8.37	8.37	8.37
-Mattapoisett	11.26	11.26	11.26
-Maynard	17.50	26.91	26.91
-Medfield	15.02	15.02	15.02
-Medford	11.61	22.98	22.98
-Medway	17.10	17.10	17.10
-Melrose	12.46	19.01	19.01
-Mendon	13.67	13.67	13.67
-Merrimac	13.99	13.99	13.99
-Methuen	12.69	22.91	22.91
-Middleborough	13.05	13.86	13.86
-Middlefield	15.12	15.12	15.12
-Middleton	12.17	12.17	12.17
-Milford	15.22	26.05	26.05
-Millbury	14.55	14.55	14.55
-Millis	15.41	15.41	15.41
-Millville	12.61	12.61	12.61
-Milton	14.07	21.56	21.56
-Monroe	12.80	27.63	27.63
-Monson	14.43	14.43	14.43
-Montague	15.28	23.05	23.05
-Monterey	5.28	5.28	5.28
-Montgomery	13.81	13.81	13.81
-Nahant	10.00	10.00	10.00
-Nantucket	3.58	6.41	6.41
-Natick	12.60	12.60	12.60
-Needham	10.90	21.50	21.50
-Newbury	10.18	10.18	10.18
-Newburyport	12.07	12.07	12.07
-Newton	10.90	20.89	20.89
-Norfolk	15.10	15.10	15.10
-Northampton	12.96	12.96	12.96
-Northborough	15.11	15.11	15.11
-Northbridge	11.70	11.70	11.70
-Northfield	13.72	13.72	13.72
-Norton	12.68	12.68	12.68
-Norwell	13.87	13.87	13.87
-Norwood	10.10	18.99	18.99
-Oak Bluffs	7.03	7.03	7.03
-Oakham	10.92	10.92	10.92
-Orange	16.58	16.58	16.58
-Orleans	5.57	5.57	5.57
-Otis	6.62	6.62	6.62
-Oxford	13.08	13.08	13.08
-Palmer	15.85	15.85	15.85
-Paxton	17.03	17.03	17.03
-Peabody	11.58	23.14	23.14
-Pelham	18.20	18.20	18.20
-Pembroke	13.47	13.47	13.47
-Pepperell	13.13	13.13	13.13
-Peru	15.07	15.07	15.07
-Petersham	14.17	14.17	14.17
-Phillipston	13.67	13.67	13.67
-Pittsfield	15.19	30.95	30.95
-Plainfield	14.83	14.83	14.83
-Plainville	13.57	13.57	13.57
-Plymouth	13.04	13.04	13.04
-Plympton	15.97	15.97	15.97
-Princeton	15.84	15.84	15.84
-Provincetown	6.81	6.81	6.81
-Quincy	13.42	27.85	27.85
-Randolph	15.47	28.07	28.07
-Raynham	13.56	18.90	18.90
-Reading	13.80	13.80	13.80
-Rehoboth	10.13	10.13	10.13
-Revere	14.44	29.30	29.30
-Richmond	9.04	9.04	9.04
-Rochester	12.02	12.02	12.02
-Rockland	14.87	14.87	14.87
-Rockport	9.80	9.80	9.80
-Rowe	5.33	11.56	11.56
-Rowley	13.28	13.28	13.28
-Royalston	9.28	9.28	9.28
-Russell	18.16	18.16	18.16
-Rutland	14.14	14.14	14.14
-Salem	15.05	29.08	29.08
-Salisbury	10.63	10.63	10.63
-Sandisfield	9.41	9.41	9.41
-Sandwich	12.18	12.18	12.18
-Saugus	10.62	23.36	23.36
-Savoy	16.23	16.23	16.23
-Scituate	11.25	11.25	11.25
-Seekonk	11.39	22.62	22.62
-Sharon	19.47	19.47	19.47
-Sheffield	12.50	12.50	12.50
-Shelburne	12.66	12.66	12.66
-Sherborn	17.72	17.72	17.72
-Shirley	13.69	13.69	13.69
-Shrewsbury	10.67	10.67	10.67
-Shutesbury	19.37	19.37	19.37
-Somerset	11.94	28.62	28.62
-Somerville	12.71	21.21	21.21
-Southampton	12.96	12.96	12.96
-Southborough	15.58	15.58	15.58
-Southbridge	17.14	17.14	17.14
-Southwick	13.44	13.44	13.44
-Spencer	11.07	11.07	11.07
-Springfield	19.49	38.97	38.97
-Sterling	14.90	14.90	14.90
-Stockbridge	7.48	7.48	7.48
-Stoneham	12.21	19.63	19.63
-Stoughton	13.57	23.67	23.67
-Stow	17.05	17.05	17.05
-Sturbridge	16.19	16.19	16.19
-Sudbury	17.03	22.27	22.27
-Sunderland	12.80	12.80	12.80
-Sutton	13.25	13.25	13.25
-Swampscott	16.60	30.80	30.80
-Swansea	10.50	20.91	20.91
-Taunton	11.71	25.45	25.45
-Templeton	12.55	12.55	12.55
-Tewksbury	13.46	21.29	21.29
-Tisbury	7.52	9.49	9.49
-Tolland	5.44	5.44	5.44
-Topsfield	14.83	14.83	14.83
-Townsend	15.74	15.74	15.74
-Truro	5.69	5.69	5.69
-Tyngsborough	14.17	14.17	14.17
-Tyringham	6.04	6.04	0.00
-Upton	14.64	14.64	14.64
-Uxbridge	13.72	13.72	13.72
-Wakefield	11.46	23.32	23.32
-Wales	14.64	14.64	14.64
-Walpole	13.68	17.82	17.82
-Waltham	13.09	30.43	30.43
-Ware	14.87	14.87	14.87
-Wareham	8.93	8.93	8.93
-Warren	15.32	15.32	15.32
-Warwick	16.70	16.70	16.70
-Washington	12.74	12.74	12.74
-Watertown	13.92	25.87	25.87
-Wayland	19.35	19.35	19.35
-Webster	11.16	17.92	17.92
-Wellesley	11.43	11.43	11.43
-Wellfleet	6.09	6.09	6.09
-Wendell	17.99	17.99	17.99
-Wenham	17.17	17.17	17.17
-Westborough	18.24	18.24	18.24
-Westfield	15.41	29.13	29.13
-Westford	15.23	15.50	15.50
-Westhampton	15.67	15.67	15.67
-Westminster	15.14	15.14	15.14
-Weston	11.39	11.39	11.39
-Westport	6.71	6.71	6.71
-Westwood	13.83	25.38	25.38
-Weymouth	11.69	19.41	19.41
-Whately	15.47	15.47	15.47
-Whitman	13.43	13.43	13.43
-Wilbraham	16.66	16.66	16.66
-Williamsburg	14.89	14.89	14.89
-Williamstown	12.70	12.70	12.70
-Wilmington	11.88	28.10	28.10
-Winchendon	14.06	14.06	14.06
-Winchester	12.10	11.35	11.35
-Windsor	12.90	12.90	12.90
-Winthrop	13.80	13.80	13.80
-Woburn	10.30	26.34	26.34
-Worcester	16.06	34.65	34.65
-Worthington	12.42	12.42	12.42
-Wrentham	14.08	16.10	16.10
-Yarmouth	8.64	8.64	8.64
-Devens	13.25	15.89	15.89
+1	Abington	16.55
+2	Acton	19.1
+3	Acushnet	13.17
+4	Adams	18.25
+5	Agawam	15.6
+6	Alford	4.35
+7	Amesbury	20.24
+8	Amherst	20.39
+9	Andover	14.51
+10	Aquinnah	4.32
+11	Arlington	13.61
+12	Ashburnham	18.85
+13	Ashby	17.47
+14	Ashfield	15.09
+15	Ashland	17.14
+16	Athol	15.48
+17	Attleboro	13.88
+18	Auburn	16.7
+19	Avon	14.65
+20	Ayer	13.63
+21	Barnstable	8.76
+22	Barre	15.34
+23	Becket	9.62
+24	Bedford	15.37
+25	Belchertown	17.11
+26	Bellingham	14.44
+27	Belmont	13.33
+28	Berkley	11.68
+29	Berlin	15.38
+30	Bernardston	16.85
+31	Beverly	13.64
+32	Billerica	14.31
+33	Blackstone	17.99
+34	Blandford	14.69
+35	Bolton	20.96
+36	Boston	13.14
+37	Bourne	9.45
+38	Boxborough	17.69
+39	Boxford	14.88
+40	Boylston	17.2
+41	Braintree	11.11
+42	Brewster	7.92
+43	Bridgewater	15.83
+44	Brimfield	14.84
+45	Brockton	16.88
+46	Brookfield	17.42
+47	Brookline	11.65
+48	Buckland	14.88
+49	Burlington	11.85
+50	Cambridge	8.66
+51	Canton	12.3
+52	Carlisle	17.68
+53	Carver	16.34
+54	Charlemont	17.09
+55	Charlton	12.3
+56	Chatham	5.03
+57	Chelmsford	17.95
+58	Chelsea	14.13
+59	Cheshire	10.62
+60	Chester	20.28
+61	Chesterfield	17.99
+62	Chicopee	15.74
+63	Chilmark	2.29
+64	Clarksburg	13.04
+65	Clinton	15.59
+66	Cohasset	12.2
+67	Colrain	16.34
+68	Concord	14.07
+69	Conway	13.7
+70	Cummington	12.34
+71	Dalton	18.12
+72	Danvers	14.54
+73	Dartmouth	9.35
+74	Dedham	15.79
+75	Deerfield	13.44
+76	Dennis	6.09
+77	Devens	16
+78	Dighton	14
+79	Douglas	15.95
+80	Dover	12.8
+81	Dracut	13.79
+82	Dudley	11.56
+83	Dunstable	15.53
+84	Duxbury	14.19
+85	East Bridgewater	15.9
+86	East Brookfield	14.55
+87	East Longmeadow	18.62
+88	Eastham	6.53
+89	Easthampton	14.51
+90	Easton	15.8
+91	Edgartown	3.55
+92	Egremont	7.89
+93	Erving	8.09
+94	Essex	15.15
+95	Everett	15.64
+96	Fairhaven	10.77
+97	Fall River	11.93
+98	Falmouth	8.04
+99	Fitchburg	19.05
+100	Florida	8.74
+101	Foxborough	14.54
+102	Framingham	17.84
+103	Franklin	14.34
+104	Freetown	12.76
+105	Gardner	17.46
+106	Georgetown	13.55
+107	Gill	15.34
+108	Gloucester	12.62
+109	Goshen	13.74
+110	Gosnold	2.25
+111	Grafton	15.55
+112	Granby	16.34
+113	Granville	12.1
+114	Great Barrington	13.14
+115	Greenfield	20.72
+116	Groton	16.85
+117	Groveland	14.48
+118	Hadley	10.44
+119	Halifax	17.99
+120	Hamilton	17.17
+121	Hampden	17.45
+122	Hancock	2.84
+123	Hanover	15.55
+124	Hanson	14.32
+125	Hardwick	13.94
+126	Harvard	16.68
+127	Harwich	8.58
+128	Hatfield	12.3
+129	Haverhill	15.65
+130	Hawley	15.95
+131	Heath	20.04
+132	Hingham	12.32
+133	Hinsdale	12.22
+134	Holbrook	18.11
+135	Holden	17.37
+136	Holland	15.61
+137	Holliston	18.62
+138	Holyoke	18.35
+139	Hopedale	15.51
+140	Hopkinton	17.32
+141	Hubbardston	13.64
+142	Hudson	16.38
+143	Hull	13.47
+144	Huntington	16.37
+145	Ipswich	13.3
+146	Kingston	16.41
+147	Lakeville	12.52
+148	Lancaster	19.08
+149	Lanesborough	18.07
+150	Lawrence	15.08
+151	Lee	14.09
+152	Leicester	13.62
+153	Lenox	11.58
+154	Leominster	17.96
+155	Leverett	18.66
+156	Lexington	15.2
+157	Leyden	16.29
+158	Lincoln	14.23
+159	Littleton	16.98
+160	Longmeadow	21.54
+161	Lowell	15.01
+162	Ludlow	17.17
+163	Lunenburg	17.3
+164	Lynn	16.93
+165	Lynnfield	14.82
+166	Malden	15.88
+167	Manchester By The Sea	10.51
+168	Mansfield	14.89
+169	Marblehead	10.85
+170	Marion	10.36
+171	Marlborough	15
+172	Marshfield	12.21
+173	Mashpee	9.09
+174	Mattapoisett	12.28
+175	Maynard	20.05
+176	Medfield	15.73
+177	Medford	12.36
+178	Medway	18.56
+179	Melrose	13.03
+180	Mendon	15.22
+181	Merrimac	15.45
+182	Methuen	14.4
+183	Middleborough	14.89
+184	Middlefield	16.14
+185	Middleton	13.59
+186	Milford	16.95
+187	Millbury	16.48
+188	Millis	16.34
+189	Millville	15.11
+190	Milton	14.7
+191	Monroe	13.38
+192	Monson	15.12
+193	Montague	17.04
+194	Monterey	5.59
+195	Montgomery	14.01
+196	Mount Washington	5.84
+197	Nahant	10.74
+198	Nantucket	3.67
+199	Natick	14.34
+200	Needham	11.3
+201	New Ashford	9.16
+202	New Bedford	14.33
+203	New Braintree	15.93
+204	New Marlborough	8.97
+205	New Salem	15.4
+206	Newbury	11.4
+207	Newburyport	13.32
+208	Newton	11.49
+209	Norfolk	17.1
+210	North Adams	15.3
+211	North Andover	13.72
+212	North Attleborough	12.78
+213	North Brookfield	14.75
+214	North Reading	16.04
+215	Northampton	14.26
+216	Northborough	16.11
+217	Northbridge	12.35
+218	Northfield	15.04
+219	Norton	14.92
+220	Norwell	16.1
+221	Norwood	11.04
+222	Oak Bluffs	7.71
+223	Oakham	12.38
+224	Orange	18.8
+225	Orleans	6.1
+226	Otis	7.17
+227	Oxford	14.45
+228	Palmer	16.69
+229	Paxton	19.22
+230	Peabody	11.98
+231	Pelham	20.03
+232	Pembroke	14.2
+233	Pepperell	14.78
+234	Peru	16.3
+235	Petersham	16.18
+236	Phillipston	15.56
+237	Pittsfield	16.7
+238	Plainfield	18.56
+239	Plainville	14.47
+240	Plymouth	14.43
+241	Plympton	16.48
+242	Princeton	17.5
+243	Provincetown	7.34
+244	Quincy	14.5
+245	Randolph	17.35
+246	Raynham	14.66
+247	Reading	14.94
+248	Rehoboth	11.75
+249	Revere	15.56
+250	Richmond	9.95
+251	Rochester	13.28
+252	Rockland	17.58
+253	Rockport	11.12
+254	Rowe	6.3
+255	Rowley	14.5
+256	Royalston	9.3
+257	Russell	19.68
+258	Rutland	16.66
+259	Salem	16.38
+260	Salisbury	11.51
+261	Sandisfield	12.6
+262	Sandwich	13.72
+263	Saugus	11.28
+264	Savoy	16.81
+265	Scituate	12.72
+266	Seekonk	12.75
+267	Sharon	20.45
+268	Sheffield	13.34
+269	Shelburne	12.99
+270	Sherborn	19.72
+271	Shirley	15.65
+272	Shrewsbury	11.67
+273	Shutesbury	20.27
+274	Somerset	15.04
+275	Somerville	13.42
+276	South Hadley	14.91
+277	Southampton	14.44
+278	Southborough	16.54
+279	Southbridge	18.47
+280	Southfield Redevelopment Authority	13.26
+281	Southwick	15.48
+282	Spencer	12.77
+283	Springfield	19.71
+284	Sterling	16.35
+285	Stockbridge	8.32
+286	Stoneham	13.06
+287	Stoughton	15.07
+288	Stow	18.37
+289	Sturbridge	17.95
+290	Sudbury	17.99
+291	Sunderland	13.43
+292	Sutton	15.57
+293	Swampscott	18.84
+294	Swansea	12.02
+295	Taunton	13.77
+296	Templeton	14.12
+297	Tewksbury	15.44
+298	Tisbury	8.48
+299	Tolland	6.74
+300	Topsfield	15.95
+301	Townsend	18.26
+302	Truro	6.02
+303	Tyngsborough	16.19
+304	Tyringham	6
+305	Upton	16.72
+306	Uxbridge	16.28
+307	Wakefield	12.29
+308	Wales	17.07
+309	Walpole	15.4
+310	Waltham	13.49
+311	Ware	16.94
+312	Wareham	10.47
+313	Warren	17.94
+314	Warwick	17.43
+315	Washington	12.91
+316	Watertown	14.68
+317	Wayland	17.89
+318	Webster	12.47
+319	Wellesley	11.7
+320	Wellfleet	6.41
+321	Wendell	17.71
+322	Wenham	18.48
+323	West Boylston	17.45
+324	West Bridgewater	16.09
+325	West Brookfield	13.22
+326	West Newbury	15.75
+327	West Springfield	16.44
+328	West Stockbridge	11.44
+329	West Tisbury	5.26
+330	Westborough	18.97
+331	Westfield	16.72
+332	Westford	16.13
+333	Westhampton	17.15
+334	Westminster	18.36
+335	Weston	12.4
+336	Westport	7.39
+337	Westwood	14.89
+338	Weymouth	12.93
+339	Whately	15.4
+340	Whitman	15.79
+341	Wilbraham	19.66
+342	Williamsburg	16.84
+343	Williamstown	14.37
+344	Wilmington	13.61
+345	Winchendon	14.93
+346	Winchester	12.77
+347	Windsor	12.59
+348	Winthrop	14.91
+349	Woburn	10.4
+350	Worcester	18.58
+351	Worthington	13.36
+352	Wrentham	15.07
+353	Yarmouth	9.88

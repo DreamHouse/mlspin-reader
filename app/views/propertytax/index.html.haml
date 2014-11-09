@@ -1,61 +1,70 @@
 - if @taxrates
   .container.home_details_container
     .row
+      .col-md-10
+        %h4 波士顿地区及麻萨诸塞州地产税税率大全
+    .row
       .col-md-10.details_more
         %ul.nav.nav-tabs
           %li.active
-            %a{:href => "#tax-2014", "data-toggle" => "tab"} 2014
+            %a{:href => "#tax-20", "data-toggle" => "tab"} 波士顿周边热门城镇
           %li
-            %a{:href => "#tax-2013", "data-toggle" => "tab"} 2013
+            %a{:href => "#tax-50", "data-toggle" => "tab"} 麻萨诸塞州热门城镇
           %li 
-            %a{:href => "#tax-2012", "data-toggle" => "tab"} 2012
-          %li 
-            %a{:href => "#tax-2011", "data-toggle" => "tab"} 2011
+            %a{:href => "#tax-all", "data-toggle" => "tab"} 麻萨诸塞州全部城镇
         .tab-content
-          .tab-pane.active#tax-2014
+          .tab-pane.active#tax-20
             %table.table.table-striped
               %thead
                 %tr
-                  %th 城镇
-                  %th 税率
+                  %th 城镇（每1000元交税数目）
+                  %th 2014年
+                  %th 2013年
+                  %th 2012年
+                  %th 2011年
               %tbody
-                - @taxrates[2014].each do |rate|
+                - @top_20towns.each do |town|
                   %tr
-                    %td= rate.town
-                    %td= rate.rate
-          .tab-pane#tax-2013
+                    %td= town
+                    %td= @taxrates[2014][town]
+                    %td= @taxrates[2013][town]
+                    %td= @taxrates[2012][town]
+                    %td= @taxrates[2011][town]
+          .tab-pane#tax-50
             %table.table.table-striped
               %thead
                 %tr
-                  %th 城镇
-                  %th 税率
+                  %th 城镇（每1000元交税数目）
+                  %th 2014年
+                  %th 2013年
+                  %th 2012年
+                  %th 2011年
               %tbody
-                - @taxrates[2013].each do |rate|
+                - @top_50towns.each do |town|
                   %tr
-                    %td= rate.town
-                    %td= rate.rate
-          .tab-pane#tax-2012
+                    %td= town
+                    %td= @taxrates[2014][town]
+                    %td= @taxrates[2013][town]
+                    %td= @taxrates[2012][town]
+                    %td= @taxrates[2011][town]
+          .tab-pane#tax-all
             %table.table.table-striped
               %thead
                 %tr
-                  %th 城镇
-                  %th 税率
+                  %th 城镇（每1000元交税数目）
+                  %th 2014年
+                  %th 2013年
+                  %th 2012年
               %tbody
-                - @taxrates[2012].each do |rate|
+                - @all_towns.each do |town|
                   %tr
-                    %td= rate.town
-                    %td= rate.rate
-          .tab-pane#tax-2011
-            %table.table.table-striped
-              %thead
-                %tr
-                  %th 城镇
-                  %th 税率
-              %tbody
-                - @taxrates[2011].each do |rate|
-                  %tr
-                    %td= rate.town
-                    %td= rate.rate
+                    %td= town
+                    %td= @taxrates[2014][town]
+                    %td= @taxrates[2013][town]
+                    %td= @taxrates[2012][town]
+    .row
+      %p 信息来源：https://dlsgateway.dor.state.ma.us/gateway/Public/WebForms/TaxRate/ReportTRApprovalPublic.aspx
+  
 - else
-  %h2 抱歉，我们目前没有关于这个房产的信息
+  %h2 抱歉，正在修复
     

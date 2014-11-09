@@ -6,25 +6,39 @@
           %a{href: "/"} 首页
         %li.dropdown
           %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
-            房产问题咨询
+            买房
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{href: questions_path + "?tag=房屋咨询" } 关于房产的问题
-              %a{href: questions_path + "?tag=社区" } 关于社区的问题
-              %a{href: questions_path + "?tag=贷款" } 贷款相关问题
-              %a{href: questions_path + "?tag=维护" } 房子的维护保养问题
-        %li
-          %a{href: propertyreviews_path} 房源讨论区
+              %a{href: propertyreviews_path } 房源讨论
+              %a{href: questions_path + "?tag=房屋咨询" } 买房咨询
+              %a{href: questions_path + "?tag=社区" } 社区咨询
+              %a{href: questions_path + "?tag=贷款" } 贷款咨询
+              %a{href: questions_path + "?tag=贷款" } 购房知识
         %li.dropdown
           %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
-            黄页 
+            卖房
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{href: merchants_path + '?tag=agent'} 房产代理
-              %a{href: merchants_path + '?tag=mortgage'} 贷款机构
-              %a{href: merchants_path + '?tag=builder'} 房屋维修保养
+              %a{href: merchants_path + '?tag=卖房'} 卖房咨询
+              %a{href: merchants_path + '?tag=卖房'} 市场行情
+              %a{href: merchants_path + '?tag=卖房'} 卖房知识
+        %li.dropdown
+          %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"} 
+            贷款
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: merchants_path + '?tag=卖房'} 利率走势
+              %a{href: merchants_path + '?tag=卖房'} 相关新闻
+              %a{href: merchants_path + '?tag=卖房'} 贷款知识
+        %li
+          %a{href: "/"} 房检
+        %li
+          %a{href: "/"} 房屋保险
+        %li
+          %a{href: "/propertytax/index"} 房产税
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li

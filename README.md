@@ -38,3 +38,56 @@ u.save!
 After installing CKEditor gem, run:
 rails generate ckeditor:install --orm=mongoid --backend=paperclip
 
+Deployment 11/7/2014
+--------------------
+Run db/tax_seed.db
+In rails console
+
+towns = []
+Propertytax.where(year:2013).each do |pt|
+  towns << pt.town  
+end
+
+towns.uniq!
+towns.each do |town|
+  Town.create!(name: town, state: 'MA')
+end 
+
+fifty_towns = []
+Propertytax.where(year:2011).each do |pt|
+  fifty_towns << pt.town
+end  
+
+Town.all.each do |town|
+ if fifty_towns.include? town.name
+   town.update_attributes(hotness: 3)
+ end  
+end  
+
+Town.create!(name: 'Hyannis', hotness: 3, state: 'MA')
+Run db/town_seed.rb
+
+
+Deployment 11/8/2014
+--------------------
+Fix 2013 tax rate
+
+year = '2011'
+f = File.new("db/tax-#{year}.txt", 'r')
+while(line = f.gets)
+  matched = line.match(/([0-9]*)([a-zA-Z\s]*)([0-9.]*)/)
+  if matched.size != 4
+    puts "BAD LINE"
+  else
+    town_name = matched[2].strip
+    pt = Propertytax.where(year: year).where(town: town_name).first
+    if pt
+      puts "Update #{town_name} rate to #{matched[3]}"
+      pt.update_attributes(rate: matched[3].to_f)
+    else
+      puts "No town found for #{town_name}, adding it"
+      Propertytax.create!(year: year, town: town_name, rate: matched[3].to_f)
+    end
+  end
+end
+f.close

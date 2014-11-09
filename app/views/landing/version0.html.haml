@@ -1,0 +1,52 @@
+.container
+  .row.campaign
+    .col-md-8
+      -@articles.each do |article|
+        %h3=raw(article.title)
+        %p= "#{article.author},  发表于：#{article.publish_date.to_date}"
+        %p
+          = raw(article.desc)
+          %a{"href" => "./articles/#{article.id}"}
+            阅读全文
+    .col-md-4
+      .container#right-panel
+        .row
+          .col-md-4
+            .carousel.slide#sell_carousel
+              %ol.carousel-indicators
+                %li{"data-target" => "#sell_carousel", "data-slide-to" => "0", "class" => "active"}
+                %li{"data-target" => "#sell_carousel", "data-slide-to" => "1"}
+                %li{"data-target" => "#sell_carousel", "data-slide-to" => "2"}
+              .carousel-inner
+                - @reviewed_homes.each_with_index do |home, index|
+                  - if index == 0
+                    .item.active
+                      =image_tag "images/#{home.mls}/0.jpg"
+                      .carousel-caption "#{home.addr}"
+                  - else
+                    .item
+                      =image_tag "images/#{home.mls}/0.jpg"
+                      .carousel-caption #{home.addr}
+              %a{"class"=>"left carousel-control", "href"=>"#sell_carousel", "data-slide"=>"prev"}
+                %span<
+              %a{"class"=>"right carousel-control", "href"=>"#sell_carousel", "data-slide"=>"next"}
+                %span>
+            .town
+              %h2 热门房源讨论
+              %p 
+                - unless @reviewed_homes.empty?
+                  = raw(@reviewed_homes.first.addr)
+                  = raw(@reviewed_homes.first.propertyreviews.first.content)
+              %p
+                %a{href: propertyreviews_path, class: "btn btn-default"}查看详情》
+        .row
+          .col-md-4
+            %h3 热点问题
+            -@questions.each do |question|
+              %a{href: question_path(question.id)}
+                = raw(question.title)
+              %p
+                %small= "更新于#{question.updated_at}"
+  %hr
+  %footer
+    %p @ 美房美地 2014
