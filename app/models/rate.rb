@@ -12,8 +12,8 @@ class Rate
   # Rate.create!(sample_date: Time.parse("2012-11-12T00:00:00-08:00"), value: 2.655, program: 'Fixed15Year', state: 'MA')
   # Rate.where(:sample_date.lt => Time.now).first
   
-  # getRates(stats: 'MA', program: 'Fixed30Year')
-  def getRates(options = {})
+  # getRates(stats: 'MA')
+  def self.getRates(options = {})
     # http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=${zid}
     # http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=${zid}&state=MA
     # { "request" : {  "output" : "json" }, "message" : { "text" : "Request successfully processed",
@@ -26,19 +26,24 @@ class Rate
     # if there is an entry in local db within an hour, use that
     # otherwise load from remote service
     state = options[:state] || 'MA'
-    program = options[:program] || 'Fixed30Year'
     now = Time.now
     an_hour_ago = (now - 3600)
-    rate_entry = Rate.where(:sample_date.gt => an_hour_ago, :state => state, :program => program).order_by(:sample_date.desc).first
-    unless rate_entry
+    rates = Rate.where(:sample_date.gt => an_hour_ago, :state => state).order_by(:sample_date.desc)
+    unless rates
       result = HTTParty.get("http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=#{APP_CONFIG['zws_id']}&output=json&state=MA")
       if result["message"]["code"] == '0'
         Rate.create!(sample_date: now, program: 'Fixed30Year', state: state, value: result["response"]['today']['thirtyYearFixed'])
         Rate.create!(sample_date: now, program: 'Fixed15Year', state: state, value: result["response"]['today']['fifteenYearFixed'])
         Rate.create!(sample_date: now, program: 'fiveOneARM', state: state, value: result["response"]['today']['fiveOneARM'])
-        rate_entry = Rate.where(:sample_date.gt => an_hour_ago, :state => state, :program => program).order_by(:sample_date.desc).first
+        rates = Rate.where(:sample_date.gt => an_hour_ago, :state => state).order_by(:sample_date.desc)
       end
     end
     
+    if rates
+      rates.reduce({}) do |hash_by_program, rate|
+        hash_by_program[rate.program] = rate.value
+        hash_by_program
+      end
+    end
   end
 end

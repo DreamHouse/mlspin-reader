@@ -16,6 +16,10 @@ Mlspin::Application.routes.draw do
   
   resources :merchants
   
+  resources :rates do
+    get 'historical'
+  end
+    
   get 'propertytax/index'
   
   namespace :admin do

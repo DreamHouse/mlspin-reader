@@ -1,0 +1,29 @@
+.container
+  .row
+    .col-md-12
+      %h3 30年贷款利率走势图
+      #graph
+        = render "graph"
+  .row.campaign
+    .col-md-3
+      .panel.panel-info
+        .panel-heading 利率常见问题
+        .panel-body 
+          %ul
+            %li 
+              %a{href: ''}
+                什么是Jumbo loan?
+            %li 
+              %a{href: ''}
+                没有绿卡对办贷款有影响吗？
+    .col-md-6
+      .panel.panel-info
+        .panel-heading 当天利率
+        .panel-body
+          %p 30年固定利率:
+          %p= @rates['Fixed30Year']
+          %p 15年固定利率:
+          %p= @rates['Fixed15Year']
+          %p 5年ARM利率:
+          %p= @rates['fiveOneARM']
+    .col-md-3

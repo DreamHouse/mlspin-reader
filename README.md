@@ -91,3 +91,7 @@ while(line = f.gets)
   end
 end
 f.close
+
+Deployment 11/17/2014
+---------------------
+Run db/loan_rates/loan_seeds.rb in rails console
