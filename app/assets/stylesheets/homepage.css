@@ -229,3 +229,67 @@
 .review-ts {
   color: orange;
 }
+
+/* New style of home page, 11/27/14 */
+.home-page-row {
+  padding-top: 20px;
+}
+
+.index-spacer-ads {
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.index-spacer-slogan {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif,STKaiti,KaiTi;
+  color: #428bca;
+  text-align: center;
+}
+
+.town-pic:hover {
+    opacity: 0.85
+}
+
+.index_town_pic {
+  width: 90%;
+  height: 200px;
+  padding-top: 10px;
+}
+
+.town-name {
+  position: absolute; 
+  left: 0; 
+  top: 50%;
+  width: 90%;
+  z-index: 100;
+  color: white;
+  font-size: 18pt;
+  text-align: center;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif,STKaiti,KaiTi;
+}
+
+.hot-town-title {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif,STKaiti,KaiTi;
+}
+
+.hot-town-name {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif,STXihei,"Microsoft YaHei";
+}
+
+.hot-house-name {
+  position: absolute; 
+  left: 10%; 
+  top: 60%;
+  width: 70%;
+  z-index: 100;
+  color: white;
+  font-size: 14pt;
+  text-align: center;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif,STKaiti,KaiTi;
+}
+
+.panel-info-long {
+  min-height: 260px;
+}

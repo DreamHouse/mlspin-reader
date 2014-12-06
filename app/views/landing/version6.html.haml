@@ -1,0 +1,126 @@
+.container
+  .row.home-page-row
+    .col-lg-2
+      %h3.hot-town-title 热门城镇
+      %p.hot-town-name
+        %a 贝尔蒙特 Belmont
+      %p.hot-town-name
+        %a 莱克星顿 Lextington
+      %p.hot-town-name
+        %a 温彻斯特 Winchester
+      %p.hot-town-name
+        %a 波士顿 Boston
+      %p.hot-town-name
+        %a 韦尔斯利 Wellesley
+      %p.hot-town-name
+        %a 更多>>
+    .col-lg-3.town-pic
+      =image_tag "towns/Arlington_MA_Town_Hall.jpg", :class => 'index_town_pic'
+      .town-name
+        阿灵顿<br>Arlington
+    .col-lg-3.town-pic
+      =image_tag "towns/cambridge.png", :class => 'index_town_pic'
+      .town-name
+        剑桥<br>Cambridge
+    .col-lg-3.town-pic
+      =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+      .town-name
+        牛顿<br>Newton
+  .row.home-page-row
+    .col-lg-4
+      //=image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'
+    .col-lg-4
+      %h2.index-spacer-slogan 家
+      %h2.index-spacer-slogan 一个梦开始的地方
+    .col-lg-4
+      //=image_tag "ads/Ouyang_half.jpg", :class => 'index-spacer-ads'
+  .row.home-page-row
+    .col-lg-2
+      %h3.hot-town-title 本周精选房源
+      %p.hot-town-name
+        %a 59 Statler Rd, Belmont
+      %p.hot-town-name
+        %a 22 Waltham st, Lextington
+      %p.hot-town-name
+        %a 19 Cross st, Winchester
+      %p.hot-town-name
+        %a 31 Brighton st, Boston
+      %p.hot-town-name
+        %a 更多>>
+    .col-lg-3.town-pic
+      =image_tag "images/#{@reviewed_homes[0].mls}/0.jpg", :class => 'index_town_pic'
+      .hot-house-name
+        = @reviewed_homes[0].addr
+    .col-lg-3.town-pic
+      =image_tag "images/#{@reviewed_homes[1].mls}/0.jpg", :class => 'index_town_pic'
+      .hot-house-name
+        = @reviewed_homes[1].addr
+    .col-lg-3.town-pic
+      =image_tag "images/#{@reviewed_homes[2].mls}/0.jpg", :class => 'index_town_pic'
+      .hot-house-name
+        = @reviewed_homes[2].addr
+  .row.home-page-row
+    .col-lg-6
+      =image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'
+    .col-lg-6
+      =image_tag "ads/Ouyang_half.jpg", :class => 'index-spacer-ads'
+  .row.home-page-row
+    .col-lg-6
+      .panel.panel-default.panel-info-long
+        .panel-heading 本周热点问答
+        .panel-body
+          - @questions.each do |question|
+            %p
+              %a{href: question_path(question.id)}
+                = raw(question.title)
+              %small= "更新于#{question.updated_at}"
+    .col-lg-6.town-pic
+      .panel.panel-default.panel-info-long
+        .panel-heading 地产新闻
+        .panel-body
+          -@articles.each do |article|
+            %p
+              %a{"href" => "./articles/#{article.id}"}
+                = "#{raw(article.title)} -- #{article.author},  发表于：#{article.publish_date.to_date}"
+  .row.home-page-row
+    .col-lg-4
+      .panel.panel-default.panel-info-long
+        .panel-heading 购房知识
+        .panel-body
+          %p
+            %a 如何挑选投资房
+          %p
+            %a 购买新房需要注意的事项
+          %p
+            %a 我需要找房产代理吗？
+          %p
+            %a 第一次买房需要做好的8项准备工作
+          %p
+            %a 学区房的价值
+    .col-lg-4
+      .panel.panel-default.panel-info-long
+        .panel-heading 卖房知识
+        .panel-body
+          %p
+            %a 卖房前的准备工作
+          %p
+            %a 如何评估房产价值
+          %p
+            %a 卖房杂记
+          %p
+            %a 牛市卖房必读
+    .col-lg-4
+      .panel.panel-default.panel-info-long
+        .panel-heading 维护和保养
+        .panel-body
+        .panel-body
+          %p
+            %a 油改气全过程分享
+          %p
+            %a 同一屋檐下－－换屋顶
+          %p
+            %a 地板、地板
+          %p
+            %a 清理gutter
+  %footer
+    %p @ 美房美地 2014

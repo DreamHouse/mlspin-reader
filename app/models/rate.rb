@@ -29,7 +29,7 @@ class Rate
     now = Time.now
     an_hour_ago = (now - 3600)
     rates = Rate.where(:sample_date.gt => an_hour_ago, :state => state).order_by(:sample_date.desc)
-    unless rates
+    if rates.empty?
       result = HTTParty.get("http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=#{APP_CONFIG['zws_id']}&output=json&state=MA")
       if result["message"]["code"] == '0'
         Rate.create!(sample_date: now, program: 'Fixed30Year', state: state, value: result["response"]['today']['thirtyYearFixed'])
