@@ -18,3 +18,4 @@
 //= require question
 //= require propertyreview
 //= require ckeditor/init
+//= require responsiveCarousel

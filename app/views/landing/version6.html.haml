@@ -14,18 +14,51 @@
         %a 韦尔斯利 Wellesley
       %p.hot-town-name
         %a 更多>>
-    .col-lg-3.town-pic
-      =image_tag "towns/Arlington_MA_Town_Hall.jpg", :class => 'index_town_pic'
-      .town-name
-        阿灵顿<br>Arlington
-    .col-lg-3.town-pic
-      =image_tag "towns/cambridge.png", :class => 'index_town_pic'
-      .town-name
-        剑桥<br>Cambridge
-    .col-lg-3.town-pic
-      =image_tag "towns/newton.jpg", :class => 'index_town_pic'
-      .town-name
-        牛顿<br>Newton
+    .col-lg-9.town-pic
+      .row
+        .crsl-items#town-lists{"data-navigation" => "nav-towns"}
+          .crsl-wrap
+            %figure.crsl-item
+              =image_tag "towns/Arlington_MA_Town_Hall.jpg", :class => 'index_town_pic'
+              .town-name
+                阿灵顿<br>Arlington
+            %figure.crsl-item
+              =image_tag "towns/cambridge.png", :class => 'index_town_pic'
+              .town-name
+                剑桥<br>Cambridge
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                牛顿<br>Newton
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                莱克星顿<br>Lextington
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                温彻斯特<br>Winchester
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                波士顿<br>Boston
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                韦尔斯利<br>Wellesley                
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                贝蒙特<br>Belmont
+      #nav-towns.crsl-nav
+        .row
+          .col-lg-5
+          .col-lg-4
+            %a.previous
+              %span.glyphicon.glyphicon-chevron-left
+            %a.next
+              %span.glyphicon.glyphicon-chevron-right 
+          .col-lg-1
   .row.home-page-row
     .col-lg-4
       //=image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'

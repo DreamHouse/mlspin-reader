@@ -95,3 +95,7 @@ f.close
 Deployment 11/17/2014
 ---------------------
 Run db/loan_rates/loan_seeds.rb in rails console
+
+Deployment 11/17/2014
+---------------------
+Copy fonts from vendor/assets/stylesheets/fonts to public/fonts directory

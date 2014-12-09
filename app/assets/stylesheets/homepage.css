@@ -293,3 +293,12 @@
 .panel-info-long {
   min-height: 260px;
 }
+
+.crsl-nav a {
+  text-decoration:none;
+  cursor: pointer;
+}
+
+#nav-towns {
+  padding-top: 5px;
+}
