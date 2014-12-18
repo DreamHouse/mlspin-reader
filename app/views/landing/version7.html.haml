@@ -1,0 +1,103 @@
+.container
+  .row.campaign
+    .col-md-5
+      .panel.panel-success
+        .panel-heading 新房讨论
+        .panel-body 
+          %ul
+            - unless @reviewed_homes.empty?
+              - @reviewed_homes.each do |home|
+                %li
+                  %a{href: propertyreview_path(home.id)}
+                    = raw(home.addr)
+                  = raw(home.propertyreviews.first.content)
+    .col-md-7
+      .panel.panel-success
+        .panel-heading 上个月成交记录
+        .panel-body 
+          %p
+            2014年9月波士顿周边成交信息汇总，目前收录阿灵顿(Arlington), 贝蒙特(Belmont), 莱克星顿(Lexington), 牛顿(Newton)等城镇
+        %table.table.table-striped
+          %thead
+            %tr
+              %th 城镇
+              %th 地址
+              %th 房间数
+              %th 上市价
+              %th 成交价
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  57 Creeley Rd
+              %td 4卧室，1.5卫生间，Colonial
+              %td 629,900
+              %td 620,000
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  115 Winn
+              %td 2卧室，2.5卫生间，Cape
+              %td 649,000
+              %td 706,000
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  24 Eliot Rd
+              %td 3卧室，1.5卫生间，Garrison
+              %td 679,000
+              %td 666,500
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  59 Tobey Rd
+              %td 3卧室，1.5卫生间，Colonial
+              %td 699,000
+              %td 780,000
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  51 Berwick Street U:3
+              %td 2卧室，1卫生间，2/3 Family
+              %td 365,000
+              %td 390,000
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  61 Dartmouth U:2
+              %td 2卧室，1卫生间，2/3 Family
+              %td 385,000
+              %td 380,000
+            %tr
+              %td 贝蒙特(Belmont)
+              %td 
+                %a
+                  107 Slade Street U:1
+              %td 2卧室，1卫生间，2/3 Family
+              %td 409,000
+              %td 452,000
+  .row
+    .col-md-6
+      .panel.panel-info
+        .panel-heading 热点问答
+        .panel-body 
+          - @questions.each do |question|
+            %a{href: question_path(question.id)}
+              = raw(question.title)
+            %p
+              %small= "更新于#{question.updated_at}"
+    .col-md-6
+      .panel.panel-info
+        .panel-heading 地产新闻
+        .panel-body
+          -@articles.each do |article|
+            %a{"href" => "./articles/#{article.id}"}
+              %p= "#{raw(article.title)} -- #{article.author},  发表于：#{article.publish_date.to_date}"
+  %hr
+  %footer
+    %p @ 美房美地 2014

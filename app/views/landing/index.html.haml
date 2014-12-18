@@ -1,103 +1,239 @@
 .container
-  .row.campaign
-    .col-md-5
-      .panel.panel-success
-        .panel-heading 新房讨论
-        .panel-body 
-          %ul
-            - unless @reviewed_homes.empty?
-              - @reviewed_homes.each do |home|
-                %li
-                  %a{href: propertyreview_path(home.id)}
-                    = raw(home.addr)
-                  = raw(home.propertyreviews.first.content)
-    .col-md-7
-      .panel.panel-success
-        .panel-heading 上个月成交记录
-        .panel-body 
-          %p
-            2014年9月波士顿周边成交信息汇总，目前收录阿灵顿(Arlington), 贝蒙特(Belmont), 莱克星顿(Lexington), 牛顿(Newton)等城镇
-        %table.table.table-striped
-          %thead
-            %tr
-              %th 城镇
-              %th 地址
-              %th 房间数
-              %th 上市价
-              %th 成交价
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  57 Creeley Rd
-              %td 4卧室，1.5卫生间，Colonial
-              %td 629,900
-              %td 620,000
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  115 Winn
-              %td 2卧室，2.5卫生间，Cape
-              %td 649,000
-              %td 706,000
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  24 Eliot Rd
-              %td 3卧室，1.5卫生间，Garrison
-              %td 679,000
-              %td 666,500
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  59 Tobey Rd
-              %td 3卧室，1.5卫生间，Colonial
-              %td 699,000
-              %td 780,000
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  51 Berwick Street U:3
-              %td 2卧室，1卫生间，2/3 Family
-              %td 365,000
-              %td 390,000
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  61 Dartmouth U:2
-              %td 2卧室，1卫生间，2/3 Family
-              %td 385,000
-              %td 380,000
-            %tr
-              %td 贝蒙特(Belmont)
-              %td 
-                %a
-                  107 Slade Street U:1
-              %td 2卧室，1卫生间，2/3 Family
-              %td 409,000
-              %td 452,000
-  .row
-    .col-md-6
-      .panel.panel-info
-        .panel-heading 热点问答
-        .panel-body 
+  .row.home-page-row
+    .col-lg-2
+      %h3.hot-town-title 热门城镇
+      %p.hot-town-name
+        %a 贝尔蒙特 Belmont
+      %p.hot-town-name
+        %a 莱克星顿 Lextington
+      %p.hot-town-name
+        %a 温彻斯特 Winchester
+      %p.hot-town-name
+        %a 波士顿 Boston
+      %p.hot-town-name
+        %a 韦尔斯利 Wellesley
+      %p.hot-town-name
+        %a 更多>>
+    .col-lg-9.town-pic
+      .row
+        .crsl-items#town-lists{"data-navigation" => "nav-towns"}
+          .crsl-wrap
+            %figure.crsl-item
+              %a{href: properties_path(town: 'Belmont')}
+                =image_tag "towns/belmont.jpg", :class => 'index_town_pic'
+                .town-name
+                  贝蒙特<br>Belmont
+            %figure.crsl-item
+              %a{href: properties_path(town: 'Lexington')}
+                =image_tag "towns/lexington.jpg", :class => 'index_town_pic'
+                .town-name
+                  莱克星顿<br>Lextington
+            %figure.crsl-item
+              %a{href: properties_path(town: 'Arlington')}
+                =image_tag "towns/Arlington_MA_Town_Hall.jpg", :class => 'index_town_pic'
+                .town-name
+                  阿灵顿<br>Arlington
+            %figure.crsl-item
+              =image_tag "towns/cambridge.png", :class => 'index_town_pic'
+              .town-name
+                剑桥<br>Cambridge
+            %figure.crsl-item
+              =image_tag "towns/newton.jpg", :class => 'index_town_pic'
+              .town-name
+                牛顿<br>Newton
+            %figure.crsl-item
+              =image_tag "towns/winchester.jpg", :class => 'index_town_pic'
+              .town-name
+                温彻斯特<br>Winchester
+            %figure.crsl-item
+              =image_tag "towns/boston.jpg", :class => 'index_town_pic'
+              .town-name
+                波士顿<br>Boston
+            %figure.crsl-item
+              =image_tag "towns/wellesley.png", :class => 'index_town_pic'
+              .town-name
+                韦尔斯利<br>Wellesley                
+      #nav-towns.crsl-nav
+        .row
+          .col-lg-5
+          .col-lg-4
+            %a.previous
+              %span.glyphicon.glyphicon-chevron-left
+            %a.next
+              %span.glyphicon.glyphicon-chevron-right 
+          .col-lg-1
+  .row.home-page-row
+    .col-lg-4
+      //=image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'
+    .col-lg-4
+      %h2.index-spacer-slogan 家
+      %h2.index-spacer-slogan 一个梦开始的地方
+    .col-lg-4
+      //=image_tag "ads/Ouyang_half.jpg", :class => 'index-spacer-ads'
+  .row.home-page-row
+    .col-lg-2
+      %h3.hot-town-title 本周精选房源
+      %p.hot-town-name
+        %a 59 Statler Rd, Belmont
+      %p.hot-town-name
+        %a 22 Waltham st, Lextington
+      %p.hot-town-name
+        %a 19 Cross st, Winchester
+      %p.hot-town-name
+        %a 31 Brighton st, Boston
+      %p.hot-town-name
+        %a 更多>>
+    .col-lg-3.town-pic
+      %a{href: propertyreview_path(@reviewed_homes[0].id)}
+        =image_tag "images/#{@reviewed_homes[0].mls}/0.jpg", :class => 'index_town_pic'
+        .hot-house-name
+          = @reviewed_homes[0].addr
+    .col-lg-3.town-pic
+      %a{href: propertyreview_path(@reviewed_homes[1].id)}
+        =image_tag "images/#{@reviewed_homes[1].mls}/0.jpg", :class => 'index_town_pic'
+        .hot-house-name
+          = @reviewed_homes[1].addr
+    .col-lg-3.town-pic
+      %a{href: propertyreview_path(@reviewed_homes[2].id)}
+        =image_tag "images/#{@reviewed_homes[2].mls}/0.jpg", :class => 'index_town_pic'
+        .hot-house-name
+          = @reviewed_homes[2].addr
+  .row.home-page-row
+    .col-lg-6
+      =image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'
+    .col-lg-6
+      =image_tag "ads/Ouyang_half.jpg", :class => 'index-spacer-ads'
+  .row.home-page-row
+    .col-lg-6
+      .panel.panel-default.panel-info-long
+        .panel-heading 本周热点问答
+        .panel-body
           - @questions.each do |question|
-            %a{href: question_path(question.id)}
-              = raw(question.title)
             %p
+              %a{href: question_path(question.id)}
+                = raw(question.title)
               %small= "更新于#{question.updated_at}"
-    .col-md-6
-      .panel.panel-info
+    .col-lg-6.town-pic
+      .panel.panel-default.panel-info-long
         .panel-heading 地产新闻
         .panel-body
           -@articles.each do |article|
-            %a{"href" => "./articles/#{article.id}"}
-              %p= "#{raw(article.title)} -- #{article.author},  发表于：#{article.publish_date.to_date}"
-  %hr
+            %p
+              %a{"href" => "./articles/#{article.id}"}
+                = "#{raw(article.title)} -- #{article.author},  发表于：#{article.publish_date.to_date}"
+  .row.home-page-row
+    .col-lg-4
+      .panel.panel-default.panel-info-long
+        .panel-heading 购房知识
+        .panel-body.home-buying-panel
+          %p.home-buying-item
+            %a{"href" => "./buyers/decision"} 买房还是租房？
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 选代理
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 贷款准备
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 搜房
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 看房
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 下单
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 房检
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a 搬家
+    .col-lg-4
+      .panel.panel-default.panel-info-long
+        .panel-heading 卖房知识
+        .panel-body.home-buying-panel
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 评估房价
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 选代理
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 竞争市场分析(CMA)
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 准备工作
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 定价
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 推广
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 接受offer之后
+          .glyphicon-box
+            .glyphicon.glyphicon-arrow-down.home-buying-arrow
+          %p.home-buying-item
+            %a{"href" => "./sellers/evaluate"} 成交
+    .col-lg-4
+      .panel.panel-default.panel-info-long
+        .panel-heading 维护和保养
+        .panel-body
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/lawn.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 草坪护理
+          %hr
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/gutters.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 屋檐清理
+          %hr
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/roof.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 更换屋顶
+          %hr
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/heater.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 取暖设备
+          %hr
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/window.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 窗户维修
+          %hr
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/floor.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 地板
+          %hr
+          .home-maintain-item
+            .home-maintain-icon
+              =image_tag "articles/basement.png", :class => "buyer-article-icon"
+            .home-maintain-title
+              %a 地下室装修
   %footer
     %p @ 美房美地 2014

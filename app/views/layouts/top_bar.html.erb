@@ -15,8 +15,12 @@
 <body>
 
 <%= render "layouts/header#{@header_version}"%>
-<%= render "layouts/search_bar"%>
-<%= yield %>
+<div class="background">
+  <div class="main-content">
+    <%= render "layouts/search_bar"%>
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

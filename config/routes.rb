@@ -10,6 +10,7 @@ Mlspin::Application.routes.draw do
   resources :articles
   resources :propertyreviews
   
+  resources :buyers # 买房相关文章
   resources :questions do
     resources :answers
   end

@@ -1,4 +1,20 @@
 class PropertiesController < ApplicationController
+  def index
+    town = params[:town]
+    
+    if town
+      addr_pattern = "#{town}, MA"
+      properties = Home.where(:addr => /#{addr_pattern}/)
+      @town = town
+    else
+      properties = Home.all
+    end
+    
+    @properties = properties.where(:mls.ne => nil).paginate(:page => params[:page])
+    
+    render "index", layout: "top_bar"
+  end
+  
   def show
     mls = params[:id]
     addr = params[:addr]

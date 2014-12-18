@@ -302,3 +302,119 @@
 #nav-towns {
   padding-top: 5px;
 }
+
+/* Layout style */
+.background {
+  background: #f8f8f8;
+}
+
+.main-content {
+  max-width: 1272px;
+  background: white;
+  border: 1px solid #cccccc;
+  margin: 0 auto;
+}
+
+.home-buying-item {
+  background-color: #f80;
+  color: white;
+  border-radius: 10px;
+  padding: 4px 14px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  text-align: center;
+}
+
+.home-buying-item a {
+  color: white;
+}
+
+.glyphicon-box {
+  margin-right: auto;
+  margin-left: auto;
+  width: 20px;
+}
+
+.home-maintain-icon {
+  max-width: 30px;
+  max-height: 30px;
+  float: left;
+}
+
+.home-maintain-title {
+  padding-left: 40px;
+  line-height: 30px;
+}
+/* End of Layout style */
+
+/* House list page */
+.title {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif,STKaiti,KaiTi;
+}
+
+.property-list-thumbnail {
+  width: 100px;
+}
+
+.bordered {
+  border: 1px solid #cccccc;
+}
+
+.ads-block {
+  max-width: 250px;
+}
+
+.ads-block-inner {
+  max-width: 240px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.property-addr {
+  font-size: 16px;
+}
+
+.property-list-review {
+  vertical-align: baseline;
+  font-size: 13px;
+}
+
+.property-list-review-content {
+  font-style: italic;
+}
+/* End of House list page */
+
+/* Buyers pages */
+.buyer-article-content h4 {
+  margin: 16px 0;
+}
+
+.buyer-article-content h5 {
+  font-weight: bold;
+}
+
+.buyer-article-content p {
+  margin-bottom: 16px;
+} 
+
+.buyer-title h4 {
+  line-height: 30px;
+}
+
+.buyer-title {
+  padding-left: 33px;
+}
+.buyer-nav-tree-folder .buyer-icon{
+  float: left;
+}
+
+.buyer-article-icon {
+  max-width: 30px;
+  max-height: 30px;
+}
+.buyer-article-image {
+  padding: 20px 20px;
+}
+
+/* End of Buyers pages */

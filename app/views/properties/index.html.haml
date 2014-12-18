@@ -1,0 +1,35 @@
+.container.merchant-list
+  .row
+    .col-md-12
+      - if @town
+        %h3.title= "#{@town}正在出售的房产"
+  - if @properties
+    .row
+      .col-md-8
+        %hr
+        - @properties.each do |property|
+          .row
+            .col-md-2
+              - if property.mls
+                =image_tag "images/#{property.mls}/0.jpg", :class => "property-list-thumbnail"
+            .col-md-6
+              %a.property-addr{href: propertyreview_path(property.id)}
+                = property.addr
+              %p= property.desc
+            .col-md-4
+              = "售价：#{property.price}"
+          - if !property.propertyreviews.empty?
+            .row.property-list-review
+              .col-md-12
+                共有
+                %b= property.propertyreviews.count
+                条评论，来自
+                %b= property.propertyreviews.first.user.nickname
+                的评论：
+                .property-list-review-content
+                  = raw(property.propertyreviews.first.content)
+          %hr
+      .col-md-4
+        .bordered.ads-block
+          =image_tag "ads/nancy.png", :class => "ads-block-inner"
+  = will_paginate @properties
