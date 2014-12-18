@@ -107,7 +107,8 @@
             %p
               %a{href: question_path(question.id)}
                 = raw(question.title)
-              %small= "更新于#{question.updated_at}"
+              %small= "更新于#{question.updated_at.strftime('%Y-%m-%d')}"
+            %hr
     .col-lg-6.town-pic
       .panel.panel-default.panel-info-long
         .panel-heading 地产新闻
@@ -115,7 +116,9 @@
           -@articles.each do |article|
             %p
               %a{"href" => "./articles/#{article.id}"}
-                = "#{raw(article.title)} -- #{article.author},  发表于：#{article.publish_date.to_date}"
+                = "#{raw(article.title)} -- #{article.author}"
+              %small 发表于：#{article.publish_date.strftime('%Y-%m-%d')}
+            %hr
   .row.home-page-row
     .col-lg-4
       .panel.panel-default.panel-info-long
