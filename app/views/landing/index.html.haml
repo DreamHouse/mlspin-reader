@@ -1,6 +1,6 @@
 .container
   .row.home-page-row
-    .col-lg-2
+    .col-md-3
       %h3.hot-town-title 热门城镇
       %p.hot-town-name
         %a 贝尔蒙特 Belmont
@@ -14,7 +14,7 @@
         %a 韦尔斯利 Wellesley
       %p.hot-town-name
         %a 更多>>
-    .col-lg-9.town-pic
+    .col-md-9.town-pic
       .row
         .crsl-items#town-lists{"data-navigation" => "nav-towns"}
           .crsl-wrap
@@ -55,23 +55,23 @@
                 韦尔斯利<br>Wellesley                
       #nav-towns.crsl-nav
         .row
-          .col-lg-5
-          .col-lg-4
+          .col-md-5
+          .col-md-4
             %a.previous
               %span.glyphicon.glyphicon-chevron-left
             %a.next
               %span.glyphicon.glyphicon-chevron-right 
-          .col-lg-1
+          .col-md-1
   .row.home-page-row
-    .col-lg-4
+    .col-md-4
       //=image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'
-    .col-lg-4
+    .col-md-4
       %h2.index-spacer-slogan 家
       %h2.index-spacer-slogan 一个梦开始的地方
-    .col-lg-4
+    .col-md-4
       //=image_tag "ads/Ouyang_half.jpg", :class => 'index-spacer-ads'
   .row.home-page-row
-    .col-lg-2
+    .col-md-3
       %h3.hot-town-title 本周精选房源
       %p.hot-town-name
         %a 59 Statler Rd, Belmont
@@ -83,23 +83,23 @@
         %a 31 Brighton st, Boston
       %p.hot-town-name
         %a 更多>>
-    .col-lg-3.town-pic
+    .col-md-3.town-pic
       %a{href: propertyreview_path(@reviewed_homes[0].id)}
         =image_tag "images/#{@reviewed_homes[0].mls}/0.jpg", :class => 'index_town_pic'
         .hot-house-name
           = @reviewed_homes[0].addr
-    .col-lg-3.town-pic
+    .col-md-3.town-pic
       %a{href: propertyreview_path(@reviewed_homes[1].id)}
         =image_tag "images/#{@reviewed_homes[1].mls}/0.jpg", :class => 'index_town_pic'
         .hot-house-name
           = @reviewed_homes[1].addr
-    .col-lg-3.town-pic
+    .col-md-3.town-pic
       %a{href: propertyreview_path(@reviewed_homes[2].id)}
         =image_tag "images/#{@reviewed_homes[2].mls}/0.jpg", :class => 'index_town_pic'
         .hot-house-name
           = @reviewed_homes[2].addr
   .row.home-page-row
-    .col-lg-6
+    .col-md-6
       .panel.panel-default.panel-info-long
         .panel-heading 本周热点问答
         .panel-body
@@ -109,7 +109,7 @@
                 = raw(question.title)
               %small= "更新于#{question.updated_at.strftime('%Y-%m-%d')}"
             %hr
-    .col-lg-6.town-pic
+    .col-md-6.town-pic
       .panel.panel-default.panel-info-long
         .panel-heading 地产新闻
         .panel-body
@@ -120,7 +120,7 @@
               %small 发表于：#{article.publish_date.strftime('%Y-%m-%d')}
             %hr
   .row.home-page-row
-    .col-lg-4
+    .col-md-4
       .panel.panel-default.panel-info-long
         .panel-heading 购房知识
         .panel-body.home-buying-panel
@@ -154,7 +154,7 @@
             .glyphicon.glyphicon-arrow-down.home-buying-arrow
           %p.home-buying-item
             %a 搬家
-    .col-lg-4
+    .col-md-4
       .panel.panel-default.panel-info-long
         .panel-heading 卖房知识
         .panel-body.home-buying-panel
@@ -188,7 +188,7 @@
             .glyphicon.glyphicon-arrow-down.home-buying-arrow
           %p.home-buying-item
             %a{"href" => "./sellers/evaluate"} 成交
-    .col-lg-4
+    .col-md-4
       .panel.panel-default.panel-info-long
         .panel-heading 维护和保养
         .panel-body
