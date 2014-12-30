@@ -1,0 +1,26 @@
+.row
+  .buyer-article-content
+    .col-md-2
+      =render "buyers/nav"
+    .col-md-6
+      %h3 如何找到想要的房子
+      %p 在美国买房基本上足不出户就可以找到所有正在出售的房源以及全部细节信息。几家主要的房地产信息网站redfin, zillow和trulia上都有完整的代售房源信息和最近出售的房产信息。
+      %p
+        用户可以按照各种条件查询，例如地址、房价、房型、房间数、建造年份等。用户还可以指定查询条件订阅邮件通知，这样就可以在第一时间获取最近房源。各大网站都提供了手机应用，这样在用户出门在外的时候，尤其是看Open House的时候可以通过手机查看房子信息。
+      %p
+        虽然几家公司提供的基本信息都差不多，但是彼此各有侧重，所以最好都浏览一下从而更全面的了解您感兴趣的房产。
+      %h4 Redfin
+      %p Redfin提供了由房产代理的客观评论（如下图），这样用户就可以在看房之前就过滤掉一些自己不喜欢的房源。
+      =image_tag "articles/redfin.png", :class => "buyer-article-image"
+
+      %h4 Zillow
+      %p Zillow作为一个房产信息共享平台，有很多房主在上面直接出售房产(Sell by Owner)。
+      =image_tag "articles/zillow.png", :class => "buyer-article-image"
+
+      %h4 Trulia
+      %p Trulia的地图应用可以选择不同的颜色图层，从而让用户直观的看到一个地区的特点。
+      =image_tag "articles/trulia.png", :class => "buyer-article-image"
+      %p 遗憾的是目前这些网站还不支持中文，如果您想查看中文的信息可以使用本网站的搜索功能或者google在线翻译。
+    .col-md-4
+      .bordered.ads-block
+        =image_tag "ads/nancy.png", :class => "ads-block-inner"
