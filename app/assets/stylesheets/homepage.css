@@ -418,3 +418,7 @@
 }
 
 /* End of Buyers pages */
+
+.seller-article-content h4 {
+  margin: 16px 0;
+}
