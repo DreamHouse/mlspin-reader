@@ -62,42 +62,99 @@
             %a.next
               %span.glyphicon.glyphicon-chevron-right 
           .col-md-1
-  .row.home-page-row
+  .row
+    .col-md-8
+      .row
+        %hr.section-header
+        .col-md-4.section-box
+          %h2.section-heading
+            %a 草坪 》
+            =image_tag "articles/lawn.png", :class => "fixer-article-icon"
+          %ul.section-ul
+            %li 
+              %a 
+                %h3.article-heading 秋季种草
+            %li 
+              %a 
+                %h3.article-heading 春季草坪维护
+            %li 
+              %a 
+                %h3.article-heading 如何给草坪安装灌溉
+        .col-md-4.section-box
+          %h2.section-heading
+            %a 屋檐 》
+            =image_tag "articles/gutters.png", :class => "fixer-article-icon"
+          %ul.section-ul
+            %li 
+              %a 
+                %h3.article-heading 如何清理屋檐
+            %li 
+              %a 
+                %h3.article-heading 下雪天应对屋檐上的冰坝
+            %li 
+              %a 
+                %h3.article-heading 安装屋檐的费用
+        .col-md-4.section-box
+          %h2.section-heading
+            %a 屋顶 》
+            =image_tag "articles/roof.png", :class => "fixer-article-icon"
+          %ul.section-ul
+            %li 
+              %a 
+                %h3.article-heading 屋顶的更换周期及使用寿命
+            %li 
+              %a 
+                %h3.article-heading 如何选择屋顶
+            %li 
+              %a 
+                %h3.article-heading 更换屋顶的费用
+      .row
+        %hr.section-separator
+        .col-md-4.section-box
+          %h2.section-heading
+            %a 取暖 》
+            =image_tag "articles/heater.png", :class => "fixer-article-icon"
+          %ul.section-ul
+            %li 
+              %a 
+                %h3.article-heading 油、气取暖的开销
+            %li 
+              %a 
+                %h3.article-heading 油改气的成本
+            %li 
+              %a 
+                %h3.article-heading 油箱维护
+        .col-md-4.section-box
+          %h2.section-heading
+            %a 窗户 》
+            =image_tag "articles/window.png", :class => "fixer-article-icon"
+          %ul.section-ul
+            %li 
+              %a 
+                %h3.article-heading 怎么挑选窗户的品牌
+            %li 
+              %a 
+                %h3.article-heading 油改气的成本
+            %li 
+              %a 
+                %h3.article-heading 油箱维护
+        .col-md-4.section-box
+          %h2.section-heading
+            %a 地板 》
+            =image_tag "articles/floor.png", :class => "fixer-article-icon"
+          %ul.section-ul
+            %li 
+              %a 
+                %h3.article-heading 自己换地板的步骤
+            %li 
+              %a 
+                %h3.article-heading 地板的种类
+            %li 
+              %a 
+                %h3.article-heading 铺地板
     .col-md-4
-      //=image_tag "ads/ellie-hwong-2014.jpg", :class => 'index-spacer-ads'
-    .col-md-4
-      %h2.index-spacer-slogan 家
-      %h2.index-spacer-slogan 一个梦开始的地方
-    .col-md-4
-      //=image_tag "ads/Ouyang_half.jpg", :class => 'index-spacer-ads'
-  .row.home-page-row
-    .col-md-3
-      %h3.hot-town-title 本周精选房源
-      %p.hot-town-name
-        %a 59 Statler Rd, Belmont
-      %p.hot-town-name
-        %a 22 Waltham st, Lextington
-      %p.hot-town-name
-        %a 19 Cross st, Winchester
-      %p.hot-town-name
-        %a 31 Brighton st, Boston
-      %p.hot-town-name
-        %a 更多>>
-    .col-md-3.town-pic
-      %a{href: propertyreview_path(@reviewed_homes[0].id)}
-        =image_tag "images/#{@reviewed_homes[0].mls}/0.jpg", :class => 'index_town_pic'
-        .hot-house-name
-          = @reviewed_homes[0].addr
-    .col-md-3.town-pic
-      %a{href: propertyreview_path(@reviewed_homes[1].id)}
-        =image_tag "images/#{@reviewed_homes[1].mls}/0.jpg", :class => 'index_town_pic'
-        .hot-house-name
-          = @reviewed_homes[1].addr
-    .col-md-3.town-pic
-      %a{href: propertyreview_path(@reviewed_homes[2].id)}
-        =image_tag "images/#{@reviewed_homes[2].mls}/0.jpg", :class => 'index_town_pic'
-        .hot-house-name
-          = @reviewed_homes[2].addr
+      %hr.section-header
+      =image_tag "ads/nancy.png", :class => "ads-block-inner"
   .row.home-page-row
     .col-md-6
       .panel.panel-default.panel-info-long
@@ -183,11 +240,11 @@
           .glyphicon-box
             .glyphicon.glyphicon-arrow-down.home-buying-arrow
           %p.home-buying-item
-            %a{"href" => "./sellers/accepted"} 接受offer之后
+            %a{"href" => "./sellers/offer"} 成交
           .glyphicon-box
             .glyphicon.glyphicon-arrow-down.home-buying-arrow
           %p.home-buying-item
-            %a{"href" => "./sellers/deal"} 成交
+            %a{"href" => "./sellers/sold"} 后续工作
     .col-md-4
       .panel.panel-default.panel-info-long
         .panel-heading 维护和保养
@@ -196,7 +253,7 @@
             .home-maintain-icon
               =image_tag "articles/lawn.png", :class => "buyer-article-icon"
             .home-maintain-title
-              %a 草坪护理
+              %a{"href" => "./owners/lawn"} 草坪护理
           %hr
           .home-maintain-item
             .home-maintain-icon

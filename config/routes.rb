@@ -12,6 +12,8 @@ Mlspin::Application.routes.draw do
   
   resources :buyers # 买房相关文章
   resources :sellers # 卖房相关文章
+  resources :owners # 维护相关文章
+  
   resources :questions do
     resources :answers
   end

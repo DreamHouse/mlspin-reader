@@ -1,3 +1,7 @@
+html {
+  font-size: 100%;
+}
+
 .jumbotron {
   background-color: transparent;
 }
@@ -302,6 +306,51 @@
   padding-top: 5px;
 }
 
+.section-header {
+  box-sizing: content-box;
+  display: block;
+  border-top: 2px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  height: 1px;
+  background-color: #fff;
+}
+
+.section-separator {
+  color: #e2e2e2;
+}
+
+.section-heading {
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.article-heading {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.section-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section-box {
+  border-right: 1px solid #e2e2e2;
+}
+
+.fixer-article-icon {
+  max-width: 50px;
+  max-height: 50px;
+  float: right;
+}
+a {
+  color: #000;
+}
+
+a:visited {
+  color: #326891;
+}
 /* Layout style */
 .background {
   background: #f8f8f8;
