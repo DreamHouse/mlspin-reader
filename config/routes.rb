@@ -6,25 +6,7 @@ Mlspin::Application.routes.draw do
   match 'landing/index'
   match 'landing/search'
   
-  resources :properties
-  resources :articles
-  resources :propertyreviews
-  
-  resources :buyers # 买房相关文章
-  resources :sellers # 卖房相关文章
-  resources :owners # 维护相关文章
-  
-  resources :questions do
-    resources :answers
-  end
-  
-  resources :merchants
-  
-  resources :rates do
-    get 'historical'
-  end
-    
-  get 'propertytax/index'
+  resources :tags
   
   namespace :admin do
     resource :dashboard
