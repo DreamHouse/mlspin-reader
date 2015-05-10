@@ -1,20 +1,6 @@
 class LandingController < ApplicationController
   def index
-    @articles = Article.order_by(publish_date: :desc).limit(5)
-    @questions = Question.where(:content.ne => '').order_by(updated_at: :desc).limit(5)
-    
-    @reviewed_homes = Propertyreview.all.reduce([]) do |result, pr| 
-      result << pr.home 
-    end
-    @reviewed_homes.select! { |home| home.mls }
-
-    @header_version = (params["header_version"] || "")
-    
-    if params["version"]
-      render "version#{params["version"]}", layout: "top_bar"
-    else
-      render "index", layout: "top_bar"
-    end
+    @tags = Tag.where(level: 1, vocabulary: "维护房产")
   end
   
   def search
