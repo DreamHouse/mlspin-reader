@@ -1,6 +1,11 @@
 class LandingController < ApplicationController
   def index
-    @tags = Tag.where(level: 1, vocabulary: "维护房产")
+    @tags = Tag.where(level: 1, vocabulary: "维护房产").to_a
+    @tags.each do |tag|
+      tag.children = Tag.where(parent: tag).to_a
+    end
+    
+    render 'index', layout: "simple"
   end
   
   def search

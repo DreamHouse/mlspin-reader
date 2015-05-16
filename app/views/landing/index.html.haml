@@ -1,5 +1,13 @@
-.container
-  .row.home-page-row
-    - @tags.each do |tag|
-      .col-md-3
-        %p= tag.name
+.l-content
+  .m-nav-blocks
+    .container
+    - @tags.each_slice(3) do |four_tags|
+      .row.home-page-row
+        - four_tags.each do |tag|
+          .col-md-4
+            %h4.block-title= tag.name
+            %ul
+            - tag.children.each do |child_tag|
+              %li
+                %a{href: "#"} 
+                  = child_tag.name

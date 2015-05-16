@@ -14,6 +14,8 @@ class Tag
   
   belongs_to :parent, class_name: "Tag"
   
+  attr_accessor :children
+  
   def add_child(name, options = {})
     children = Tag.where(parent: self).order_by(:weight.desc)
     
