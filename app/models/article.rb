@@ -11,6 +11,8 @@ class Article
   field :author, type: String # original author
   field :published, type: Boolean
   
+  has_and_belongs_to_many :tags
+  
   belongs_to :user
   
   default_scope where(published: true)

@@ -6,4 +6,9 @@ class TagsController < ApplicationController
       @tags = Tag.all
     end
   end
+  
+  # show some articles for one tag
+  def show
+    
+  end
 end
