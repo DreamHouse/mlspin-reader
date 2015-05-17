@@ -9,5 +9,5 @@
             %ul
             - tag.children.each do |child_tag|
               %li
-                %a{href: "#"} 
+                %a{href: tag_path(child_tag.id)} 
                   = child_tag.name

@@ -1,0 +1,8 @@
+.l-content
+  .m-nav-blocks
+    .container
+    - @articles.each do |article|
+      %h2
+        %a{href: article_path(article.id)}
+          = article.title
+      %p= article.desc

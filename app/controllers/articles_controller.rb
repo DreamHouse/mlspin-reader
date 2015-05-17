@@ -3,6 +3,6 @@ class ArticlesController < ApplicationController
     mls = params[:id]
     @article = Article.where(id: params[:id]).first
     
-    render layout: "top_bar"
+    render layout: "simple"
   end
 end

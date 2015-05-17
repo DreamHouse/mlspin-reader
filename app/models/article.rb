@@ -15,5 +15,5 @@ class Article
   
   belongs_to :user
   
-  default_scope where(published: true)
+  # default_scope where(published: true)
 end

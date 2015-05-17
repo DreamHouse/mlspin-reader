@@ -7,6 +7,7 @@ Mlspin::Application.routes.draw do
   match 'landing/search'
   
   resources :tags
+  resources :articles
   
   namespace :admin do
     resource :dashboard

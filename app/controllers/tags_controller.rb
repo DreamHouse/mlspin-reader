@@ -9,6 +9,13 @@ class TagsController < ApplicationController
   
   # show some articles for one tag
   def show
+    tag = Tag.where(id: params[:id]).first
+    if tag
+      @articles = Article.where(published: nil).where(:tag_ids.in => [tag.id])
+    else
+      @error = :no_data
+    end
     
+    render layout: "simple"
   end
 end
