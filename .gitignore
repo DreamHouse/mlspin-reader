@@ -10,3 +10,4 @@ log
 db/development.sqlite3
 tmp
 public/assets/images
+app.tar.gz

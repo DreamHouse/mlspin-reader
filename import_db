@@ -1,0 +1,3 @@
+rails@ivygate:/usr/local/website/mlspin-reader$ mongoimport -d prettyhome -c tags --file tags.json 
+rails@ivygate:/usr/local/website/mlspin-reader$ mongoimport -d prettyhome -c articles --file articles.json 
+
