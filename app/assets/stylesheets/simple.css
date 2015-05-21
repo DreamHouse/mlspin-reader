@@ -42,3 +42,11 @@ html {
   border-bottom: 1px solid #eaeaea;
   color: rgb(0, 0, 238);
 }
+
+.sub-title {
+  float: left;
+}
+
+.sign-in {
+  float: right;
+}

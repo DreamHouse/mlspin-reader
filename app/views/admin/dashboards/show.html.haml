@@ -1,8 +1,15 @@
-.container
-  .row
-    .col-md-4
-      %a{href: admin_articles_path, class: "btn btn-primary"} 管理文章
-    .col-md-4
-      %a{href: admin_merchants_path, class: "btn btn-primary"} 管理商家
-    .col-md-4
-      %a{href: '#', class: "btn btn-primary"} 管理问答（未完成）
+.l-content
+  .m-nav-blocks
+    .container
+      .row
+        .col-md-4
+          %a{href: admin_articles_path} 管理文章
+        .col-md-4
+          %p 管理标签
+          %ul
+            %li
+              %a{href: admin_tags_path(v: 1)} 
+                维护房产
+            %li
+              %a{href: admin_tags_path(v: 2)} 
+                买卖房产

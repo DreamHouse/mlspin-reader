@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>美房美地</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "simple", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -14,9 +14,13 @@
 </head>
 <body>
 
-<%= render "layouts/header"%>
-<%= render "layouts/search_bar"%>
-<%= yield %>
+<div class="background">
+  <%= render "layouts/simple_header"%>
+
+  <div class="l-main">
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>
