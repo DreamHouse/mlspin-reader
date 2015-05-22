@@ -1,2 +1,7 @@
+%h3 全部标签
 - @tags.each do |tag|
-  %p= tag.name
+  %h4= tag.name
+  %ul
+  - tag.children.each do |child_tag|
+    %li
+      %p= child_tag.name
