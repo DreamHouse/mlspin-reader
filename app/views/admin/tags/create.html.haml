@@ -1,0 +1,12 @@
+.container.create-article
+  - if @error
+    - if @error == :no_user
+      请先登陆
+    - else
+      = @error
+  - else
+    .row
+      .col-md-9
+        = "标签 #{@new_tag.name} 成功添加"
+        %a{href: admin_tags_path}
+          返回标签列表

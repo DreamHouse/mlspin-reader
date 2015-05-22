@@ -1,0 +1,14 @@
+.add-new-tag-container
+  %h4 添加新标签
+  = form_tag(admin_tags_path, method: 'post') do
+    .text-format-wrapper
+      %label.add-new-tag-label 标签名称 *
+      = text_field_tag 'name', '', size: "60"
+    .text-format-wrapper
+      %label.add-new-tag-label 描述
+      = text_area_tag 'desc', '', cols: "120", rows: "5"
+    .text-format-wrapper
+      %label.add-new-tag-label 选择父标签（不选则表示添加一级标签）
+      = select_tag 'parent', options_from_collection_for_select(@tags, "id", "name"), size: @tags.count
+    .text-format-wrapper
+      = submit_tag "保存"

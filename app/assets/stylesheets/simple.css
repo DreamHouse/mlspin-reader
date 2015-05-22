@@ -50,3 +50,7 @@ html {
 .sign-in {
   float: right;
 }
+
+.add-new-tag-label {
+  display: block;
+}

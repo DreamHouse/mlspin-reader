@@ -1,4 +1,7 @@
 %h3 全部标签
+.add-tag
+  %a{href: new_admin_tag_path}
+    添加标签
 - @tags.each do |tag|
   %h4= tag.name
   %ul
