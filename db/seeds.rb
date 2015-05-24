@@ -54,4 +54,5 @@ other_tag.add_child("过冬准备")
 other_tag.add_child("老年人服务")
 
 require_relative 'article_seeds'
+require_relative 'users_seeds'
 
