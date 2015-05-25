@@ -34,4 +34,10 @@ class Admin::TagsController < ApplicationController
       @error = @new_tag.errors.full_messages
     end
   end
+  
+  def destroy
+    Rails.logger.debug "delete tag #{params[:id]}"
+    Tag.find(params[:id]).delete
+    redirect_to action: "index"
+  end
 end

@@ -2,9 +2,16 @@
 .add-tag
   %a{href: new_admin_tag_path}
     添加标签
-- @tags.each do |tag|
-  %h4= tag.name
-  %ul
-  - tag.children.each do |child_tag|
-    %li
-      %p= child_tag.name
+%table.table
+  - @tags.each do |tag|
+    %tr
+      %td
+        %h4= tag.name
+      %td
+        = button_to("删除", admin_tag_path(tag.id), :method => :delete, data: {confirm: '确定删除该标签？'})
+        - tag.children.each do |child_tag|
+          %tr
+            %td
+              %p= child_tag.name
+            %td
+              = button_to("删除", admin_tag_path(child_tag.id), :method => :delete, data: {confirm: '确定删除该标签？'})
