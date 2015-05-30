@@ -30,4 +30,10 @@ class Tag
     
     Tag.create!(name: name, level: self.level + 1, weight: weight, parent: self, vocabulary: self.vocabulary)
   end
+  
+  def get_name_with_level
+    prefix =  ""
+    (2..self.level).each { |i| prefix += "-"}
+    "#{prefix}#{self.name}"
+  end
 end

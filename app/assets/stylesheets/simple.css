@@ -54,3 +54,11 @@ html {
 .add-new-tag-label {
   display: block;
 }
+
+.edit-article .row {
+  padding-bottom: 10px;
+}
+
+.create-article .row {
+  padding-bottom: 10px;
+}

@@ -1,37 +1,37 @@
 .container.edit-article
   = form_tag(admin_article_path(@article.id), :method => :put) do
     .row
-      .col-md-3
+      .col-md-2
         标题：
-      .col-md-9
+      .col-md-10
         = text_field_tag 'title', @article.title
     .row
-      .col-md-3
+      .col-md-2
         摘要：
-      .col-md-9
-        = cktext_area 'desc', '', :value => @article.desc, :class => 'someclass', :ckeditor => {:language => 'zh'}
+      .col-md-10
+        = cktext_area 'desc', '', :value => @article.desc, :class => 'someclass', :ckeditor => {:language => 'zh', :width => 600, :toolbarGroups => [{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },{ name: 'links' },{ name: 'styles' },{ name: 'colors' }]}
     .row
-      .col-md-3
+      .col-md-2
         原文链接：
-      .col-md-9
+      .col-md-10
         = @article.source_link
     .row
-      .col-md-3
+      .col-md-2
         原文发表日期：
-      .col-md-9
+      .col-md-10
         = @article.publish_date
     .row
-      .col-md-3
+      .col-md-2
         原文作者：
-      .col-md-9
+      .col-md-10
         = @article.author
     .row
-      .col-md-3
+      .col-md-2
         内容：
-      .col-md-9
-        = cktext_area 'content', '', :value => @article.content, :class => 'someclass', :ckeditor => {:language => 'zh'}
+      .col-md-10
+        = cktext_area 'content', '', :value => @article.content, :class => 'someclass', :ckeditor => {:language => 'zh', :width => 600, :toolbarGroups => [{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },{ name: 'links' },{ name: 'styles' },{ name: 'colors' }]}
     .row
-      .col-md-3
+      .col-md-2
         %button{type: "submit", class: "btn btn-warning", id: "save_article"} 保存
   = form_tag(publish_admin_article_path(@article.id), :method => :post) do
     .row

@@ -1,13 +1,19 @@
 class Admin::ArticlesController < ApplicationController
+  layout "admin"
+  
   def index
     # check permission
     @articles = Article.unscoped.all
-    
-    render layout: "admin"
   end
   
   def new
-    render layout: "admin"
+    tags = Tag.all.where(level: 1)
+    @tags = []
+    tags.to_a.each do |tag|
+      @tags << tag
+      @tags.push(*Tag.where(parent: tag).to_a)
+    end
+    @tag_count = Tag.count
   end
 
   def create
@@ -18,8 +24,6 @@ class Admin::ArticlesController < ApplicationController
   
   def edit
     @article = Article.unscoped.find(params[:id])
-    
-    render layout: 'admin_editor'
   end
   
   def update
@@ -34,7 +38,5 @@ class Admin::ArticlesController < ApplicationController
       @article.published = true
       @article.save!
     end
-    
-    render layout: 'admin_editor'
   end
 end

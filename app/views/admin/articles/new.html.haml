@@ -1,37 +1,42 @@
 .container.create-article
   = form_tag(admin_articles_path, :method => :post) do
     .row
-      .col-md-3
+      .col-md-2
         标题：
-      .col-md-9
-        = text_field_tag 'title'
+      .col-md-10
+        = text_field_tag 'title', '', size: 60
     .row
-      .col-md-3
+      .col-md-2
         摘要：
-      .col-md-9  
-        = cktext_area 'desc', '', :class => 'someclass', :ckeditor => {:language => 'zh'}
+      .col-md-10  
+        = cktext_area 'desc', '', :class => 'someclass', :ckeditor => {:language => 'zh', :width => 600, :toolbarGroups => [{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },{ name: 'links' },{ name: 'styles' },{ name: 'colors' }]}
     .row
-      .col-md-3
+      .col-md-2
         原文链接：
-      .col-md-9
-        = text_field_tag 'source_link'
+      .col-md-10
+        = text_field_tag 'source_link', '', size: 60
     .row
-      .col-md-3
+      .col-md-2
         原文发表日期('YYYY-MM-DD')：
-      .col-md-9
+      .col-md-10
         = text_field_tag 'publish_date', '2014-01-01', class: 'short-field'
     .row
-      .col-md-3
+      .col-md-2
         原文作者：
-      .col-md-9
+      .col-md-10
         = text_field_tag 'author', nil, class: 'short-field'
     .row
-      .col-md-3
+      .col-md-2
         正文：
-      .col-md-9  
-        = cktext_area 'content', '', :class => 'someclass', :ckeditor => {:language => 'zh'}
+      .col-md-10  
+        = cktext_area 'content', '', :class => 'someclass', :ckeditor => {:language => 'zh', :width => 600, :toolbarGroups => [{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },{ name: 'links' },{ name: 'styles' },{ name: 'colors' }]}
     .row
-      .col-md-3
+      .col-md-2
+        标签（必选）：
+      .col-md-10
+        = select_tag "tags", options_from_collection_for_select(@tags, "id", "get_name_with_level"), multiple: true, size: @tag_count
+    .row
+      .col-md-10
         %button{type: "submit", class: "btn btn-warning"} 保存
-      .col-md-9
+      .col-md-10
         %a{href: admin_articles_path} 返回文章列表

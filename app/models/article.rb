@@ -11,7 +11,7 @@ class Article
   field :author, type: String # original author
   field :published, type: Boolean
   
-  has_and_belongs_to_many :tags
+  has_and_belongs_to_many :tags, inverse_of: nil
   
   belongs_to :user
   
