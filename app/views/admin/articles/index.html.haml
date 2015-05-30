@@ -6,7 +6,7 @@
   - if @articles
     - @articles.each do |article|
       .row
-        .col-md-8
+        .col-md-6
           = raw(article.title)
         .col-md-2
           - if article.published
@@ -15,3 +15,5 @@
             %a{href: article_path(article.id), target: "_blank"} 查看全文
           - else
             %a{href: edit_admin_article_path(article.id)} 编辑/发布
+        .col-md-2
+          = button_to("删除", admin_article_path(article.id), :method => :delete, data: {confirm: '确定删除该文章？'})

@@ -51,6 +51,11 @@ class Admin::ArticlesController < ApplicationController
     end
   end
   
+  def destroy
+    Article.find(params[:id]).delete
+    redirect_to action: "index"
+  end
+  
   protected
   def prepare_tags
     tags = Tag.all.where(level: 1)
