@@ -32,6 +32,13 @@
         = cktext_area 'content', '', :value => @article.content, :class => 'someclass', :ckeditor => {:language => 'zh', :width => 600, :toolbarGroups => [{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },{ name: 'links' },{ name: 'styles' },{ name: 'colors' }]}
     .row
       .col-md-2
+        标签：
+      .col-md-10
+        - @article.tags.each do |tag|
+          = tag.name
+          <br>
+    .row
+      .col-md-2
         %button{type: "submit", class: "btn btn-warning", id: "save_article"} 保存
   = form_tag(publish_admin_article_path(@article.id), :method => :post) do
     .row
