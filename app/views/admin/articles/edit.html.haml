@@ -39,6 +39,11 @@
           <br>
     .row
       .col-md-2
+        重新选择标签：
+      .col-md-10
+        = select_tag "tags", options_from_collection_for_select(@tags, "id", "get_name_with_level"), multiple: true, size: @tag_count
+    .row
+      .col-md-2
         %button{type: "submit", class: "btn btn-warning", id: "save_article"} 保存
   = form_tag(publish_admin_article_path(@article.id), :method => :post) do
     .row

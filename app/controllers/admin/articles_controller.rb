@@ -6,14 +6,9 @@ class Admin::ArticlesController < ApplicationController
     @articles = Article.unscoped.all
   end
   
+  
   def new
-    tags = Tag.all.where(level: 1)
-    @tags = []
-    tags.to_a.each do |tag|
-      @tags << tag
-      @tags.push(*Tag.where(parent: tag).to_a)
-    end
-    @tag_count = Tag.count
+    prepare_tags
   end
 
   def create
@@ -29,12 +24,22 @@ class Admin::ArticlesController < ApplicationController
   end
   
   def edit
+    prepare_tags
     @article = Article.unscoped.find(params[:id])
   end
   
   def update
     @article = Article.unscoped.find(params[:id])
     @article.update_attributes!(title: params[:title], desc: params[:desc][0], content: params[:content][0])
+    if params[:tags]
+      @article.tags = []
+      params[:tags].each do |tag_id|
+        tag = Tag.where(id: tag_id).first
+        if tag
+          @article.tags << tag
+        end
+      end
+    end
     redirect_to admin_articles_path
   end
   
@@ -44,5 +49,16 @@ class Admin::ArticlesController < ApplicationController
       @article.published = true
       @article.save!
     end
+  end
+  
+  protected
+  def prepare_tags
+    tags = Tag.all.where(level: 1)
+    @tags = []
+    tags.to_a.each do |tag|
+      @tags << tag
+      @tags.push(*Tag.where(parent: tag).to_a)
+    end
+    @tag_count = Tag.count
   end
 end
