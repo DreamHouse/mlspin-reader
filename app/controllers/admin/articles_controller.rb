@@ -19,6 +19,12 @@ class Admin::ArticlesController < ApplicationController
   def create
     article = Article.create!(title: params[:title], desc: params[:desc][0], source_link: params[:source_link],
       publish_date: params[:publish_date], author: params[:author], content: params[:content][0])
+    params[:tags].each do |tag_id|
+      tag = Tag.where(id: tag_id).first
+      if tag
+        article.tags << tag
+      end
+    end
     redirect_to admin_articles_path
   end
   
